@@ -1,0 +1,99 @@
+[18-Apr-2018 20:17:53 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 13
+[18-Apr-2018 20:17:53 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 15
+[18-Apr-2018 20:19:21 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 13
+[18-Apr-2018 20:19:21 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 15
+[18-Apr-2018 20:20:08 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 13
+[18-Apr-2018 20:20:08 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 15
+[18-Apr-2018 20:27:46 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 13
+[18-Apr-2018 20:27:46 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 15
+[18-Apr-2018 20:30:13 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 13
+[18-Apr-2018 20:30:13 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 15
+[18-Apr-2018 20:30:19 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 13
+[18-Apr-2018 20:30:19 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 15
+[18-Apr-2018 20:30:32 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 13
+[18-Apr-2018 20:30:32 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 15
+[18-Apr-2018 20:30:57 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 13
+[18-Apr-2018 20:30:57 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 15
+[18-Apr-2018 20:31:02 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 13
+[18-Apr-2018 20:31:02 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 15
+[20-Apr-2018 17:38:24 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 17:38:24 UTC] PHP Notice:  Undefined index: g-recaptcha-response in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 10
+[20-Apr-2018 17:44:41 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 17:47:11 UTC] PHP Warning:  require(/recapcha.php): failed to open stream: No such file or directory in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 3
+[20-Apr-2018 17:47:11 UTC] PHP Fatal error:  require(): Failed opening required '/recapcha.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 3
+[20-Apr-2018 17:47:17 UTC] PHP Warning:  require(/recapcha.php): failed to open stream: No such file or directory in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 3
+[20-Apr-2018 17:47:17 UTC] PHP Fatal error:  require(): Failed opening required '/recapcha.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 3
+[20-Apr-2018 17:49:13 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 17:49:13 UTC] PHP Notice:  Undefined variable: msg in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 60
+[20-Apr-2018 17:49:13 UTC] PHP Notice:  Undefined variable: email in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 64
+[20-Apr-2018 17:49:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function IsHTML() on null in /home/timwer/avs-tech.e-dev.pp.ua/mail.php:64
+Stack trace:
+#0 {main}
+  thrown in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 64
+[20-Apr-2018 17:49:33 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 17:49:33 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 27
+[20-Apr-2018 17:49:33 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 29
+[20-Apr-2018 17:50:05 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 17:50:05 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 27
+[20-Apr-2018 17:50:05 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 29
+[20-Apr-2018 17:50:20 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 17:50:20 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 27
+[20-Apr-2018 17:50:20 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 29
+[20-Apr-2018 18:12:36 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 18:13:12 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 18:13:12 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 39
+[20-Apr-2018 18:13:12 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 40
+[20-Apr-2018 18:13:12 UTC] PHP Notice:  Undefined variable: email in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 44
+[20-Apr-2018 18:13:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function MsgHTML() on null in /home/timwer/avs-tech.e-dev.pp.ua/mail.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 44
+[20-Apr-2018 18:13:18 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 18:13:18 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 28
+[20-Apr-2018 18:13:18 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 30
+[20-Apr-2018 18:13:54 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 18:13:54 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 39
+[20-Apr-2018 18:13:54 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 40
+[20-Apr-2018 18:13:54 UTC] PHP Notice:  Undefined variable: email in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 44
+[20-Apr-2018 18:13:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function MsgHTML() on null in /home/timwer/avs-tech.e-dev.pp.ua/mail.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 44
+[20-Apr-2018 18:14:02 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 18:14:03 UTC] PHP Notice:  Undefined index: formInfo in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 24
+[20-Apr-2018 18:14:03 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 28
+[20-Apr-2018 18:14:03 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 30
+[20-Apr-2018 18:14:51 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 18:14:51 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 39
+[20-Apr-2018 18:14:51 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 40
+[20-Apr-2018 18:14:51 UTC] PHP Notice:  Undefined variable: email in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 44
+[20-Apr-2018 18:14:51 UTC] PHP Fatal error:  Uncaught Error: Call to a member function MsgHTML() on null in /home/timwer/avs-tech.e-dev.pp.ua/mail.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 44
+[20-Apr-2018 18:14:57 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 18:14:57 UTC] PHP Notice:  Undefined index: formInfo in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 24
+[20-Apr-2018 18:14:57 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 28
+[20-Apr-2018 18:14:57 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 30
+[20-Apr-2018 18:18:27 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 18:18:27 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 39
+[20-Apr-2018 18:18:27 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 40
+[20-Apr-2018 18:18:27 UTC] PHP Notice:  Undefined variable: email in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 44
+[20-Apr-2018 18:18:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function MsgHTML() on null in /home/timwer/avs-tech.e-dev.pp.ua/mail.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 44
+[20-Apr-2018 18:18:43 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 18:18:43 UTC] PHP Notice:  Undefined index: formInfo in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 24
+[20-Apr-2018 18:18:43 UTC] PHP Notice:  Undefined variable: c in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 28
+[20-Apr-2018 18:18:43 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 30
+[20-Apr-2018 18:18:43 UTC] PHP Notice:  Undefined index: attachmentFile in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 55
+[20-Apr-2018 18:18:43 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 55
+[20-Apr-2018 18:20:30 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; ReCaptcha has a deprecated constructor in /home/timwer/avs-tech.e-dev.pp.ua/recapcha.php on line 40
+[20-Apr-2018 18:20:30 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 39
+[20-Apr-2018 18:20:30 UTC] PHP Notice:  Undefined variable: message in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 40
+[20-Apr-2018 18:20:30 UTC] PHP Notice:  Undefined variable: email in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 44
+[20-Apr-2018 18:20:30 UTC] PHP Fatal error:  Uncaught Error: Call to a member function MsgHTML() on null in /home/timwer/avs-tech.e-dev.pp.ua/mail.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/timwer/avs-tech.e-dev.pp.ua/mail.php on line 44
