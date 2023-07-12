@@ -623,7 +623,9 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+.panorama-block .btn_group{
+  padding-top: 30px;
+}
 .btn_group .btn {
   border: 0;
   color: #184b67;
@@ -645,6 +647,7 @@ template {
   color: #fff;
   text-transform: uppercase;
 }
+
 
 @media screen and (max-width: 680px) {
   .btn_group .btn.btn-callback {
@@ -2456,7 +2459,7 @@ hr::before {
   position: absolute;
   z-index: 10;
   top: 120px;
-  left: 100px;
+  left: 200px;
   width: 60%;
   background: #00000059;
   padding: 30px;

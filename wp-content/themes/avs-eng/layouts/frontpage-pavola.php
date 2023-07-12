@@ -18,6 +18,10 @@ get_header();
       <p>
         <?php echo wp_kses_post(get_field('panorama_image_description')); ?>
       </p>
+      <div class="btn_group .panorama-block ">
+                            <button class="popup-with-zoom-anim btn btn-callback"
+                                data-mfp-src="#order_back">Забронировать</button>
+                        </div>
     </div>
   <?php endif; ?>
 </section>
