@@ -1199,6 +1199,9 @@ header {
     display: block;
   }
 }
+.col {
+  padding: 0 150px;
+}
 
 .top_nav nav ul li a {
   color: #184b67;
@@ -1419,15 +1422,19 @@ html,
 body {
   color: #184b67;
   font-family: "Open Sans";
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   font-size-adjust: none;
   width: 100%;
   height: 100%;
+  
+  
+
+  text-align: left;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 
@@ -2441,6 +2448,8 @@ hr::before {
   /* position: relative; */
   position: absolute;
   bottom: -12px;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-blend-mode: overlay;
 }
 
 .panorama-block .description {
@@ -2449,9 +2458,9 @@ hr::before {
   top: 120px;
   left: 100px;
   width: 60%;
-  background: #22222240;
+  background: #00000059;
   padding: 30px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .panorama-block .description h3 {
@@ -2479,12 +2488,13 @@ hr::before {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 30px;
   margin-bottom: 40px;
+  font-weight: 600;
 }
 
 .impressions-block .grid {
-  margin: 0 20px;
+  margin: 90px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
@@ -2495,6 +2505,7 @@ h2 {
   position: relative;
   height: 300px;
   width: auto;
+  
   overflow: hidden;
 }
 
@@ -2505,6 +2516,7 @@ h2 {
 
 .impressions-block .grid .grid-item img {
   height: 350px;
+  width: 100%;
   transition: all 0.5s;
 }
 
@@ -2526,9 +2538,11 @@ h2 {
   visibility: visible;
   display: flex;
   align-items: flex-end;
+  align-content: flex-end;
   flex-wrap: wrap;
   text-align: left;
   padding: 30px;
+  gap:20px;
 }
 
 @media screen and (max-width: 992px) {
@@ -2546,7 +2560,7 @@ h2 {
 }
 
 .options-block .grid {
-  margin-top: 30px;
+  margin: 90px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -2619,6 +2633,7 @@ h2 {
   width: auto;
   cursor: pointer;
 }
+
 
 .useful_link .section_area {
   background-color: #e5dddd;
