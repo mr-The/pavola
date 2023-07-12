@@ -2429,7 +2429,7 @@ hr::before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
-  height: 700px;
+  height: 800px;
   margin: 0 auto;
   width: 100%;
 }
@@ -2437,8 +2437,10 @@ hr::before {
 .panorama-block img {
   overflow: hidden;
   width: 100%;
-  height: 700px;
-  position: relative;
+  height: 800px;
+  /* position: relative; */
+  position: absolute;
+  bottom: -12px;
 }
 
 .panorama-block .description {
@@ -2663,3 +2665,4 @@ h2 {
         min-height: 100px;
       }
   }
+ 
