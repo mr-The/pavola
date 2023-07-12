@@ -653,7 +653,7 @@ template {
   .btn_group .btn.btn-callback {
     padding: 10px 5px;
   }
-    
+
 }
 
 .btn_group .btn.btn-callback:hover {
@@ -2322,7 +2322,7 @@ footer .footer-wrap .footer_content .site_contacts {
   footer .footer-wrap .footer_content .site_contacts {
     margin: 30px auto 0;
   }
-  
+
 }
 
 footer .footer-wrap .footer_content .site_contacts ul {
@@ -2442,17 +2442,8 @@ hr::before {
   height: 800px;
   margin: 0 auto;
   width: 100%;
-}
-
-.panorama-block img {
-  overflow: hidden;
-  width: 100%;
-  height: 800px;
-  /* position: relative; */
-  position: absolute;
-  bottom: -12px;
-  background-color: rgba(0, 0, 0, 0.1);
-  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
 }
 
 .panorama-block .description {
@@ -2476,10 +2467,12 @@ hr::before {
 }
 
 @media screen and (max-width: 992px) {
+
   html,
   body {
     font-size: 14px;
   }
+
   .panorama-block .description h3 {
     font-size: 24px;
   }
@@ -2488,6 +2481,19 @@ hr::before {
     font-size: 18px;
   }
 
+  .panorama-block .description {
+    top: 80px;
+    left: 30px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .panorama-block .description {
+    top: 60px;
+    left: 20px;
+    width: 90%;
+  }
 }
 
 h2 {
@@ -2510,42 +2516,34 @@ h2 {
   width: auto;
   
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  background-size: cover;
 }
 
-.impressions-block .grid .grid-item:hover img {
-  transform: scale(1.2);
-  transition: all 0.5s;
-}
-
-.impressions-block .grid .grid-item img {
-  height: 350px;
-  width: 100%;
-  transition: all 0.5s;
+.impressions-block .grid .grid-item:hover {
+  transform: scale(1.01);
+  transition: all 0.3s ease-in-out;
 }
 
 .impressions-block .grid .grid-item .description {
   position: absolute;
   z-index: 1;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   color: #fff;
   text-align: center;
-  padding: 10px 0;
-  opacity: 0;
-  visibility: hidden;
-  transition-property: bottom, opacity, visibility;
-  transition-duration: 0.5s;
   top: 0;
   bottom: 0;
   opacity: 1;
-  visibility: visible;
   display: flex;
   align-items: flex-end;
   align-content: flex-end;
   flex-wrap: wrap;
   text-align: left;
   padding: 30px;
-  gap:20px;
+}
+
+.impressions-block .grid .grid-item .description:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 992px) {
@@ -2557,6 +2555,7 @@ h2 {
     font-size: 20px;
   }
 }
+
 
 .options-block {
   margin-top: 50px;
@@ -2570,8 +2569,8 @@ h2 {
 
 @media screen and (max-width: 692px) {
   .options-block .grid {
-  grid-template-columns: 1fr;
-}
+    grid-template-columns: 1fr;
+  }
 }
 
 .options-block .grid .grid-item {
@@ -2580,17 +2579,14 @@ h2 {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: all 0.5s ease-in-out;
+  background-position: center;
 }
 
-.options-block .grid .grid-item img {
-  height: 600px;
-  width: -webkit-fill-available;
-  overflow: hidden;
-  transition: all 0.5s;
-}
-
-.options-block .grid .grid-item:hover img {
-  transform: scale(1.2);
+.options-block .grid .grid-item:hover {
+  transition: all 0.5s ease-in-out;
+  background-position: bottom;
+  transform: scaleX(1.01);
 }
 
 .options-block .grid .grid-item:hover .description {
@@ -2674,13 +2670,70 @@ h2 {
 .useful_link .name {
   color: #ff8562;
 }
-  @media screen and (max-width: 692px) {
-    .useful_link .wrapper {
-      grid-template-columns: 1fr;
-    }
-  
-      .useful_link .link {
-        min-height: 100px;
-      }
+
+@media screen and (max-width: 692px) {
+  .useful_link .wrapper {
+    grid-template-columns: 1fr;
   }
- 
+
+  .useful_link .link {
+    min-height: 100px;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.accordion-item {
+  border-top: 1px solid #184b67;
+  border-left: none;
+  border-right: none;
+}
+
+.accordion-heading {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.accordion-content {
+  display: none;
+  height: 0;
+  padding: 10px;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+
+.accordion-item.active .accordion-heading .plus-minus::after {
+  transform: rotate(45deg);
+}
+
+.accordion-item.active .accordion-heading .plus-minus.hide::after {
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.3s ease-out 0.1s, scale 0.1s ease-in;
+}
+
+.accordion-item .accordion-heading .plus-minus::after {
+  content: "";
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  background: url('../images/plus.svg') center no-repeat;
+  background-size: 35px;
+  transition: transform 0.3s ease-out;
+  opacity: .7;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+  height: auto;
+  transition: all .5s ease-in-out;
+}

@@ -68,6 +68,7 @@ define('DB_USER', 'dyrnel77_gb_gb');
 
 /** MySQL database password */
 
+// define('DB_PASSWORD', '');
 define('DB_PASSWORD', 'I668&&Dg');
 
 
