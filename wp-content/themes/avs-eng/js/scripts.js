@@ -156,34 +156,41 @@ $(".phone").mask("+7(999) 999-99-99");
 
 
 $(document).ready(function (e){
-$("form").on('submit',(function(e){
-	e.preventDefault();
-    var th = $(this);
+$("#order_back_form").on("submit", function (e) {
+	e.preventDefault()
+	var th = $(this)
 	$.ajax({
 		url: "mail.php",
 		type: "POST",
-		data:  new FormData(this),
+		data: new FormData(this),
 		contentType: false,
 		cache: false,
-		processData:false,
-		success: function(data){
-		 $(".success").addClass("visible");
-             setTimeout(function() {
-                 th.trigger("reset");
-                  $(".success").removeClass("visible");
-       $.magnificPopup.close();
-      }, 1000);
+		processData: false,
+		success: function (data) {
+			$(".success").addClass("visible")
+			setTimeout(function () {
+				th.trigger("reset")
+				$(".success").removeClass("visible")
+				$.magnificPopup.close()
+			}, 1000)
 		},
-		error: function(){
-            alert('Не пройдена капча');
-        } 	        
-		 
-		});
-	
-}));
+		error: function () {
+			alert("Не пройдена капча")
+		},
+	})
+})
 
 });
 
 $(".form-send").click(function() {
     $( "input[name*='formInfo']" ).val($(this).attr( "title" ));
 });
+
+
+var accordionItems = document.querySelectorAll('.accordion-item');
+
+for (var i = 0; i < accordionItems.length; i++) {
+  accordionItems[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+  });
+}

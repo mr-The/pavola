@@ -7,10 +7,9 @@ get_header();
 
 // Панорамное изображение
 ?>
-<section class="panorama-block">
-  <?php $panorama_image = get_field('panorama_image'); ?>
-  <?php if ($panorama_image): ?>
-    <img src="<?php echo esc_url($panorama_image); ?>" alt="">
+<?php $panorama_image = get_field('panorama_image'); ?>
+<?php if ($panorama_image): ?>
+  <section class="panorama-block" style="background-image: url('<?php echo esc_url($panorama_image); ?>')">
     <div class="description">
       <h3>
         <?php echo wp_kses_post(get_field('panorama_image_title')); ?>
@@ -19,8 +18,8 @@ get_header();
         <?php echo wp_kses_post(get_field('panorama_image_description')); ?>
       </p>
     </div>
-  <?php endif; ?>
-</section>
+  </section>
+<?php endif; ?>
 
 <?php
 // Блок "Текст"
@@ -57,8 +56,7 @@ get_header();
   <?php if ($impressions): ?>
     <div class="grid">
       <?php foreach ($impressions as $impression): ?>
-        <div class="grid-item">
-          <img src="<?php echo esc_url($impression['image']); ?>" alt="<?php echo esc_attr($impression['title']); ?>">
+        <div class="grid-item" style="background-image: url('<?php echo esc_url($impression['image']); ?>')">
           <div class="description">
             <?php echo wp_kses_post($impression['description']); ?>
           </div>
@@ -123,10 +121,10 @@ get_header();
               <h2>
                 <?php echo wp_kses_post(get_field('links_block_title')); ?>
               </h2>
-            </div>
-          <?php else:
+              <?php else:
               echo "<h2>Полезные ссылки</h2>";
               ?>
+          </div>
           <?php endif; ?>
           <div class="wrapper">
             <?php while ($the_query->have_posts()):
@@ -145,7 +143,6 @@ get_header();
                   <span class="name">
                     <?php the_field('useful_links_name'); ?> →
                   </span>
-                  </span>
                 </div>
               </a>
               <!-- end block -->
@@ -160,5 +157,6 @@ get_header();
     <?php wp_reset_postdata(); ?>
   <?php endif; ?>
 </section>
+
 <?php
 get_footer();

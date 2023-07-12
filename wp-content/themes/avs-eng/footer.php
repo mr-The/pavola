@@ -80,7 +80,7 @@ $options = get_option('true_options');
 </footer>
 <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
 <div id="order_back" class="form-content zoom-anim-dialog mfp-hide">
-    <form method="post">
+    <form method="post" id="order_back_form">
         <!-- Hidden Required Fields -->
         <input type="hidden" name="project_name" value="Новая заявка с сайта <?php echo ($_SERVER['HTTP_HOST']); ?>">
         <input type="hidden" name="admin_email" value="<?php echo bloginfo('admin_email'); ?>">

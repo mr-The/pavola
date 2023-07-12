@@ -189,6 +189,44 @@ function useful_links()
 }
 add_action('init', 'useful_links');
 
+// Как добраться
+function how_to_get_there()
+{
+
+   $labels = array(
+      'name' => 'Как добраться',
+      'singular_name' => 'Как добраться',
+      'add_new' => 'Добавить маршрут',
+      'add_new_item' => 'Добавить новый маршрут',
+      'edit_item' => 'Редактировать маршрут',
+      'new_item' => 'Новый маршрут',
+      'all_items' => 'Все маршруты',
+      'view_item' => 'Смотреть маршрут',
+      'search_items' => 'Найти маршрут',
+      'not_found' => 'Маршруты не найдены',
+      'not_found_in_trash' => 'Нет удаленных маршрутов',
+      'menu_name' => 'Как добраться'
+   );
+
+   $args = array(
+      'labels' => $labels,
+      'menu_icon' => 'dashicons-admin-site',
+      'public' => true,
+      'has_archive' => true,
+      'publicly_queryable' => true,
+      'query_var' => true,
+      'rewrite' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+      'menu_position' => 5,
+      'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+      'exclude_from_search' => false,
+   );
+
+   register_post_type('how_to_get_there', $args);
+}
+add_action('init', 'how_to_get_there');
+
 function rewiew()
 {
 
