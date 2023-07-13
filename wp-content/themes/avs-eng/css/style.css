@@ -2645,6 +2645,7 @@ h2 {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   padding: 20px;
+  width: 100%;
 }
 
 
