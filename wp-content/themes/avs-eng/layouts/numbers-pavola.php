@@ -130,7 +130,6 @@ get_header();
 
 
 
-
 <!-- Панорамное изображение -->
 
 <section class="panorama-block">

@@ -28,20 +28,41 @@ get_header();
 <?php endif; ?>
 
 <!-- Блок 3 фото -->
-
-<div class="tree_photo container">
- <div class="tree_photo-block">
-  <div class="tree_photo-image-block">
-    <img class="tree-photo-image" scr="../images/rope_park1.jpg">
+<section class="photo-block container">
+<div class="tree_photo ">
+  <div class="tree_photo-block">
+      <div class="tree_photo-image-block">
+        <img class="tree-photo-image" scr="../images/rope_park1.jpg">
+      </div>
+      <div class="tree_photo-image-block">
+        <img class="tree-photo-image" scr="../images/rope_park2.jpg">
+      </div>
+      <div class="tree_photo-image-block">
+        <img class="tree-photo-image" scr="../images/rope_park3.jpg">
+      </div>
   </div>
-  <div class="tree_photo-image-block">
-    <img class="tree-photo-image" scr="../images/rope_park2.jpg">
-  </div>
-  <div class="tree_photo-image-block">
-    <img class="tree-photo-image" scr="../images/rope_park3.jpg">
-  </div>
- </div>
 </div>
+</section>
+
+<!-- Блок 4 колонки текст -->
+<section class="four-col-text" >
+  <div class="container">
+    <div class="four-col-text-block" >
+      <div class="four-col-text-box" >
+        <div class="four-col-title" >
+          <h3>
+          710 метров
+          </h3>
+        </div>
+        <div class="four-col-description" >
+          <p>
+          Протяженность
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <?php
 // Блок "Текст"
