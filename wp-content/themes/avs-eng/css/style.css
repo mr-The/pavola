@@ -1587,10 +1587,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   justify-content: center;
+  align-content: center;
 }
 
 .section_area .section_title h2 {
@@ -2674,6 +2676,7 @@ h2 {
 @media screen and (max-width: 692px) {
   .useful_link .wrapper {
     grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .useful_link .link {
