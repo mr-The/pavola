@@ -2822,10 +2822,9 @@ h2 {
 }
 
 .accordion-content {
-  display: none;
   height: 0;
-  padding: 10px;
-  transition: all .5s ease-in-out;
+  padding: 0 10px;
+  transition: all .5s;
   overflow: hidden;
 }
 
@@ -2850,7 +2849,7 @@ h2 {
 }
 
 .accordion-item.active .accordion-content {
-  display: block;
   height: auto;
+  padding: 10px 10px;
   transition: all .5s ease-in-out;
 }

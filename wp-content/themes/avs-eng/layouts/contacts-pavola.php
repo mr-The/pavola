@@ -27,7 +27,6 @@ get_header();
 <section class="text-block">
   <div class="container">
     <div class="row">
-      <div class="col">
         <h2>
           <?php echo wp_kses_post(get_field('text_block_title')); ?>
           КАК С НАМИ СВЯЗАТЬСЯ
@@ -43,7 +42,6 @@ get_header();
           pr-dw@dachawintera.ru
         </div>
       </div>
-    </div>
   </div>
 </section>
 
@@ -65,12 +63,32 @@ get_header();
 <?php endif; ?>
 
 <?php
+// Заявки на корпоративные мероприятия
+?>
+<?php $contacts_reversation = get_field('contacts_reversation'); ?>
+<?php if (!$contacts_reversation): ?>
+  <div class="container">
+    <hr>
+    <div class="row btn_group wp-caption-text">
+      <h2>
+        <?php echo wp_kses_post(get_field('contacts_reversation')); ?>
+      </h2>
+      <div>
+        <button class="popup-with-zoom-anim btn btn-callback" data-mfp-src="#order_back">
+          Отправить заявку
+        </button>
+      </div>
+    </div>
+    <hr>
+  </div>
+<?php endif; ?>
+
+<?php
 // Блок "МАРШРУТЫ И КООРДИНАТЫ"
 ?>
 <section class="text-block">
   <div class="container">
     <div class="row">
-      <div class="col">
         <h2>
           <?php echo wp_kses_post(get_field('text_block_title')); ?>
           Возможные маршруты до парк-отеля «Дача Винтера»
@@ -87,7 +105,7 @@ get_header();
           Широта: 61°39'07.3"N
           Долгота: 30°41'01.8"E
         </div>
-      </div>
+
     </div>
   </div>
 </section>
