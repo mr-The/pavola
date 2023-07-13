@@ -623,9 +623,20 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.btn-centr{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
 .panorama-block .btn_group{
   padding-top: 30px;
 }
+.revers-wraper-box{
+  flex-direction: row-reverse!important;
+}
+
 .btn_group .btn {
   border: 0;
   color: #184b67;
@@ -1037,6 +1048,7 @@ template {
   background-color: #184b67;;
   color:white;
   padding: 10px 25px;
+  border-radius: 10px;
 }
 .important span::before{
   display: block;                   
@@ -1056,6 +1068,9 @@ template {
   top:50%;
   left: 110px; 
 }
+.number-block{
+  justify-content: center;
+}
 .number_image {
   display: block;
   height: 500px;
@@ -1066,12 +1081,18 @@ template {
   flex-direction: row;
   align-content: space-between;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  justify-items: center;
 }
+.number_conteiner_text{
+  width: 45%;
+}
+
 .number_group_text {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  padding: 15px 0;
 }
 .tree_photo-image {
   max-width: 360px;
@@ -2372,7 +2393,27 @@ footer .footer-wrap .footer_content {
   align-items: flex-start;
   /* padding: 50px 0; */
 }
-
+.four-col-text-block{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  padding: 100px 0;
+}
+.four-col-text-box{
+  text-align: center;
+  vertical-align: middle;
+  width: 25%;
+}
+.four-col-title{
+  border-bottom-width:1px;
+  border-bottom-style: solid;
+  border-bottom-color: #12405a;
+  padding: 20px 0;
+}
+.four-col-description{
+  padding: 20px 0;
+}
 @media screen and (max-width: 992px) {
   footer .footer-wrap .footer_content {
     -ms-flex-wrap: wrap;

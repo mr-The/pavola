@@ -78,7 +78,7 @@ get_header();
 
 
 
-<!-- Номера -->
+<!-- Номера 01 -->
 <section class="number-block">
   <div class='number-box-wraper container'>
     <div class='number_conteiner_image'>
@@ -91,40 +91,272 @@ get_header();
         <div class='number_icon_block'>
           <img class='number_icon' scr="../images/Tilda_Icons_41_hotel_couple.svg" style='width:55px;' alt='icon'>
         </div>
-        <div class='number_title_block'>
-          <h3>
-            Двухместные номера.<br>Площадь 24 кв.м.
-          </h3>
-        </div>
-        <div class='number_text_block'>
-          <p>
-            Достаточно просторные, чтобы разместиться вдвоем. Детская кроватка — по запросу.
-          </p>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+              Двухместные номера.<br>Площадь 24 кв.м.
+            </h3>
+          </div>
+          <div class='number_text_block'>
+            <p>
+              Достаточно просторные, чтобы разместиться вдвоем. Детская кроватка — по запросу.
+            </p>
+          </div>
         </div>
       </div>
+      
 
       <div class='number_group_text'>
         <div class='number_icon_block'>
           <img class='number_icon' scr="../images/Tilda_Icons_41_hotel_lux.svg" style='width:55px;' alt='icon'>
         </div>
-        <div class='number_title_block'>
+        <div class='number_text-box'>
+         <div class='number_title_block'>
           <h3>
-            Двухместные номера.<br>Площадь 24 кв.м.
+           Номера категории «люкс» и «полулюкс».
+           <br>Площадь 48 кв.м.
           </h3>
         </div>
         <div class='number_text_block'>
           <p>
-            Достаточно просторные, чтобы разместиться вдвоем. Детская кроватка — по запросу.
+           Двухкомнатные номера с живописным видом на Ладожское озеро.
           </p>
+        </div>
         </div>
       </div>
 
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' scr="../images/Tilda_Icons_41_hotel_tv.svg" style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+        <div class='number_title_block'>
+          <h3>
+           Современная техника и Smart TV
+          </h3>
+        </div>
+        <div class='number_text_block'>
+          <p>
+           Смотрите телевизор, если вдруг устанете смотреть на карельские пейзажи.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' scr="../images/Tilda_Icons_41_hotel_cleaning.svg" style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+             Обслуживание номеров
+            </h3>
+          </div>
+          <div class='number_text_block'>
+          <p>
+            Наши горничные позаботятся о том, чтобы в вашем номере всегда было чисто и комфортно.
+          </p>
+        </div>
+       </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  <div class="btn-centr">
+    <div class="btn_group .panorama-block ">
+        <button class="popup-with-zoom-anim btn btn-callback" data-mfp-src="#order_back">Забронировать</button>
+      </div>
     </div>
+</section>
+
+<!-- Номера 02 -->
+<section class="number-block">
+  <div class='number-box-wraper revers-wraper-box container'>
+    <div class='number_conteiner_image'>
+      <img class='number_image' scr="<?php echo get_template_directory() . '/images/IMG_0580_1_1.jpg' ?>" alt="">
+    </div>
+
+    <div class='number_conteiner_text'>
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' scr="../images/nomer2-1.svg" style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+            Четырехместные номера.
+            <br>Площадь 100 кв.м.
+            </h3>
+          </div>
+          <div class='number_text_block'>
+            <p>
+            Две спальни — для семейных пар с детьми или небольших компаний.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' scr="../images/nomer2-2.svg" style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+         <div class='number_title_block'>
+          <h3>
+          Зона барбекю
+          </h3>
+        </div>
+        <div class='number_text_block'>
+          <p>
+          Патио с зоной барбекю и обеденным столом.
+          </p>
+        </div>
+        </div>
+      </div>
+
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' scr="../images/nomer2-3.svg" style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+        <div class='number_title_block'>
+          <h3>
+          Оборудованная кухня-гостиная
+          </h3>
+        </div>
+        <div class='number_text_block'>
+          <p>
+          Просторная кухня-гостиная для приятных вечеров с близкими.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' scr="../images/nomer2-4.svg" style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+            Отдельные санузлы
+            </h3>
+          </div>
+          <div class='number_text_block'>
+          <p>
+          Два санузла — по одному на каждом этаже.
+          </p>
+        </div>
+       </div>
+        </div>
+      </div>
   </div>
   </div>
+  <div class="btn-centr">
+    <div class="btn_group .panorama-block ">
+        <button class="popup-with-zoom-anim btn btn-callback" data-mfp-src="#order_back">Забронировать</button>
+      </div>
+    </div>
 </section>
 
 
+<!-- Номера 03 -->
+<section class="number-block">
+  <div class='number-box-wraper container'>
+    <div class='number_conteiner_image'>
+      <img class='number_image' scr="<?php echo get_template_directory() . '/images/IMG_0580_1_1.jpg' ?>" alt="">
+    </div>
+
+    <div class='number_conteiner_text'>
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' scr="../images/nomer3-1.svg" style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+            Шестиместные коттеджи.
+             <br>Площадь 200 кв.м.
+            </h3>
+          </div>
+          <div class='number_text_block'>
+            <p>
+            Три спальни с ванными комнатами — для большой семьи или компании друзей. 
+            </p>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' scr="../images/nomer3-2.svg" style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+         <div class='number_title_block'>
+          <h3>
+           Сауна
+          </h3>
+        </div>
+        <div class='number_text_block'>
+          <p>
+          Идеально для релакса после долгой прогулки на свежем карельском воздухе.
+          </p>
+        </div>
+        </div>
+      </div>
+
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' scr="../images/nomer3-3.svg" style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+        <div class='number_title_block'>
+          <h3>
+           Камин
+          </h3>
+        </div>
+        <div class='number_text_block'>
+          <p>
+          Настоящий камин в центре просторной гостиной.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' scr="../images/nomer3-4.svg" style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+            Терраса с камином и видом на закаты
+            </h3>
+          </div>
+          <div class='number_text_block'>
+          <p>
+          Просторная терраса с барбекю-зоной и незабываемыми видами.
+          </p>
+        </div>
+       </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  <div class="btn-centr">
+    <div class="btn_group .panorama-block ">
+        <button class="popup-with-zoom-anim btn btn-callback" data-mfp-src="#order_back">Забронировать</button>
+      </div>
+    </div>
+</section>
 <!-- Слайдер -->
 
 
