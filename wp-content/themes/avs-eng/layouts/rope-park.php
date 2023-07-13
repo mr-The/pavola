@@ -32,13 +32,13 @@ get_header();
 <div class="tree_photo ">
   <div class="tree_photo-block">
       <div class="tree_photo-image-block">
-        <img class="tree-photo-image" scr="../images/rope_park1.jpg">
+        <img class="tree-photo-image" src="<?php bloginfo('template_url'); ?>/images/rope_park1.jpg">
       </div>
       <div class="tree_photo-image-block">
-        <img class="tree-photo-image" scr="../images/rope_park2.jpg">
+        <img class="tree-photo-image" src="<?php bloginfo('template_url'); ?>/images/rope_park2.jpg">
       </div>
       <div class="tree_photo-image-block">
-        <img class="tree-photo-image" scr="../images/rope_park3.jpg">
+        <img class="tree-photo-image" src="<?php bloginfo('template_url'); ?>/images/rope_park3.jpg">
       </div>
   </div>
 </div>
