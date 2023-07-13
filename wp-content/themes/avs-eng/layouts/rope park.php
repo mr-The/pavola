@@ -60,6 +60,42 @@ get_header();
           </p>
         </div>
       </div>
+      <div class="four-col-text-box" >
+        <div class="four-col-title" >
+          <h3>
+          16 метров
+          </h3>
+        </div>
+        <div class="four-col-description" >
+          <p>
+          Самая высокая точка
+          </p>
+        </div>
+      </div>
+      <div class="four-col-text-box" >
+        <div class="four-col-title" >
+          <h3>
+          6 человек
+          </h3>
+        </div>
+        <div class="four-col-description" >
+          <p>
+          Максимальное количество участников
+          </p>
+        </div>
+      </div>
+      <div class="four-col-text-box" >
+        <div class="four-col-title" >
+          <h3>
+          Не менее 1.5 метров
+          </h3>
+        </div>
+        <div class="four-col-description" >
+          <p>
+          Соблюдение мер социальной дистанции не менее 1.5 м
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
