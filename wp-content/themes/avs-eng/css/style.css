@@ -1004,6 +1004,82 @@ template {
   z-index: -1;
 }
 
+.icons-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.icons-grid_col{
+    display: inline;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+    gap: 50px;
+}
+.t-align_left {
+  text-align: left;
+}
+.icons-block{
+  padding: 50px 0;
+}
+.icons-grid_title{
+  padding-bottom: 10px;
+}
+.important{
+  text-align: center; 
+  width: 80%;          
+  margin: 0 auto;    
+  overflow: hidden;   
+}
+.important span{
+  position: relative;
+  background-color: #184b67;;
+  color:white;
+  padding: 10px 25px;
+}
+.important span::before{
+  display: block;                   
+  width:1000px;                  
+  content: '';                    
+  position: absolute;              
+  border-bottom: 1px solid #184b67;  
+  top:50%;                         
+  right: 110px; 
+}
+.important span::after{
+  display: block;
+  width:1000px;
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid #184b67;
+  top:50%;
+  left: 110px; 
+}
+.number_image {
+  display: block;
+  height: 500px;
+  width: 500px;
+}
+.number-box-wraper{
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.number_group_text {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.tree_photo-image {
+  max-width: 360px;
+  height: 360px;
+  margin-bottom: 20px;
+}
+
+
 .inputfile+label {
   max-width: 80%;
   color: #184b67;
@@ -1138,6 +1214,10 @@ header {
   -o-object-fit: contain;
   object-fit: contain;
 }
+.line {
+border-top: 1px solid #184b67;
+
+}
 
 .top_nav {
   color: #184b67;
@@ -1172,6 +1252,24 @@ header {
 .top_nav nav ul li {
   display: inline-block;
 }
+.tree_photo-block{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 360px;
+  background: #ff0;
+
+}
+.tree_photo-image-block {
+    max-width: 360px;
+    height: 360px;
+    margin-bottom: 20px;
+    background: #12405a;
+}
+.tree-photo-image{
+  max-width: 360px;
+  height: 360px;
+}
 
 @media screen and (max-width: 992px) {
   .top_nav nav ul li {
@@ -1205,7 +1303,11 @@ header {
 .col {
   padding: 0 150px;
 }
-
+@media screen and (max-width: 992px) {
+  .col {
+  padding: 0 10px;
+  }
+}
 .top_nav nav ul li a {
   color: #184b67;
   font-family: "Open Sans";
@@ -2448,6 +2550,12 @@ hr::before {
   background-position: center;
 }
 
+@media screen and (max-width: 992px) {
+  .panorama-block {
+    height: 500px;
+  }
+}
+
 .panorama-block .description {
   position: absolute;
   z-index: 10;
@@ -2510,6 +2618,11 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
+@media screen and (max-width: 992px) {
+  .impressions-block .grid {
+    margin: 10px;
+  }
+}
 
 
 .impressions-block .grid .grid-item {
@@ -2569,9 +2682,10 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
 }
 
-@media screen and (max-width: 692px) {
+@media screen and (max-width: 992px) {
   .options-block .grid {
     grid-template-columns: 1fr;
+    margin: 10px;
   }
 }
 

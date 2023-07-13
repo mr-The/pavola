@@ -5,8 +5,114 @@ Template Name: Номера
 
 get_header();
 
-// Панорамное изображение
+// Важно
 ?>
+<div class="important container">
+  <span>
+    ВАЖНО
+  </span>
+</div>
+
+<div class="line container"></div>
+<!-- Блок с иконками-->
+
+<section class="icons-block">
+<div class="icons-grid">
+  <ul class="icons-grid container">
+    <li class="icons-grid_col">
+      <div class="icons-grid_col t-align_left">
+        <img class="icons-grid_img" scr="<?php echo get_template_directory() . '/images/store_24.svg' ?>" style='width:55px;' alt='icons'> 
+        <div class="icons-grid_title"><h3>Круглосуточная стойка администрации
+         </h3></div>
+        <div class="icons-grid_text"><p>Наши администраторы сделают все, чтобы ваш отдых был комфортным и незабываемым.
+         </p></div>
+      </div>
+    </li>
+    <li class="icons-grid_col">
+      <div class="icons-grid_col t-align_left">
+        <img class="icons-grid_img" scr="../images/Layer_3.svg" style='width:55px;' alt='icons'> 
+        <div class="icons-grid_title"><h3>Предоставляется бесплатный wi-fi
+         </h3></div>
+        <div class="icons-grid_text"><p>На случай, если вы хотите оставаться на связи, находясь в эпицентре карельской природы.
+         </p></div>
+      </div>
+    </li>
+    <li class="icons-grid_col">
+      <div class="icons-grid_col t-align_left">
+        <img class="icons-grid_img" scr="../images/Tilda_Icons_44_travel_bicycle.svg" style='width:55px;' alt='icons'> 
+        <div class="icons-grid_title"><h3>Прокат спортивного инвентаря
+         </h3></div>
+        <div class="icons-grid_text"><p>Велосипеды, самокаты, ролики и многое другое
+         </p></div>
+      </div>
+    </li>
+    <li class="icons-grid_col">
+      <div class="icons-grid_col t-align_left">
+        <img class="icons-grid_img" scr="../images/re_trees.svg" style='width:55px;' alt='icons'> 
+        <div class="icons-grid_title"><h3>Природа на расстоянии вытянутой руки
+         </h3></div>
+        <div class="icons-grid_text"><p>Живописные уголки территории словно вышли из закладок фотохостингов либо со страниц National Geographic.
+         </p></div>
+      </div>
+    </li>
+  </ul>
+</div>
+</section>
+
+
+
+<!-- Номера -->
+<section class="number-block">
+<div class='number-box-wraper container'>
+  <div class='number_conteiner_image'>
+    <img class='number_image'scr="<?php echo get_template_directory() . '/images/IMG_0580_1_1.jpg' ?>" alt="">
+  </div>
+  <div class='number_conteiner_text'>
+    <div class='number_group_text'>
+      <div class='number_icon_block' >
+        <img class='number_icon' scr="../images/Tilda_Icons_41_hotel_couple.svg" style='width:55px;' alt='icon'>
+      </div>
+      <div class='number_title_block'>
+        <h3>
+          Двухместные номера.<br>Площадь 24 кв.м.
+        </h3>
+      <div>
+      <div class='number_text_block'>
+        <p>
+        Достаточно просторные, чтобы разместиться вдвоем. Детская кроватка — по запросу.
+        </p>
+      <div>
+      </div>
+    </div>  
+    <div class='number_group_text'>
+      <div class='number_icon_block' >
+        <img class='number_icon' scr="../images/Tilda_Icons_41_hotel_lux.svg" style='width:55px;' alt='icon'>
+      </div>
+      <div class='number_title_block'>
+        <h3>
+          Двухместные номера.<br>Площадь 24 кв.м.
+        </h3>
+      <div>
+      <div class='number_text_block'>
+        <p>
+        Достаточно просторные, чтобы разместиться вдвоем. Детская кроватка — по запросу.
+        </p>
+      <div>
+      </div>
+    </div>  
+  </div> 
+</div>
+</section>
+
+
+<!-- Слайдер -->
+
+
+
+
+
+<!-- Панорамное изображение -->
+
 <section class="panorama-block">
   <?php $panorama_image = get_field('panorama_image'); ?>
   <?php if ($panorama_image): ?>
