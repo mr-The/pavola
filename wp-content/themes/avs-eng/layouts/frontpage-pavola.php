@@ -89,7 +89,6 @@ get_header();
       <?php foreach ($options as $option): ?>
         <div class="grid-item" style="background-image: url('<?php echo esc_url($option['image']); ?>');">
           <a href="<?php echo esc_url($option['link']); ?>">
-            <!-- <img src="<?php echo esc_url($option['image']); ?>" alt="<?php echo esc_attr($option['title']); ?>"> -->
             <div class="description">
               <?php echo wp_kses_post($option['description']); ?>
 
@@ -154,7 +153,6 @@ get_header();
           </div>
         </div>
       </div>
-      <div class="line"></div>
     </div>
     </div>
     <?php wp_reset_query(); ?>
