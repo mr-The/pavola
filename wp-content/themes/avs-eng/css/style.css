@@ -147,8 +147,8 @@ sup {
 /* Embedded content ========================================================================== */
 /** Add the correct display in IE 9-. */
 audio,
-video {
-  display: inline-block;
+.video{
+  padding: 170px 0;
 }
 
 /** Add the correct display in iOS 4-7. */
@@ -998,6 +998,10 @@ template {
   display: block;
 }
 
+.video{
+  align-items: center;
+}
+
 #call_back .sc_content {
   padding-top: 30%;
 }
@@ -1013,6 +1017,30 @@ template {
   overflow: hidden;
   position: absolute;
   z-index: -1;
+}
+.infoblock-inform-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  margin: 0 150px;
+  justify-content: space-between;
+  gap: 5px;
+}
+.infoblock-inform_singl{
+  width: 20%;
+  padding: 0 0 20px 0;
+}
+
+.infoblock-title{
+  text-align: center;
+}
+.infoblock-inform-image{
+  width: 100%;
+}
+.infoblock-image{
+  height: auto;
+  max-width: 100%;
 }
 
 .icons-grid {
@@ -1191,6 +1219,9 @@ template {
   vertical-align: middle;
   margin-right: 10px;
 }
+.inclusive{
+  padding: 20px 0 0 0 ;
+}
 
 header {
   -webkit-box-sizing: border-box;
@@ -1244,6 +1275,23 @@ border-top: 1px solid #184b67;
   color: #184b67;
   position: relative;
 }
+.tarif-box{
+  width: 720px;
+  margin: 0 auto;
+}
+.tarif-point{
+  border-bottom-width:1px;
+  border-bottom-style: solid;
+  border-bottom-color: #12405a;
+  padding: 20px 0;
+  text-align: center;
+  
+}
+.tarif-point-text-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 @media screen and (max-width: 992px) {
   .top_nav {
@@ -1277,13 +1325,12 @@ border-top: 1px solid #184b67;
   display: flex;
   flex-direction: row;
   gap: 10px;
-  background: #ff0;
+  
 
 }
 .tree_photo-image-block {
     height: 360px;
     margin-bottom: 20px;
-    background: #12405a;
     width: 33%;
 }
 .tree-photo-image{

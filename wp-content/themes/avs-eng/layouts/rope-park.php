@@ -100,6 +100,463 @@ get_header();
   </div>
 </section>
 
+
+
+<!-- Тарифная сетка -->
+
+<section class="tarif container">
+  <div class='tarif-box'>
+    <div class='tarif-point'>
+      <h3>Тарифная сетка (рублей, без НДС)</h3>
+     </div>
+     <div class='tarif-point'>
+      <div class='tarif-point-text-box'>
+      <div class='tarif-point-text'>
+        <p>
+          Тренировочная трасса (будние дни)
+        </p>
+       </div>	
+       <div class='tarif-point-price'>
+        <p>
+           1 000 р
+          </p>
+        </div>
+       </div>
+     </div>
+
+     <div class='tarif-point'>
+      <div class='tarif-point-text-box'>
+      <div class='tarif-point-text'>
+        <p>
+        Основная трасса (будние дни)
+        </p>
+       </div>	
+       <div class='tarif-point-price'>
+        <p>
+           2 000 р
+          </p>
+        </div>
+       </div>
+     </div>
+
+     <div class='tarif-point'>
+      <div class='tarif-point-text-box'>
+      <div class='tarif-point-text'>
+        <p>
+          Тренировочная трасса (выходные и праздничные дни)
+        </p>
+       </div>	
+       <div class='tarif-point-price'>
+        <p>
+           1 200 р
+          </p>
+        </div>
+       </div>
+     </div>
+
+     <div class='tarif-point'>
+      <div class='tarif-point-text-box'>
+      <div class='tarif-point-text'>
+        <p>
+        Основная трасса (выходные и праздничные дни)
+        </p>
+       </div>	
+       <div class='tarif-point-price'>
+        <p>
+           2 400 р
+          </p>
+        </div>
+       </div>
+     </div>
+
+     <div class='inclusive'>
+       <p>
+       В стоимость включено:<br>
+
+        Аренда экипировки, инструктаж перед маршрутом, сопровождение инструктора.
+       </p>
+     </div>
+  </div>
+
+</section>
+
+
+<!-- Видео -->
+<section class='video container  wp-caption-text' >
+<iframe width="960" height="540" src="https://www.youtube.com/embed/UxAK_T2hRTs" title="Видеоинструктаж перед прохождением веревочного парка «Тарулинна»" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe>
+</section>
+
+<!-- Информационный блок ( фото с мини статьями) -->
+<div class='infoblock'>
+  <div class='infoblock-title'>
+    <h2>Уединенный отдых в Карелии с возможностью активного досуга и приключений</h2>
+  </div>
+  <div class='infoblock-inform-box'>
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+
+    <div class='infoblock-inform_singl'>
+        <div class='infoblock-inform-image'>
+          <img class='infoblock-image' src="<?php bloginfo('template_url'); ?>/images/What_we_do.jpg" alt="">
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-predrisanie'>
+              <p>
+              НА ТЕРРИТОРИИ
+              </p>
+            </div> 
+            <div class='infoblock-inform-title'>
+              <h3>
+              Музей Густава Винтера
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Проследить за богатым прошлым дачи Винтера 
+              сегодня можно в стенах музея Густава Винтера 
+              на территории нашего парк-отеля. Бережно отреставрированные 
+              предметы интерьера времен Густава Винтера, архивные документы
+               и старые фотографии оживают в рассказах наших экскурсоводов.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+
+  </div>
+</div> 
 <?php
 // Блок "Текст"
 ?>
