@@ -107,46 +107,6 @@ add_filter('get_the_archive_title', function ($title) {
 /**
  * ДОБАВЛЕНИЕ ПОЛЬЗОВАТЕЛЬСКОГО ТИПА ЗАПИСЕЙ
  */
-function project()
-{
-
-   $labels = array(
-      'name' => 'Проекты',
-      'post type general name',
-      'singular_name' => 'Проекты',
-      'post type singular name',
-      'add_new' => 'Добавить проект',
-      'project',
-      'add_new_item' => 'Добавить новый проект',
-      'edit_item' => 'Редактировать проект',
-      'new_item' => 'Новый проект',
-      'all_items' => 'Все проекты',
-      'view_item' => 'Смотреть проект',
-      'search_items' => 'Найти проект',
-      'not_found' => 'Проекты не найдены',
-      'not_found_in_trash' => 'Нет удаленных проектов',
-      'parent_item_colon' => 'Parent Item',
-      'menu_name' => 'Проекты'
-   );
-
-   $args = array(
-      'labels' => $labels,
-      'menu_icon' => 'dashicons-archive',
-      'public' => true,
-      'has_archive' => true,
-      'publicly_queryable' => true,
-      'query_var' => true,
-      'rewrite' => true,
-      'capability_type' => 'post',
-      'hierarchical' => true,
-      'menu_position' => 5,
-      'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'project_category', 'revisions'),
-      'exclude_from_search' => false,
-   );
-
-   register_post_type('project', $args);
-}
-add_action('init', 'project');
 
 function useful_links()
 {
@@ -226,90 +186,6 @@ function how_to_get_there()
    register_post_type('how_to_get_there', $args);
 }
 add_action('init', 'how_to_get_there');
-
-function rewiew()
-{
-
-   $labels = array(
-      'name' => 'Отзывы',
-      'post type general name',
-      'singular_name' => 'Отзывы',
-      'post type singular name',
-      'add_new' => 'Добавить отзыв',
-      'rewiew',
-      'add_new_item' => 'Добавить новый отзыв',
-      'edit_item' => 'Редактировать отзыв',
-      'new_item' => 'Новый отзыв',
-      'all_items' => 'Все отзывы',
-      'view_item' => 'Смотреть отзыв',
-      'search_items' => 'Найти отзыв',
-      'not_found' => 'Отзывы не найдены',
-      'not_found_in_trash' => 'Нет удаленных отзывов',
-      'parent_item_colon' => 'Parent Item',
-      'menu_name' => 'Отзывы'
-   );
-
-   $args = array(
-      'labels' => $labels,
-      'menu_icon' => 'dashicons-format-status',
-      'public' => true,
-      'has_archive' => true,
-      'publicly_queryable' => true,
-      'query_var' => true,
-      'rewrite' => true,
-      'capability_type' => 'post',
-      'hierarchical' => true,
-      'menu_position' => 5,
-      'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'rewiew_category', 'revisions'),
-      'exclude_from_search' => false,
-   );
-
-   register_post_type('rewiew', $args);
-}
-add_action('init', 'rewiew');
-
-function service()
-{
-
-   $labels = array(
-      'name' => 'Блоки на главную',
-      'post type general name',
-      'singular_name' => 'Блоки на главную',
-      'post type singular name',
-      'add_new' => 'Добавить блок',
-      'service',
-      'add_new_item' => 'Добавить новый блок',
-      'edit_item' => 'Редактировать блок',
-      'new_item' => 'Новый блок',
-      'all_items' => 'Все блоки',
-      'view_item' => 'Смотреть блоки',
-      'search_items' => 'Найти блоки',
-      'not_found' => 'Блоки не найдены',
-      'not_found_in_trash' => 'Нет удаленных блоков',
-      'parent_item_colon' => 'Parent Item',
-      'menu_name' => 'Блоки'
-   );
-
-   $args = array(
-      'labels' => $labels,
-      'menu_icon' => 'dashicons-welcome-view-site',
-      'public' => true,
-      'has_archive' => true,
-      'publicly_queryable' => true,
-      'query_var' => true,
-      'rewrite' => true,
-      'capability_type' => 'post',
-      'hierarchical' => true,
-      'menu_position' => 5,
-      'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'service_category', 'revisions'),
-      'exclude_from_search' => false,
-   );
-
-   register_post_type('service', $args);
-}
-add_action('init', 'service');
-
-
 
 /**
  * Обрезка текста (excerpt). Шоткоды вырезаются. Минимальное значение maxchar может быть 22.

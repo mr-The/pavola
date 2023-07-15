@@ -5,7 +5,7 @@ $('.slider_init').slick({
     autoplaySpeed: 2000,
     dots: true,
     infinite: true,
-    speed: 300,
+    speed: 1000,
     arrows: false,
 });
 

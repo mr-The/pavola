@@ -1,10 +1,51 @@
 <?php
 /*
-Template Name: Номера
+Template Name: Проживание
 */
 
 get_header();
+?>
 
+
+<?php
+// Панорамное изображение
+?>
+<?php $panorama_image = get_field('panorama_image'); ?>
+<?php if ($panorama_image): ?>
+  <section class="panorama-block" style="background-image: url('<?php echo esc_url($panorama_image); ?>')">
+    <div class="description">
+      <h3>
+        <?php echo wp_kses_post(get_field('panorama_image_title')); ?>
+      </h3>
+      <p>
+        <?php echo wp_kses_post(get_field('panorama_image_description')); ?>
+      </p>
+      <div class="btn_group .panorama-block ">
+        <button class="popup-with-zoom-anim btn btn-callback" data-mfp-src="#order_back">Забронировать</button>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
+<?php
+// Блок "Текст"
+?>
+<section class="text-block">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>
+          <?php echo wp_kses_post(get_field('text_block_title')); ?>
+        </h2>
+        <div class="content">
+          <?php echo wp_kses_post(get_field('text_block_content')); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php
 // Важно
 ?>
 <div class="important container">
@@ -12,6 +53,24 @@ get_header();
     ВАЖНО
   </span>
 </div>
+
+<?php
+// Блок "Текст Важно"
+?>
+<section class="text-block">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>
+          <?php echo wp_kses_post(get_field('important_text_block_title')); ?>
+        </h2>
+        <div class="content">
+          <?php echo wp_kses_post(get_field('important_text_block_content')); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <div class="line container"></div>
 <!-- Блок с иконками-->
@@ -21,8 +80,8 @@ get_header();
     <ul class="icons-grid container">
       <li class="icons-grid_col">
         <div class="icons-grid_col t-align_left">
-          <img class="icons-grid_img" src="<?php bloginfo('template_url'); ?>/images/store_24.svg"
-            style='width:55px;' alt='icons' />
+          <img class="icons-grid_img" src="<?php bloginfo('template_url'); ?>/images/store_24.svg" style='width:55px;'
+            alt='icons' />
           <div class="icons-grid_title">
             <h3>Круглосуточная стойка администрации
             </h3>
@@ -35,7 +94,8 @@ get_header();
       </li>
       <li class="icons-grid_col">
         <div class="icons-grid_col t-align_left">
-          <img class="icons-grid_img" src="<?php bloginfo('template_url'); ?>/images/Layer_3.svg" style='width:55px;' alt='icons' />
+          <img class="icons-grid_img" src="<?php bloginfo('template_url'); ?>/images/Layer_3.svg" style='width:55px;'
+            alt='icons' />
           <div class="icons-grid_title">
             <h3>Предоставляется бесплатный wi-fi
             </h3>
@@ -48,7 +108,8 @@ get_header();
       </li>
       <li class="icons-grid_col">
         <div class="icons-grid_col t-align_left">
-          <img class="icons-grid_img" src="<?php bloginfo('template_url'); ?>/images/Tilda_Icons_44_travel_bicycle.svg" style='width:55px;' alt='icons'>
+          <img class="icons-grid_img" src="<?php bloginfo('template_url'); ?>/images/Tilda_Icons_44_travel_bicycle.svg"
+            style='width:55px;' alt='icons'>
           <div class="icons-grid_title">
             <h3>Прокат спортивного инвентаря
             </h3>
@@ -61,7 +122,8 @@ get_header();
       </li>
       <li class="icons-grid_col">
         <div class="icons-grid_col t-align_left">
-          <img class="icons-grid_img" src="<?php bloginfo('template_url'); ?>/images/re_trees.svg" style='width:55px;' alt='icons'>
+          <img class="icons-grid_img" src="<?php bloginfo('template_url'); ?>/images/re_trees.svg" style='width:55px;'
+            alt='icons'>
           <div class="icons-grid_title">
             <h3>Природа на расстоянии вытянутой руки
             </h3>
@@ -76,9 +138,46 @@ get_header();
   </div>
 </section>
 
+<!-- Номера -->
 
+<?php
+// Панорамное изображение
+?>
+<?php $panorama_image = get_field('panorama_image'); ?>
+<?php if ($panorama_image): ?>
+  <section class="panorama-block" style="background-image: url('<?php echo esc_url($panorama_image); ?>')">
+    <div class="description">
+      <h3>
+        <?php echo wp_kses_post(get_field('panorama_image_title')); ?>
+      </h3>
+      <p>
+        <?php echo wp_kses_post(get_field('panorama_image_description')); ?>
+      </p>
+      <div class="btn_group .panorama-block ">
+        <button class="popup-with-zoom-anim btn btn-callback" data-mfp-src="#order_back">Забронировать</button>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
 
-<!-- Номера 01 -->
+<?php
+// Блок "Текст"
+?>
+<section class="text-block">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>
+          <?php echo wp_kses_post(get_field('text_block_title')); ?>
+        </h2>
+        <div class="content">
+          <?php echo wp_kses_post(get_field('text_block_content')); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="number-block">
   <div class='number-box-wraper container'>
     <div class='number_conteiner_image'>
@@ -89,7 +188,8 @@ get_header();
 
       <div class='number_group_text'>
         <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Tilda_Icons_41_hotel_couple.svg" style='width:55px;' alt='icon'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Tilda_Icons_41_hotel_couple.svg"
+            style='width:55px;' alt='icon'>
         </div>
         <div class='number_text-box'>
           <div class='number_title_block'>
@@ -108,7 +208,8 @@ get_header();
 
       <div class='number_group_text'>
         <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Tilda_Icons_41_hotel_lux.svg" style='width:55px;' alt='icon'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Tilda_Icons_41_hotel_lux.svg"
+            style='width:55px;' alt='icon'>
         </div>
         <div class='number_text-box'>
           <div class='number_title_block'>
@@ -128,7 +229,8 @@ get_header();
 
       <div class='number_group_text'>
         <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Tilda_Icons_41_hotel_tv.svg" style='width:55px;' alt='icon'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Tilda_Icons_41_hotel_tv.svg"
+            style='width:55px;' alt='icon'>
         </div>
         <div class='number_text-box'>
           <div class='number_title_block'>
@@ -146,7 +248,8 @@ get_header();
 
       <div class='number_group_text'>
         <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Tilda_Icons_41_hotel_cleaning.svg" style='width:55px;' alt='icon'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Tilda_Icons_41_hotel_cleaning.svg"
+            style='width:55px;' alt='icon'>
         </div>
         <div class='number_text-box'>
           <div class='number_title_block'>
@@ -171,101 +274,69 @@ get_header();
   <hr>
 </section>
 
-<!-- Номера 02 -->
-<section class="number-block">
-  <div class='number-box-wraper revers-wraper-box container'>
-    <div class='number_conteiner_image'>
-      <img class='number_image' src="<?php bloginfo('template_url'); ?>/images/IMG_0580_1_1.jpg" alt="">
-    </div>
-
-    <div class='number_conteiner_text'>
-
-      <div class='number_group_text'>
-        <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer2-1.svg" style='width:55px;' alt='icon'>
-        </div>
-        <div class='number_text-box'>
-          <div class='number_title_block'>
-            <h3>
-              Четырехместные номера.
-              <br>Площадь 100 кв.м.
-            </h3>
-          </div>
-          <div class='number_text_block'>
-            <p>
-              Две спальни — для семейных пар с детьми или небольших компаний.
-            </p>
-          </div>
-        </div>
+<!-- Слайдер -->
+<?php if (get_field('numbers_slider')): ?>
+  <div class="contaniner">
+    <div class="row">
+      <div class="col">
+        <section class="main-slider">
+          <div class="slider_init">
+            <?php while (has_sub_field('numbers_slider')): ?>
+              <!-- start slide -->
+              <div class="item">
+                <?php if (get_sub_field('upload-image')): ?>
+                  <img src="<?php the_sub_field('upload-image'); ?>" alt="">
+                <?php endif; ?>
+                <!-- end slide -->
+              </div>
+            <?php endwhile; ?>
+        </section>
       </div>
-
-
-      <div class='number_group_text'>
-        <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer2-2.svg" style='width:55px;' alt='icon'>
-        </div>
-        <div class='number_text-box'>
-          <div class='number_title_block'>
-            <h3>
-              Зона барбекю
-            </h3>
-          </div>
-          <div class='number_text_block'>
-            <p>
-              Патио с зоной барбекю и обеденным столом.
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class='number_group_text'>
-        <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer2-3.svg" style='width:55px;' alt='icon'>
-        </div>
-        <div class='number_text-box'>
-          <div class='number_title_block'>
-            <h3>
-              Оборудованная кухня-гостиная
-            </h3>
-          </div>
-          <div class='number_text_block'>
-            <p>
-              Просторная кухня-гостиная для приятных вечеров с близкими.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class='number_group_text'>
-        <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer2-4.svg" style='width:55px;' alt='icon'>
-        </div>
-        <div class='number_text-box'>
-          <div class='number_title_block'>
-            <h3>
-              Отдельные санузлы
-            </h3>
-          </div>
-          <div class='number_text_block'>
-            <p>
-              Два санузла — по одному на каждом этаже.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="btn-centr">
-    <div class="btn_group .panorama-block ">
-      <button class="popup-with-zoom-anim btn btn-callback" data-mfp-src="#order_back">Забронировать</button>
     </div>
   </div>
   <hr>
+<?php endif; ?>
+
+<!-- Коттеджи -->
+
+<?php
+// Панорамное изображение
+?>
+<?php $panorama_image = get_field('panorama_image'); ?>
+<?php if ($panorama_image): ?>
+  <section class="panorama-block" style="background-image: url('<?php echo esc_url($panorama_image); ?>')">
+    <div class="description">
+      <h3>
+        <?php echo wp_kses_post(get_field('panorama_image_title')); ?>
+      </h3>
+      <p>
+        <?php echo wp_kses_post(get_field('panorama_image_description')); ?>
+      </p>
+      <div class="btn_group .panorama-block ">
+        <button class="popup-with-zoom-anim btn btn-callback" data-mfp-src="#order_back">Забронировать</button>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
+<?php
+// Блок "Текст"
+?>
+<section class="text-block">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>
+          <?php echo wp_kses_post(get_field('text_block_title')); ?>
+        </h2>
+        <div class="content">
+          <?php echo wp_kses_post(get_field('text_block_content')); ?>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<!-- Номера 03 -->
 <section class="number-block">
   <div class='number-box-wraper container'>
     <div class='number_conteiner_image'>
@@ -276,7 +347,8 @@ get_header();
 
       <div class='number_group_text'>
         <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer3-1.svg" style='width:55px;' alt='icon'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer3-1.svg" style='width:55px;'
+            alt='icon'>
         </div>
         <div class='number_text-box'>
           <div class='number_title_block'>
@@ -296,7 +368,8 @@ get_header();
 
       <div class='number_group_text'>
         <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer3-2.svg" style='width:55px;' alt='icon'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer3-2.svg" style='width:55px;'
+            alt='icon'>
         </div>
         <div class='number_text-box'>
           <div class='number_title_block'>
@@ -315,7 +388,8 @@ get_header();
 
       <div class='number_group_text'>
         <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer3-3.svg" style='width:55px;' alt='icon'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer3-3.svg" style='width:55px;'
+            alt='icon'>
         </div>
         <div class='number_text-box'>
           <div class='number_title_block'>
@@ -333,7 +407,8 @@ get_header();
 
       <div class='number_group_text'>
         <div class='number_icon_block'>
-          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer3-4.svg" style='width:55px;' alt='icon'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/nomer3-4.svg" style='width:55px;'
+            alt='icon'>
         </div>
         <div class='number_text-box'>
           <div class='number_title_block'>
@@ -358,110 +433,29 @@ get_header();
   </div>
   <hr>
 </section>
+
 <!-- Слайдер -->
-
-
-
-
-<!-- Панорамное изображение -->
-
-<section class="panorama-block">
-  <?php $panorama_image = get_field('panorama_image'); ?>
-  <?php if ($panorama_image): ?>
-    <img src="<?php echo esc_url($panorama_image); ?>" alt="">
-    <div class="description">
-      <h3>
-        <?php echo wp_kses_post(get_field('panorama_image_title')); ?>
-      </h3>
-      <p>
-        <?php echo wp_kses_post(get_field('panorama_image_description')); ?>
-      </p>
-      <div class="btn_group .panorama-block ">
-        <button class="popup-with-zoom-anim btn btn-callback" data-mfp-src="#order_back">Забронировать</button>
-      </div>
-    </div>
-  <?php endif; ?>
-</section>
-
-<?php
-// Блок "Текст"
-?>
-<section class="text-block">
-  <div class="container">
+<?php if (get_field('numbers_slider')): ?>
+  <div class="contaniner">
     <div class="row">
       <div class="col">
-        <h2>
-          <?php echo wp_kses_post(get_field('text_block_title')); ?>
-        </h2>
-        <div class="content">
-          <?php echo wp_kses_post(get_field('text_block_content')); ?>
-        </div>
+        <section class="main-slider">
+          <div class="slider_init">
+            <?php while (has_sub_field('numbers_slider')): ?>
+              <!-- start slide -->
+              <div class="item">
+                <?php if (get_sub_field('upload-image')): ?>
+                  <img src="<?php the_sub_field('upload-image'); ?>" alt="">
+                <?php endif; ?>
+                <!-- end slide -->
+              </div>
+            <?php endwhile; ?>
+        </section>
       </div>
     </div>
   </div>
-</section>
-
-<?php
-// Блок "Впечатления"
-?>
-<section class="impressions-block">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2>
-          <?php echo wp_kses_post(get_field('impressions_block_title')); ?>
-        </h2>
-      </div>
-    </div>
-  </div>
-  <?php $impressions = get_field('impressions_images'); ?>
-  <?php if ($impressions): ?>
-    <div class="grid">
-      <?php foreach ($impressions as $impression): ?>
-        <div class="grid-item">
-          <img src="<?php echo esc_url($impression['image']); ?>" alt="<?php echo esc_attr($impression['title']); ?>">
-          <div class="description">
-            <?php echo wp_kses_post($impression['description']); ?>
-          </div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  <?php endif; ?>
-</section>
-
-<?php
-// Блок "Варианты"
-?>
-<section class="options-block">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2>
-          <?php echo wp_kses_post(get_field('options_block_title')); ?>
-        </h2>
-      </div>
-    </div>
-  </div>
-  <?php $options = get_field('options_images'); ?>
-  <?php if ($options): ?>
-    <div class="grid">
-      <?php foreach ($options as $option): ?>
-        <div class="grid-item" style="background-image: url('<?php echo esc_url($option['image']); ?>');">
-          <a href="<?php echo esc_url($option['link']); ?>">
-            <!-- <img src="<?php echo esc_url($option['image']); ?>" alt="<?php echo esc_attr($option['title']); ?>"> -->
-            <div class="description">
-              <?php echo wp_kses_post($option['description']); ?>
-
-              <button class="options_button">Подробнее</button>
-
-            </div>
-          </a>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  <?php endif; ?>
-
-</section>
+  <hr>
+<?php endif; ?>
 
 <?php
 // Блок "Полезные ссылки"
