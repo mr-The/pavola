@@ -1001,6 +1001,11 @@ template {
 .video{
   align-items: center;
 }
+.video-text {
+  display: flex;
+  flex-direction: row;
+
+}
 
 #call_back .sc_content {
   padding-top: 30%;
@@ -1041,6 +1046,29 @@ template {
 .infoblock-image{
   height: auto;
   max-width: 100%;
+}
+.infoblock-marshrut-box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 90px 0;
+  justify-content: space-between;
+  gap: 10px;
+}
+.infoblock-inform_marshrut{
+  padding: 0 0 20px 0;
+  width: 30%;
+ 
+}
+#Library {
+  background-image: url('..images/marshrut.jpg');
+  height: 400px;
+  max-width: 100%;
+  background: #12405a;
+}
+
+#Library:hover {
+  background-image: url('..images/marshrut1.jpg');
 }
 
 .icons-grid {
@@ -1096,6 +1124,55 @@ template {
   top:50%;
   left: 110px; 
 }
+
+.num-box{
+  text-align: center;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    font-size: 22px;
+    color: #fff;
+    background-color:#003f22;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 50px;
+}
+.num-box-tur{
+  text-align: center;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  font-size: 22px;
+  color: #fff;
+  background-color:#003f22;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 50px;
+
+}
+.list-tur-title{
+  padding: 20px 0 20px 0;
+}
+.list-tur{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.list-tur-singl-box{
+  width: 50%;
+  padding: 30px 0 30px 0;
+}
+
+.number-main-title{
+  text-align: center;
+}
+
 .number-block{
   justify-content: center;
 }

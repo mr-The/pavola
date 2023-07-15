@@ -557,6 +557,335 @@ get_header();
 
   </div>
 </div> 
+
+<!-- Нумерация  -->
+
+<div class='num-box'>
+  <div class='num'>1</div>
+</div>
+
+
+<!-- Блок с картинкой меняется при наведении -->
+<div class='infoblock container'>
+  <div class='infoblock-marshrut-box'>
+      <div class='infoblock-inform_marshrut'>
+        <div class='infoblock-inform-image'>
+        <div id="Library"></div>
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-title'>
+              <h3>
+              СЕКРЕТЫ СОРТАВАЛА И ОКРЕСТНОСТЕЙ
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Тур для тех, кто хочет ближе узнать старинный город Сортавала, а также совершить трекинг к водопадам Белые мосты!<br>
+              ПРОДОЛЖИТЕЛЬНОСТЬ: 3-4 часа.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+    <div class='infoblock-inform_marshrut'>
+        <div class='infoblock-inform-image'>
+        <div id="Library"></div>
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-title'>
+              <h3>
+              СЕКРЕТЫ СОРТАВАЛА И ОКРЕСТНОСТЕЙ
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Тур для тех, кто хочет ближе узнать старинный город Сортавала, а также совершить трекинг к водопадам Белые мосты!<br>
+              ПРОДОЛЖИТЕЛЬНОСТЬ: 3-4 часа.
+              </p>
+            </div>
+        </div>   
+    </div>
+
+
+    <div class='infoblock-inform_marshrut'>
+        <div class='infoblock-inform-image'>
+        <div id="Library"></div>
+        </div>
+        <div class='infoblock-inform-text'>
+            <div class='infoblock-inform-title'>
+              <h3>
+              СЕКРЕТЫ СОРТАВАЛА И ОКРЕСТНОСТЕЙ
+              </h3>
+            </div>
+            <div class='infoblock-inform-description'>
+              <p>
+              Тур для тех, кто хочет ближе узнать старинный город Сортавала, а также совершить трекинг к водопадам Белые мосты!<br>
+              ПРОДОЛЖИТЕЛЬНОСТЬ: 3-4 часа.
+              </p>
+            </div>
+        </div>   
+    </div>
+ </div>
+</div>
+
+
+
+<!-- Блок текст с видео -->
+<section class='container'>
+  <div class='video-text'>
+   <div class='text-content'>
+      <p><strong>Продолжительность:</strong> 5 дней/4 ночи и 9 дней/8 ночей.<br>
+      <br>
+      <strong>Протяженность:</strong> более 1 000 км вокруг Ладожского озера<br>
+      <br>
+      <strong>Транспорт:</strong> собственный автомобиль / каршеринг / индивидуальный трансфер от «Игора Тур» (+ж/д — альтернатива).</p>
+    </div>
+     <div class='video-content'>
+        <iframe width="560" height="300" src="https://www.youtube.com/watch?v=Yrajz_FFnec&t=1s" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Блок со списком туров плитка  -->
+
+<section class='container'>
+ <div class='list-tur'>
+     <div class='list-tur-singl-box'>
+        <div class='num-box-tur'>
+          <div class='num'>1</div>
+        </div>
+        <div class='list-tur-text'>
+          <div class='list-tur-title'>
+            <h3>ФИНСКАЯ ДЕРЕВНЯ</h3>
+          </div>
+          <div class='list-tur-description'>
+            <p>
+             <strong>10 км / 30−60 минут</strong>
+               <br>
+               <br>Проходит по заснеженной лесной дороге до фундамента старого финского поселения
+            </p>
+          </div>
+        </div>
+     </div>
+
+    <div class='list-tur-singl-box'>
+        <div class='num-box-tur'>
+          <div class='num'>2</div>
+        </div>
+        <div class='list-tur-text'>
+          <div class='list-tur-title'>
+            <h3>ФИНСКАЯ ДЕРЕВНЯ</h3>
+          </div>
+          <div class='list-tur-description'>
+            <p>
+             <strong>10 км / 30−60 минут</strong>
+               <br>
+               <br>Проходит по заснеженной лесной дороге до фундамента старого финского поселения
+            </p>
+          </div>
+        </div>
+    </div>
+
+  
+    <div class='list-tur-singl-box'>
+        <div class='num-box-tur'>
+          <div class='num'>3</div>
+        </div>
+        <div class='list-tur-text'>
+          <div class='list-tur-title'>
+            <h3>ФИНСКАЯ ДЕРЕВНЯ</h3>
+          </div>
+          <div class='list-tur-description'>
+            <p>
+             <strong>10 км / 30−60 минут</strong>
+               <br>
+               <br>Проходит по заснеженной лесной дороге до фундамента старого финского поселения
+            </p>
+          </div>
+        </div>
+    </div>
+
+
+    <div class='list-tur-singl-box'>
+        <div class='num-box-tur'>
+          <div class='num'>4</div>
+        </div>
+        <div class='list-tur-text'>
+          <div class='list-tur-title'>
+            <h3>ФИНСКАЯ ДЕРЕВНЯ</h3>
+          </div>
+          <div class='list-tur-description'>
+            <p>
+             <strong>10 км / 30−60 минут</strong>
+               <br>
+               <br>Проходит по заснеженной лесной дороге до фундамента старого финского поселения
+            </p>
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- Техника -->
+
+<section class="number-block">
+  <div class='number-main-title'>
+   <h3>SKI DOO TUNDRA 550F</h3>
+  </div>
+  <div class='number-box-wraper container'>
+    <div class='number_conteiner_image'>
+      <img class='number_image' src="<?php bloginfo('template_url'); ?>/images/tehnica1.png" alt="">
+    </div>
+
+    <div class='number_conteiner_text'>
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Group1.png"
+            style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+             КАЧЕСТВО
+            </h3>
+          </div>
+          <div class='number_text_block'>
+            <p>
+            Ski-Doo Tundra WT 550F — добротная «рабочая лошадка».
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Group2.png"
+            style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+             ПРОФЕССИОНАЛЬНОЕ ОБСЛУЖИВАНИЕ
+            </h3>
+          </div>
+          <div class='number_text_block'>
+            <p>
+             Каждый снегоход проходит регулярное техническое обслуживание, а также тщательный осмотр и проверку работы агрегатов после каждого заезда
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Group3.png"
+            style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+             КАРЕЛЬСКИЙ СТАНДАРТ
+            </h3>
+          </div>
+          <div class='number_text_block'>
+            <p>
+             Широкая гусеница обладает непревзойденными качествами при движении по глубокому снегу на низкой скорости. Идеально для карельских лесов.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    
+    </div>
+  </div>
+  
+  <!-- <hr> -->
+
+
+
+  <div class='number-main-title'>
+   <h3>LYNX 59 YETI 600 ACE</h3>
+  </div>
+  <div class='number-box-wraper container'>
+    <div class='number_conteiner_image'>
+      <img class='number_image' src="<?php bloginfo('template_url'); ?>/images/tehnica2.jpg" alt="">
+    </div>
+
+    <div class='number_conteiner_text'>
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Group1.png"
+            style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+             КАЧЕСТВО
+            </h3>
+          </div>
+          <div class='number_text_block'>
+            <p>
+            LYNX 59 YETI 600 ACE — один из самых комфортных снегоходов. Четырехтактный двигатель ROTAX 600 ACE объемом 600 куб. см.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Group2.png"
+            style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+             ПРОФЕССИОНАЛЬНОЕ ОБСЛУЖИВАНИЕ
+            </h3>
+          </div>
+          <div class='number_text_block'>
+            <p>
+             Каждый снегоход проходит регулярное техническое обслуживание, а также тщательный осмотр и проверку работы агрегатов после каждого заезда
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class='number_group_text'>
+        <div class='number_icon_block'>
+          <img class='number_icon' src="<?php bloginfo('template_url'); ?>/images/Group3.png"
+            style='width:55px;' alt='icon'>
+        </div>
+        <div class='number_text-box'>
+          <div class='number_title_block'>
+            <h3>
+             КАРЕЛЬСКИЙ СТАНДАРТ
+            </h3>
+          </div>
+          <div class='number_text_block'>
+            <p>
+             Широкая гусеница обладает непревзойденными качествами при движении по глубокому снегу на низкой скорости. Идеально для карельских лесов.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    
+    </div>
+  </div>
+  
+  <hr>
+  
+</section>
+
 <?php
 // Блок "Текст"
 ?>
