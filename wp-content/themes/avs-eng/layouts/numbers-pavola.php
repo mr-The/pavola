@@ -299,6 +299,7 @@ get_header();
                 <!-- end slide -->
               </div>
             <?php endwhile; ?>
+          </div>
         </section>
       </div>
     </div>
@@ -468,6 +469,7 @@ get_header();
                 <!-- end slide -->
               </div>
             <?php endwhile; ?>
+          </div>
         </section>
       </div>
     </div>

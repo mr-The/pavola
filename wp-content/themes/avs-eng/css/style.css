@@ -148,7 +148,7 @@ sup {
 /** Add the correct display in IE 9-. */
 audio,
 .video {
-  padding: 170px 0;
+  padding: 50px 0;
 }
 
 /** Add the correct display in iOS 4-7. */
@@ -1060,8 +1060,8 @@ template {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 90px 0;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin: 50px 0;
   gap: 10px;
 }
 
@@ -1073,13 +1073,8 @@ template {
 
 .library {
   background: #12405a;
-  background-image: url('../images/marshrut.jpg');
   height: 400px;
   max-width: 100%;
-}
-
-.library:hover {
-  background-image: url('../images/marshrut1.jpg');
 }
 
 .icons-grid {
@@ -1101,6 +1096,17 @@ template {
   text-align: left;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.label {
+  font-weight: bold;
+  opacity: .5;
+  margin: 0 10px 0 0;
+  border-bottom: 1px solid #022414;
+}
+
 .icons-block {
   padding: 50px 0;
 }
@@ -1119,7 +1125,7 @@ template {
 .important span {
   position: relative;
   background-color: #004123;
-  ;
+  text-transform: uppercase;
   color: white;
   padding: 10px 25px;
   border-radius: 10px;
@@ -1132,7 +1138,7 @@ template {
   position: absolute;
   border-bottom: 1px solid #004123;
   top: 50%;
-  right: 110px;
+  right: 90%;
 }
 
 .important span::after {
@@ -1142,7 +1148,12 @@ template {
   position: absolute;
   border-bottom: 1px solid #004123;
   top: 50%;
-  left: 110px;
+  left: 90%;
+}
+
+.important-content {
+  padding: 50px;
+  border-bottom: 1px solid #004123;
 }
 
 .num-box {
@@ -1373,11 +1384,6 @@ header {
   object-fit: contain;
 }
 
-.line {
-  border-top: 1px solid #004123;
-
-}
-
 .top_nav {
   color: #004123;
   position: relative;
@@ -1389,10 +1395,10 @@ header {
 }
 
 .tarif-point {
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: #12405a;
-  padding: 20px 0;
+  padding: 20px;
   text-align: center;
 
 }
@@ -1401,6 +1407,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.map_full iframe {
+  width: 100%;
 }
 
 @media screen and (max-width: 992px) {
@@ -1734,7 +1744,7 @@ body {
 .main-slider {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  height: 700px;
+  height: 500px;
   margin: 0 auto;
   width: 100%;
   margin-bottom: 30px;
@@ -1742,7 +1752,7 @@ body {
 
 .slider_init {
   overflow: hidden;
-  height: 700px;
+  height: 500px;
   position: relative;
 }
 
@@ -1760,6 +1770,7 @@ body {
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
+  height: 500px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -2560,7 +2571,7 @@ footer .footer-wrap .footer_content {
   flex-direction: row;
   gap: 50px;
   justify-content: center;
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .four-col-text-box {
@@ -2985,7 +2996,7 @@ h2 {
 }
 
 .useful_link .link {
-  min-height: 200px;
+  min-height: 120px;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -3079,7 +3090,7 @@ h2 {
 }
 
 .text-block {
-  margin: 30px 0;
+  /* margin: 30px 0; */
 }
 
 

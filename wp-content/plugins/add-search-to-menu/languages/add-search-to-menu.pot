@@ -1786,7 +1786,7 @@ msgid "Search Button"
 msgstr ""
 
 #: ../includes/class-is-index-builder.php:84
-msgid "Post not found"
+msgid "Ничего не найдено..."
 msgstr ""
 
 #: ../includes/class-is-index-builder.php:164
