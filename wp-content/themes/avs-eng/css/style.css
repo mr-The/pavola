@@ -1108,53 +1108,13 @@ template {
 }
 
 .icons-block {
-  padding: 50px 0;
+  margin: 50px 0;
 }
 
 .icons-grid_title {
   padding-bottom: 10px;
 }
 
-.important {
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.important span {
-  position: relative;
-  background-color: #004123;
-  text-transform: uppercase;
-  color: white;
-  padding: 10px 25px;
-  border-radius: 10px;
-}
-
-.important span::before {
-  display: block;
-  width: 1000px;
-  content: '';
-  position: absolute;
-  border-bottom: 1px solid #004123;
-  top: 50%;
-  right: 90%;
-}
-
-.important span::after {
-  display: block;
-  width: 1000px;
-  content: '';
-  position: absolute;
-  border-bottom: 1px solid #004123;
-  top: 50%;
-  left: 90%;
-}
-
-.important-content {
-  padding: 50px;
-  border-bottom: 1px solid #004123;
-}
 
 .num-box {
   text-align: center;
@@ -1186,11 +1146,12 @@ template {
   overflow: hidden;
   white-space: nowrap;
   line-height: 50px;
-
+  margin-left: 0;
 }
 
 .list-tur-title {
   padding: 20px 0 20px 0;
+  text-transform: uppercase;
 }
 
 .list-tur {
@@ -1198,6 +1159,7 @@ template {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 8%;
+  margin-bottom: 30px;
 }
 
 .list-tur-singl-box {
@@ -1343,11 +1305,11 @@ template {
 header {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-top: 9px solid #004123;
+  /* border-top: 9px solid #004123; */
 }
 
 .top_cnt {
-  padding: 30px 0;
+  padding: 5px 0;
 }
 
 .tp_cnt-wrap {
@@ -1622,6 +1584,7 @@ header {
   font-weight: 600;
 }
 
+
 @media screen and (max-width: 680px) {
   .tel_block {
     display: none;
@@ -1754,6 +1717,11 @@ body {
   overflow: hidden;
   height: 500px;
   position: relative;
+}
+
+.photo-block {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -2254,6 +2222,47 @@ body {
   width: 100%;
   display: block;
   margin: 65px auto 0;
+}
+
+.important {
+  text-align: center;
+  width: 80%;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.important span {
+  position: relative;
+  background-color: #004123;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+}
+
+.important span::before {
+  display: block;
+  width: 1000px;
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid #004123;
+  top: 50%;
+  right: 99%;
+}
+
+.important span::after {
+  display: block;
+  width: 1000px;
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid #004123;
+  top: 50%;
+  left: 99%;
+}
+
+.important-content {
+  padding: 50px;
+  border-bottom: 1px solid #004123;
 }
 
 .merit {
@@ -2760,7 +2769,7 @@ hr::before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
-  height: 800px;
+  height: 700px;
   margin: 0 auto;
   width: 100%;
   background-size: cover;
@@ -3034,12 +3043,12 @@ h2 {
 }
 
 .accordion-item {
-  border-top: 1px solid #5b82af;
+  border-top: 1px solid #004123;
 }
 
 .accordion-heading {
   text-transform: uppercase;
-  color: #5b82af;
+  color: #004123;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3054,6 +3063,7 @@ h2 {
   max-height: 0;
   transition: all .5s;
   overflow: hidden;
+  padding: 0 40px;
 }
 
 .accordion-item.active .accordion-heading .plus-minus::after {
@@ -3068,7 +3078,7 @@ h2 {
 .accordion-item .accordion-heading .plus-minus::after {
   content: "";
   display: inline-block;
-  stroke: #5b82af;
+  stroke: #004123;
   height: 35px;
   width: 35px;
   background: url('../images/plus.svg') center no-repeat;
@@ -3080,13 +3090,14 @@ h2 {
 .accordion-item .accordion-heading:hover .plus-minus::after {
   border-radius: 50%;
   background: url('../images/plus-white.svg') center no-repeat;
-  background-color: #1e6fccf8;
+  background-color: #004123de;
   background-size: 30px;
 }
 
 .accordion-item.active .accordion-content {
   transition: all .5s;
   max-height: 1000px;
+  padding: 0 40px 40px 40px;
 }
 
 .text-block {

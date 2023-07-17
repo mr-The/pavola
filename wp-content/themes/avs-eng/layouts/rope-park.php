@@ -47,7 +47,9 @@ get_header();
 <?php if ($mini_articles[0]['upload-image']): ?>
   <div class='container infoblock'>
     <div class='infoblock-title'>
-      <h2>Уединенный отдых с возможностью активного досуга и приключений</h2>
+      <h2>
+        <?php the_field('mini_articles_title'); ?>
+      </h2>
     </div>
     <div class='infoblock-inform-box'>
       <?php while (has_sub_field('mini_articles')): ?>
@@ -86,7 +88,7 @@ get_header();
 <?php if ($tours[0]['upload-image']): ?>
   <div class="important container">
     <span>
-      Маршруты
+      <?php the_field('tours_title_important'); ?>
     </span>
   </div>
   <div class="container">
@@ -128,12 +130,7 @@ get_header();
 <?php $iframe = get_field('iframe_panorama'); ?>
 <?php if ($iframe): ?>
   <section class='video container  wp-caption-text'>
-    <?php echo wp_kses_post($iframe); ?>
-    <iframe width="960" height="540" src="https://www.youtube.com/embed/UxAK_T2hRTs"
-      title="Видеоинструктаж перед прохождением веревочного парка «Тарулинна»" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
+    <?php the_field('iframe_panorama'); ?>
   </section>
 <?php endif; ?>
 
@@ -157,10 +154,31 @@ get_header();
   <hr>
 <?php endif; ?>
 
+<?php
+// Блок "Текст"
+?>
+<?php $element = get_field('text_block_content'); ?>
+<?php if ($element): ?>
+  <section class="text-block">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>
+            <?php echo wp_kses_post(get_field('text_block_title_2')); ?>
+          </h2>
+          <div class="content">
+            <?php echo wp_kses_post(get_field('text_block_content_2')); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
 <!-- Блок 3 фото места -->
 <?php $photo_place = get_field('photo_place'); ?>
 <?php if ($photo_place[0]['upload-image']): ?>
-  <section class="photo-block container">
+  <section class="container photo-block">
     <div class="row">
       <div class="tree_photo">
         <div class="tree_photo-block">
@@ -198,10 +216,31 @@ get_header();
   <hr>
 <?php endif; ?>
 
+<?php
+// Блок "Текст"
+?>
+<?php $element = get_field('text_block_content'); ?>
+<?php if ($element): ?>
+  <section class="text-block">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>
+            <?php echo wp_kses_post(get_field('text_block_title_3')); ?>
+          </h2>
+          <div class="content">
+            <?php echo wp_kses_post(get_field('text_block_content_3')); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
 <!-- Блок еще 3 фото места -->
 <?php $photo_place_second = get_field('photo_place_second'); ?>
 <?php if ($photo_place_second[0]['upload-image']): ?>
-  <section class="photo-block container">
+  <section class="container photo-block">
     <div class="row">
       <div class="tree_photo">
         <div class="tree_photo-block">
@@ -222,9 +261,9 @@ get_header();
 <!-- Блок 4 колонки текст -->
 <?php $features = get_field('features'); ?>
 <?php if ($features[0]['title']): ?>
-  <div class="container">
-    <div class="row">
-      <section class="four-col-text">
+  <section class="four-col-text">
+    <div class="container">
+      <div class="row">
         <div class="four-col-text-block">
           <?php while (has_sub_field('features')): ?>
             <div class="four-col-text-box">
@@ -245,15 +284,37 @@ get_header();
             </div>
           <?php endwhile; ?>
         </div>
-    </div>
+      </div>
+  </section>
   </div>
+  </div>
+<?php endif; ?>
+
+<?php
+// Блок "Текст"
+?>
+<?php $element = get_field('text_block_content'); ?>
+<?php if ($element): ?>
+  <section class="text-block">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>
+            <?php echo wp_kses_post(get_field('text_block_title_4')); ?>
+          </h2>
+          <div class="content">
+            <?php echo wp_kses_post(get_field('text_block_content_4')); ?>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 <?php endif; ?>
 
 <!-- Блок еще 3 фото места -->
 <?php $photo_place_three = get_field('photo_place_three'); ?>
 <?php if ($photo_place_three[0]['upload-image']): ?>
-  <section class="photo-block container">
+  <section class="container photo-block">
     <div class="row">
       <div class="tree_photo">
         <div class="tree_photo-block">
@@ -271,6 +332,51 @@ get_header();
   </section>
 <?php endif; ?>
 
+<!-- Блок "Авторские туры"  -->
+<?php $author_tours = get_field('author_tours'); ?>
+<?php if ($author_tours[0]['title']): ?>
+  <?php $count = 1 ?>
+  <section class='container'>
+    <div class="row">
+      <div class="col">
+        <div class="wp-caption-text">
+          <h2>
+            <?php the_field('author_tours_main_title'); ?>
+          </h2>
+        </div>
+        <div class='list-tur'>
+          <?php while (has_sub_field('author_tours')): ?>
+            <div class='list-tur-singl-box'>
+              <div class='num-box-tur'>
+                <div class='num'>
+                  <?= $count ?>
+                </div>
+              </div>
+              <div class='list-tur-text'>
+                <div class='list-tur-title'>
+                  <h3>
+                    <?php the_sub_field('title'); ?>
+                  </h3>
+                </div>
+                <div class='list-tur-description'>
+                  <p>
+                    <strong>
+                      <?php the_sub_field('time'); ?>
+                    </strong>
+                    <br><br>
+                    <?php the_sub_field('description'); ?>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <?php $count++ ?>
+          <?php endwhile; ?>
+        </div>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
 <?php
 // Аккордеон "Программа тура"
 ?>
@@ -278,25 +384,29 @@ get_header();
 <?php if ($tours_program): ?>
   <section>
     <div class="container">
-      <div class="wp-caption-text">
-        <h3 class="uppercase">
-          Программа тура
-        </h3>
-      </div>
-      <div class="accordion">
-        <?php foreach ($tours_program as $elem): ?>
-          <!-- start block -->
-          <div class="accordion-item">
-            <div class="accordion-heading">
-              <?php echo wp_kses_post($elem['tours_program_title']); ?>
-              <span class="plus-minus"></span>
-            </div>
-            <div class="accordion-content">
-              <?php echo wp_kses_post($elem['tours_program_description']); ?>
-            </div>
+      <div class="row">
+        <div class="col">
+          <div class="wp-caption-text">
+            <h3 class="uppercase">
+              <?php the_field('tours_program_main_title'); ?>
+            </h3>
           </div>
-          <!-- end block -->
-        <?php endforeach; ?>
+          <div class="accordion">
+            <?php foreach ($tours_program as $elem): ?>
+              <!-- start block -->
+              <div class="accordion-item">
+                <div class="accordion-heading">
+                  <?php echo wp_kses_post($elem['tours_program_title']); ?>
+                  <span class="plus-minus"></span>
+                </div>
+                <div class="accordion-content">
+                  <?php echo wp_kses_post($elem['tours_program_description']); ?>
+                </div>
+              </div>
+              <!-- end block -->
+            <?php endforeach; ?>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -305,43 +415,45 @@ get_header();
 <!-- Ключевые точки тура -->
 <?php $tours_feature = get_field('tours_feature'); ?>
 <?php if ($tours_feature[0]['upload-image']): ?>
-  <div class="important container">
-    <span>
-      Ключевые точки тура
-    </span>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="icons-block">
-          <?php the_field('preview'); ?>
+  <div>
+    <div class="important container">
+      <span>
+        <?php the_field('tours_feature_important'); ?>
+      </span>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="icons-block">
+            <?php the_field('preview'); ?>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class='infoblock container row'>
-    <div class='infoblock-marshrut-box'>
-      <?php while (has_sub_field('tours_feature')): ?>
-        <div class='infoblock-inform_marshrut'>
-          <div class='infoblock-inform-image'>
-            <div class="library" style="background-image: url(<?php the_sub_field('upload-image'); ?>);"></div>
-          </div>
-          <div class='infoblock-inform-text'>
-            <div class='infoblock-inform-title'>
-              <h3 class="uppercase">
-                <?php the_sub_field('title'); ?>
-              </h3>
+    <div class='infoblock container row'>
+      <div class='infoblock-marshrut-box'>
+        <?php while (has_sub_field('tours_feature')): ?>
+          <div class='infoblock-inform_marshrut'>
+            <div class='infoblock-inform-image'>
+              <div class="library" style="background-image: url(<?php the_sub_field('upload-image'); ?>);"></div>
             </div>
-            <div class='infoblock-inform-description'>
-              <p>
-                <?php the_sub_field('description'); ?>
-              </p>
+            <div class='infoblock-inform-text'>
+              <div class='infoblock-inform-title'>
+                <h3 class="uppercase">
+                  <?php the_sub_field('title'); ?>
+                </h3>
+              </div>
+              <div class='infoblock-inform-description'>
+                <p>
+                  <?php the_sub_field('description'); ?>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      <?php endwhile; ?>
+        <?php endwhile; ?>
+      </div>
+      <hr>
     </div>
-    <hr>
   </div>
 <?php endif; ?>
 
@@ -408,7 +520,7 @@ get_header();
 <?php endif; ?>
 
 <?php
-// Блок "Ограничения"
+// Блок "Текст внизу страницы(ограничения)"
 ?>
 <?php if (get_field('restrictions')): ?>
   <section class="text-block">
