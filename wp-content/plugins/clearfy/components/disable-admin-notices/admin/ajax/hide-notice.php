@@ -1,50 +1,63 @@
 <?php
-	/**
-	 * Hides notifications
-	 * @author Webcraftic <wordpress.webraftic@gmail.com>
-	 * @copyright (c) 12.01.2018, Webcraftic
-	 * @version 1.0
-	 */
+/**
+ * Hides notifications
+ *
+ * Github: https://github.com/alexkovalevv
+ *
+ * @author        Alexander Kovalev <alex.kovalevv@gmail.com>
+ * @copyright (c) 2018 Webraftic Ltd
+ * @version       1.0
+ */
 
-	// Exit if accessed directly
-	if( !defined('ABSPATH') ) {
-		exit;
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+function wbcr_dan_ajax_hide_notices() {
+	check_ajax_referer( WDN_Plugin::app()->getPluginName() . '_ajax_hide_notices_nonce', 'security' );
+
+	if ( current_user_can( 'manage_options' ) || current_user_can( 'manage_network' ) ) {
+		$notice_id   = WDN_Plugin::app()->request->post( 'notice_id', null, true );
+		$notice_html = WDN_Plugin::app()->request->post( 'notice_html', null );
+		$hide_target = WDN_Plugin::app()->request->post( 'target', 'user' );
+		//$notice_text = wp_kses( $notice_html, [] );
+
+		if ( empty( $notice_id ) ) {
+			wp_send_json_error( [ 'error_message' => __( 'Undefinded notice id.', 'disable-admin-notices' ) ] );
+		}
+
+		switch ( $hide_target ) {
+			case 'all':
+				$get_hidden_notices = WDN_Plugin::app()->getPopulateOption( 'hidden_notices', [] );
+
+				if ( ! is_array( $get_hidden_notices ) ) {
+					$get_hidden_notices = [];
+				}
+
+				$get_hidden_notices[ $notice_id ] = rtrim( trim( $notice_html ) );
+
+				WDN_Plugin::app()->updatePopulateOption('hidden_notices', $get_hidden_notices );
+				break;
+			case 'user':
+			default:
+				$current_user_id    = get_current_user_id();
+				$get_hidden_notices = get_user_meta( $current_user_id, WDN_Plugin::app()->getOptionName( 'hidden_notices' ), true );
+
+				if ( ! is_array( $get_hidden_notices ) ) {
+					$get_hidden_notices = [];
+				}
+
+				$get_hidden_notices[ $notice_id ] = rtrim( trim( $notice_html ) );
+
+				update_user_meta( $current_user_id, WDN_Plugin::app()->getOptionName( 'hidden_notices' ), $get_hidden_notices );
+				break;
+		}
+
+		wp_send_json_success();
+	} else {
+		wp_send_json_error( [ 'error_message' => __( 'You don\'t have enough capability to edit this information.', 'disable-admin-notices' ) ] );
 	}
+}
 
-	function wbcr_dan_ajax_hide_notices()
-	{
-		check_ajax_referer(WDN_Plugin::app()->getPluginName() . '_ajax_hide_notices_nonce', 'security');
-
-		if( !current_user_can('update_plugins') ) {
-			echo json_encode(array('error' => __('You don\'t have enough capability to edit this information.', 'disable-admin-notices')));
-			exit;
-		}
-
-		$notice_id = isset($_POST['notice_id'])
-			? sanitize_text_field($_POST['notice_id'])
-			: null;
-
-		$notice_html = isset($_POST['notice_html'])
-			? wp_kses($_POST['notice_html'], array())
-			: null;
-
-		if( empty($notice_id) ) {
-			echo json_encode(array('error' => __('Undefinded notice id.', 'disable-admin-notices')));
-			exit;
-		}
-
-		$get_hidden_notices = WDN_Plugin::app()->getOption('hidden_notices');
-
-		if( !is_array($get_hidden_notices) ) {
-			$get_hidden_notices = array();
-		}
-
-		$get_hidden_notices[$notice_id] = rtrim(trim($notice_html));
-
-		WDN_Plugin::app()->updateOption('hidden_notices', $get_hidden_notices);
-
-		echo json_encode(array('success' => __('Success', 'disable-admin-notices')));
-		exit;
-	}
-
-	add_action('wp_ajax_wbcr_dan_hide_notices', 'wbcr_dan_ajax_hide_notices');
+add_action( 'wp_ajax_wbcr-dan-hide-notices', 'wbcr_dan_ajax_hide_notices' );

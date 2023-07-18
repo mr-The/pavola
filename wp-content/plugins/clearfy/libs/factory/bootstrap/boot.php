@@ -1,37 +1,46 @@
 <?php
-	/**
-	 * Factory Bootstrap
-	 *
-	 * @author Alex Kovalev <alex.kovalevv@gmail.com>
-	 * @copyright (c) 2018, Webcraftic Ltd
-	 *
-	 * @package factory-bootstrap
-	 * @since 1.0.0
-	 */
+/**
+ * Factory Bootstrap
+ *
+ * @author        Alex Kovalev <alex.kovalevv@gmail.com>
+ * @since         1.0.0
+ * @package       factory-bootstrap
+ * @copyright (c) 2018, Webcraftic Ltd
+ *
+ */
 
-	// Exit if accessed directly
-	if( !defined('ABSPATH') ) {
-		exit;
-	}
+// Exit if accessed directly
+if( !defined('ABSPATH') ) {
+	exit;
+}
 
-	// module provides function only for the admin area
-	if( !is_admin() ) {
-		return;
-	}
+// module provides function only for the admin area
+if( !is_admin() ) {
+	return;
+}
 
-	if( defined('FACTORY_BOOTSTRAP_400_LOADED') ) {
-		return;
-	}
-	define('FACTORY_BOOTSTRAP_400_LOADED', true);
+if( defined('FACTORY_BOOTSTRAP_470_LOADED') ) {
+	return;
+}
 
-	define('FACTORY_BOOTSTRAP_400_DIR', dirname(__FILE__));
-	define('FACTORY_BOOTSTRAP_400_URL', plugins_url(null, __FILE__));
+define('FACTORY_BOOTSTRAP_470_VERSION', '4.7.0');
+define('FACTORY_BOOTSTRAP_470_LOADED', true);
 
-	// sets version of admin interface
-	define('FACTORY_BOOTSTRAP_400_VERSION', 'FACTORY_BOOTSTRAP_400');
+if( !defined('FACTORY_FLAT_ADMIN') ) {
+	define('FACTORY_FLAT_ADMIN', true);
+}
 
-	if( !defined('FACTORY_FLAT_ADMIN') ) {
-		define('FACTORY_FLAT_ADMIN', true);
-	}
+define('FACTORY_BOOTSTRAP_470_DIR', dirname(__FILE__));
+define('FACTORY_BOOTSTRAP_470_URL', plugins_url('', __FILE__));
 
-	include_once(FACTORY_BOOTSTRAP_400_DIR . '/includes/functions.php');
+require_once(FACTORY_BOOTSTRAP_470_DIR . '/includes/functions.php');
+
+/**
+ * @param Wbcr_Factory469_Plugin $plugin
+ */
+add_action('wbcr_factory_bootstrap_470_plugin_created', function ($plugin) {
+	$manager = new Wbcr_FactoryBootstrap470_Manager($plugin);
+	$plugin->setBootstap($manager);
+});
+
+

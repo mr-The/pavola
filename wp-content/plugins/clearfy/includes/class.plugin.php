@@ -1,255 +1,381 @@
 <?php
+/**
+ * Clearfy core class
+ *
+ * @author        Webcraftic <wordpress.webraftic@gmail.com>
+ * @copyright (c) 19.02.2018, Webcraftic
+ * @version       1.0
+ */
+
+// Exit if accessed directly
+if( !defined('ABSPATH') ) {
+	exit;
+}
+
+class WCL_Plugin extends Wbcr_Factory469_Plugin {
+
 	/**
-	 * Clearfy core class
-	 * @author Webcraftic <wordpress.webraftic@gmail.com>
-	 * @copyright (c) 19.02.2018, Webcraftic
-	 * @version 1.0
+	 * @see self::app()
+	 * @var Wbcr_Factory469_Plugin
 	 */
+	private static $app;
 
-	// Exit if accessed directly
-	if( !defined('ABSPATH') ) {
-		exit;
-	}
 
-	class WCL_Plugin extends Wbcr_Factory400_Plugin {
+	/**
+	 * Конструктор
+	 *
+	 * Применяет конструктор родительского класса и записывает экземпляр текущего класса в свойство $app.
+	 * Подробнее о свойстве $app см. self::app()
+	 *
+	 * @param string $plugin_path
+	 * @param array  $data
+	 *
+	 * @throws Exception
+	 */
+	public function __construct($plugin_path, $data)
+	{
+		self::$app = $this;
+		parent::__construct($plugin_path, $data);
 
-		/**
-		 * @var WCL_Plugin
-		 */
-		private static $app;
+		require_once(WCL_PLUGIN_DIR . '/includes/helpers.php');
+		require_once(WCL_PLUGIN_DIR . '/includes/classes/class.licensing.php');
 
-		public function __construct($plugin_path, $data)
-		{
-			self::$app = $this;
-
-			parent::__construct($plugin_path, $data);
-
-			$this->setTextDomain();
-			$this->setModules();
-			$this->setAddons();
-
-			$this->globalScripts();
-
-			if( is_admin() ) {
-				$this->adminScripts();
+		if( is_admin() ) {
+			if( is_plugin_active('wp-rocket/wp-rocket.php') ) {
+				require_once(WCL_PLUGIN_DIR . '/includes/classes/3rd-party/boot.php');
 			}
-
-			add_action('plugins_loaded', array($this, 'pluginsLoaded'));
-		}
-
-		public static function app()
-		{
-			return self::$app;
-		}
-
-		protected function setTextDomain()
-		{
-			// Localization plugin
-			load_plugin_textdomain('clearfy', false, dirname(WCL_PLUGIN_BASE) . '/languages/');
-		}
-
-		protected function initActivation()
-		{
-			include_once(WCL_PLUGIN_DIR . '/admin/activation.php');
-			$this->registerActivation('WCL_Activation');
-		}
-
-		protected function setModules()
-		{
-			$this->load(array(
-				array('libs/factory/bootstrap', 'factory_bootstrap_400', 'admin'),
-				array('libs/factory/forms', 'factory_forms_400', 'admin'),
-				array('libs/factory/pages', 'factory_pages_401', 'admin'),
-				array('libs/factory/clearfy', 'factory_clearfy_200', 'all')
-			));
-		}
-
-		public function setAddons()
-		{
-			$addons = array();
-
-			if( $this->isActivateComponent('hide_login_page') ) {
-				$addons['hide_login_page'] = array(
-					'WHLP_Plugin',
-					WCL_PLUGIN_DIR . '/components/hide-login-page/hide-login-page.php'
-				);
-			}
-
-			// This module is for Cyrillic users only, for other users it should be disabled
-			if( $this->isActivateComponent('cyrlitera') ) {
-				$addons['cyrlitera'] = array(
-					'WCTR_Plugin',
-					WCL_PLUGIN_DIR . '/components/cyrlitera/cyrlitera.php'
-				);
-			}
-
-			if( $this->isActivateComponent('disable_notices') ) {
-				$addons['disable_admin_notices'] = array(
-					'WDN_Plugin',
-					WCL_PLUGIN_DIR . '/components/disable-admin-notices/disable-admin-notices.php'
-				);
-			}
-
-			if( $this->isActivateComponent('updates_manager') ) {
-				$addons['updates_manager'] = array(
-					'WUP_Plugin',
-					WCL_PLUGIN_DIR . '/components/updates-manager/webcraftic-updates-manager.php'
-				);
-			}
-
-			if( $this->isActivateComponent('comments_tools') ) {
-				$addons['comments_plus'] = array(
-					'WCM_Plugin',
-					WCL_PLUGIN_DIR . '/components/comments-plus/comments-plus.php'
-				);
-			}
-
-			if( $this->isActivateComponent('asset_manager') ) {
-				$addons['gonzales'] = array(
-					'WGZ_Plugin',
-					WCL_PLUGIN_DIR . '/components/assets-manager/gonzales.php'
-				);
-			}
-
-			/**
-			 * Include plugin components
-			 */
-			$this->loadAddons($addons);
-		}
-
-		private function adminScripts()
-		{
-
-			require_once(WCL_PLUGIN_DIR . '/admin/includes/classes/class.pages.php');
 			require_once(WCL_PLUGIN_DIR . '/admin/includes/classes/class.option.php');
 			require_once(WCL_PLUGIN_DIR . '/admin/includes/classes/class.group.php');
 
 			require_once(WCL_PLUGIN_DIR . '/admin/activation.php');
 
-			if( defined('DOING_AJAX') && DOING_AJAX && isset($_REQUEST['action']) && $_REQUEST['action'] == 'wbcr_clearfy_configurate' ) {
+			if( defined('DOING_AJAX') && DOING_AJAX ) {
 				require(WCL_PLUGIN_DIR . '/admin/ajax/configurate.php');
-			}
-
-			if( defined('DOING_AJAX') && DOING_AJAX && isset($_REQUEST['action']) && $_REQUEST['action'] == 'wbcr_clearfy_import_settings' ) {
+				require(WCL_PLUGIN_DIR . '/admin/ajax/google-page-speed.php');
 				require(WCL_PLUGIN_DIR . '/admin/ajax/import-settings.php');
 			}
 
+			require_once(WCL_PLUGIN_DIR . '/admin/includes/compatibility.php');
 			require_once(WCL_PLUGIN_DIR . '/admin/boot.php');
 
-			$this->initActivation();
-			$this->registerPages();
+			$this->register_activator();
 		}
 
-		private function registerPages()
-		{
-			$this->registerPage('WCL_QuickStartPage', WCL_PLUGIN_DIR . '/admin/pages/quick-start.php');
-			$this->registerPage('WCL_AdvancedPage', WCL_PLUGIN_DIR . '/admin/pages/advanced.php');
-			$this->registerPage('WCL_PerformancePage', WCL_PLUGIN_DIR . '/admin/pages/performance.php');
-			$this->registerPage('WCL_PerformanceGooglePage', WCL_PLUGIN_DIR . '/admin/pages/performance-google.php');
-			$this->registerPage('WCL_PerformanceHtmlMinifyPage', WCL_PLUGIN_DIR . '/admin/pages/performance-html-minify.php');
-			$this->registerPage('WCL_ComponentsPage', WCL_PLUGIN_DIR . '/admin/pages/components.php');
-			$this->registerPage('WCL_SeoPage', WCL_PLUGIN_DIR . '/admin/pages/seo.php');
-			$this->registerPage('WCL_DoublePagesPage', WCL_PLUGIN_DIR . '/admin/pages/seo-double-pages.php');
-			$this->registerPage('WCL_DefencePage', WCL_PLUGIN_DIR . '/admin/pages/defence.php');
-			$this->registerPage('WCL_PrivacyContentPage', WCL_PLUGIN_DIR . '/admin/pages/defence-privacy-code.php');
+		$this->global_scripts();
 
-			if( $this->isActivateComponent('widget_tools') ) {
-				$this->registerPage('WCL_WidgetsPage', WCL_PLUGIN_DIR . '/admin/pages/widgets.php');
-			}
-		}
+		add_action('plugins_loaded', [$this, 'plugins_loaded']);
+	}
 
-		private function globalScripts()
-		{
-			require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-performance.php');
-			require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-google-performance.php');
-			require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-privacy.php');
-			require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-security.php');
-			require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-seo.php');
+	/**
+	 * Статический метод для быстрого доступа к интерфейсу плагина.
+	 *
+	 * Позволяет разработчику глобально получить доступ к экземпляру класса плагина в любом месте
+	 * плагина, но при этом разработчик не может вносить изменения в основной класс плагина.
+	 *
+	 * Используется для получения настроек плагина, информации о плагине, для доступа к вспомогательным
+	 * классам.
+	 *
+	 * @return \Wbcr_Factory469_Plugin|\WCL_Plugin
+	 */
+	public static function app()
+	{
+		return self::$app;
+	}
 
-			new WCL_ConfigPerformance($this);
-			new WCL_ConfigGooglePerformance($this);
-			new WCL_ConfigPrivacy($this);
-			new WCL_ConfigSecurity($this);
-			new WCL_ConfigSeo($this);
-		}
-
-		public function pluginsLoaded()
-		{
-			require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-advanced.php');
-			new WCL_ConfigAdvanced($this);
-		}
-
-		/**
-		 * @param string $component_name
-		 * @return bool
-		 * @throws Exception
-		 */
-		public function isActivateComponent($component_name)
-		{
-			if( !is_string($component_name) ) {
-				throw new Exception('Attribute component_name must be is string');
-			}
-
-			$deactivate_components = $this->getOption('deactive_preinstall_components', array());
-
-			if( $deactivate_components && in_array($component_name, $deactivate_components) ) {
-				return false;
-			}
-
+	/**
+	 * Метод проверяет активацию премиум плагина и наличие действующего лицензионнного ключа
+	 *
+	 * @return bool
+	 */
+	public function is_premium()
+	{
+		if( $this->premium->is_active() && $this->premium->is_activate() && $this->premium->is_install_package() ) {
 			return true;
-		}
-
-		/**
-		 * @param string $component_name
-		 * @return bool
-		 * @throws Exception
-		 */
-		public function deactivateComponent($component_name)
-		{
-			if( !$this->isActivateComponent($component_name) ) {
-				return true;
-			}
-
-			$deactivate_components = $this->getOption('deactive_preinstall_components', array());
-
-			if( !empty($deactivate_components) && is_array($deactivate_components) ) {
-				$deactivate_components[] = $component_name;
-			} else {
-				$deactivate_components = array();
-				$deactivate_components[] = $component_name;
-			}
-
-			$this->updateOption('deactive_preinstall_components', $deactivate_components);
-
-			return true;
-		}
-
-		/**
-		 * @param string $component_name
-		 * @return bool
-		 * @throws Exception
-		 */
-		public function activateComponent($component_name)
-		{
-			if( $this->isActivateComponent($component_name) ) {
-				return true;
-			}
-
-			$deactivate_components = $this->getOption('deactive_preinstall_components', array());
-
-			if( !empty($deactivate_components) && is_array($deactivate_components) ) {
-				$index = array_search($component_name, $deactivate_components);
-				unset($deactivate_components[$index]);
-			}
-
-			if( empty($deactivate_components) ) {
-				$this->deleteOption('deactive_preinstall_components');
-
-				return true;
-			}
-
-			$this->updateOption('deactive_preinstall_components', $deactivate_components);
-
-			return true;
+		} else {
+			return false;
 		}
 	}
+
+	/**
+	 * Выполняет php сценарии, когда все Wordpress плагины будут загружены
+	 *
+	 * @throws \Exception
+	 * @since  1.0.0
+	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
+	 */
+	public function plugins_loaded()
+	{
+		if( is_admin() ) {
+			$this->register_pages();
+		}
+
+		require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-advanced.php');
+		new WCL_ConfigAdvanced($this);
+	}
+
+	/**
+	 * Исключаем загрузку отключенных компонентов плагина
+	 *
+	 * @return array
+	 * @since  1.6.0
+	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
+	 */
+	public function get_load_plugin_components()
+	{
+		$load_components = parent::get_load_plugin_components();
+
+		$deactivate_components = $this->getPopulateOption('deactive_preinstall_components', []);
+
+		if( !empty($deactivate_components) ) {
+			foreach((array)$load_components as $component_ID => $component) {
+				if( in_array($component_ID, $deactivate_components) ) {
+					unset($load_components[$component_ID]);
+				}
+			}
+		}
+
+		if( is_plugin_active('gonzales/gonzales.php') ) {
+			unset($load_components['assets_manager']);
+		}
+
+		// Выполнить код до загрузки и инициализации компонентов
+		// ----------------------------------------------------------
+		//if( $this->premium->is_install_package() ) {
+			//$package = $this->premium->get_package_data();
+			//if( version_compare($package['version'], "1.4.3", "<") ) {
+				//unset($load_components['cache']);
+			//}
+		//}
+
+		// Всегда отключем комонент кеша, для совместимости с премиум плагином.
+		// С версии Clearfy 2.1.0 мы сделали кеширующий компонент бесплатным и
+		// перенесли в этот плагин. Поэтому, чтобы не было конфликтом между старым
+		// и новым компонетом кеша, мы отключаем старый компонент всегда.
+		unset($load_components['cache']);
+
+		// Выполнить код до загрузки и инициализации компонентов
+		// ----------------------------------------------------------
+		if( is_plugin_active('wp-rocket/wp-rocket.php') ) {
+			$this->deactivateComponent('clearfy_cache');
+
+			require_once(WCL_PLUGIN_DIR . '/includes/classes/3rd-party/class-base.php');
+			require_once(WCL_PLUGIN_DIR . '/includes/classes/3rd-party/plugins/class-wp-rocket.php');
+
+			$wp_rocket_no_conflict = new \Clearfy\ThirdParty\Wp_Rocket();
+			$wp_rocket_no_conflict->disable_clearfy_options();
+		}
+
+		//-----------------------------------------------------------
+
+		return $load_components;
+	}
+
+	/**
+	 * Регистрируем активатор плагина
+	 *
+	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
+	 * @since  1.0.0
+	 */
+	protected function register_activator()
+	{
+		include_once(WCL_PLUGIN_DIR . '/admin/activation.php');
+		$this->registerActivation('WCL_Activation');
+	}
+
+	/**
+	 * Регистрирует классы страниц в плагине
+	 *
+	 * Мы указываем плагину, где найти файлы страниц и какое имя у их класса. Чтобы плагин
+	 * выполнил подключение классов страниц. После регистрации, страницы будут доступные по url
+	 * и в меню боковой панели администратора. Регистрируемые страницы будут связаны с текущим плагином
+	 * все операции выполняемые внутри классов страниц, имеют отношение только текущему плагину.
+	 *
+	 * @throws \Exception
+	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
+	 */
+	private function register_pages()
+	{
+		require_once(WCL_PLUGIN_DIR . '/admin/pages/class-page.php');
+
+		try {
+			$this->registerPage('WCL_Setup', WCL_PLUGIN_DIR . '/admin/pages/setup/class-pages-setup.php');
+			$this->registerPage('WCL_QuickStartPage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-quick-start.php');
+			$this->registerPage('WCL_AdvancedPage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-advanced.php');
+			$this->registerPage('WCL_PerformancePage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-performance.php');
+
+			//$this->registerPage('WCL_PerformanceGooglePage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-performance-google.php');
+			$this->registerPage('WCL_ComponentsPage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-components.php');
+			$this->registerPage('WCL_SeoPage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-seo.php');
+			$this->registerPage('WCL_DoublePagesPage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-seo-double-pages.php');
+			$this->registerPage('WCL_DefencePage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-defence.php');
+
+			if( !defined('WTITAN_PLUGIN_ACTIVE') ) {
+				$this->registerPage('WCL_TitanSecurityPage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-defence-titan.php');
+			}
+
+			if( defined('WRIO_PLUGIN_ACTIVE') && !wrio_is_clearfy_license_activate() ) {
+				$this->registerPage('WCL_ComponentsLicensePage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-components-license.php');
+			}
+
+			if( !WCL_Plugin::app()->getPopulateOption('whitelabel_hide_license_page') ) {
+				$this->registerPage('WCL_LicensePage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-license.php');
+			}
+
+			if( $this->isActivateComponent('widget_tools') ) {
+				$this->registerPage('WCL_WidgetsPage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-widgets.php');
+			}
+
+			$this->registerPage('WCL_ClearfySettingsPage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-clearfy-settings.php');
+
+			if( !defined('WIO_PLUGIN_ACTIVE') ) {
+				$this->registerPage('WCL_ImageOptimizationPage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-image-optimization.php');
+			}
+
+			if( !defined('WHLP_PLUGIN_ACTIVE') ) {
+				$this->registerPage('WCL_HideLoginPage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-hide-login-page.php');
+			}
+		} catch( Exception $e ) {
+			throw new Exception($e->getMessage());
+		}
+	}
+
+	/**
+	 * Выполняет глобальные php сценарии
+	 *
+	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
+	 * @since  1.0.0
+	 */
+	private function global_scripts()
+	{
+		require_once(WCL_PLUGIN_DIR . '/includes/boot.php');
+
+		require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-performance.php');
+		require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-google-performance.php');
+		require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-privacy.php');
+		require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-security.php');
+		require_once(WCL_PLUGIN_DIR . '/includes/classes/class.configurate-seo.php');
+
+		new WCL_ConfigPerformance($this);
+		new WCL_ConfigGooglePerformance($this);
+		new WCL_ConfigPrivacy($this);
+		new WCL_ConfigSecurity($this);
+		new WCL_ConfigSeo($this);
+	}
+
+	/**
+	 * @return bool
+	 */
+	public function currentUserCan()
+	{
+		$permission = $this->isNetworkActive() ? 'manage_network' : 'manage_options';
+
+		return current_user_can($permission);
+	}
+
+	/**
+	 * @param string $component_name
+	 *
+	 * @return bool
+	 */
+	public function is_activate_component($component_name)
+	{
+		if( !is_string($component_name) ) {
+			return false;
+		}
+
+		$deactivate_components = $this->getPopulateOption('deactive_preinstall_components', []);
+
+		if( !is_array($deactivate_components) ) {
+			// Всегда отключем комонент кеша, для совместимости с премиум плагином.
+			// С версии Clearfy 2.1.0 мы сделали кеширующий компонент бесплатным и
+			// перенесли в этот плагин. Поэтому, чтобы не было конфликтом между старым
+			// и новым компонетом кеша, мы отключаем старый компонент всегда.
+			$deactivate_components = ['cache'];
+		} else {
+			// Всегда отключем комонент кеша, для совместимости с премиум плагином.
+			// С версии Clearfy 2.1.0 мы сделали кеширующий компонент бесплатным и
+			// перенесли в этот плагин. Поэтому, чтобы не было конфликтом между старым
+			// и новым компонетом кеша, мы отключаем старый компонент всегда.
+			$deactivate_components[] = 'cache';
+		}
+
+		if( $deactivate_components && in_array($component_name, $deactivate_components) ) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * @param string $component_name
+	 *
+	 * @return bool
+	 */
+	public function isActivateComponent($component_name)
+	{
+		return $this->is_activate_component($component_name);
+	}
+
+	/**
+	 * @param string $component_name
+	 *
+	 * @return bool
+	 */
+	public function deactivateComponent($component_name)
+	{
+		if( !$this->is_activate_component($component_name) ) {
+			return true;
+		}
+
+		do_action('wbcr_clearfy_pre_deactivate_component', $component_name);
+
+		$this->deactivate_component($component_name);
+
+		do_action('wbcr_clearfy_deactivated_component', $component_name);
+
+		return true;
+	}
+
+	/**
+	 * @param string $component_name
+	 *
+	 * @return bool
+	 */
+	public function activateComponent($component_name)
+	{
+		if( $this->is_activate_component($component_name) ) {
+			return true;
+		}
+
+		do_action('wbcr_clearfy_pre_activate_component', $component_name);
+
+		return $this->activate_component($component_name);
+	}
+
+	/**
+	 * Allows you to get a button to install the plugin component
+	 *
+	 * @param $component_type
+	 * @param $slug
+	 * param $premium
+	 *
+	 * @return \WBCR\Factory_469\Components\Install_Button
+	 */
+	public function getInstallComponentsButton($component_type, $slug)
+	{
+		return $this->get_install_component_button($component_type, $slug);
+	}
+
+	/**
+	 * Allows you to get a button to delete the plugin component
+	 *
+	 * @param $component_type
+	 * @param $slug
+	 *
+	 * @return \WBCR\Factory_469\Components\Delete_Button
+	 */
+	public function getDeleteComponentsButton($component_type, $slug)
+	{
+		return $this->get_delete_component_button($component_type, $slug);
+	}
+}

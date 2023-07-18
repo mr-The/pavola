@@ -1,10 +1,10 @@
 === Wordpress Assets manager, dequeue scripts, dequeue styles ===
 Tags: dequeue script, dequeue style, pagespeed, speed, unload style, gonzales, assets clean, assets, assets cleanup, page speed optimizer, perfmatters, disable script, disable style, disable jquery, disable jquery-migrate, disable fonts
-Contributors: webcraftic
+Contributors: webcraftic, creativemotion, alexkovalevv
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VDX7JNTQPNPFW
-Requires at least: 4.2
-Tested up to: 4.9
-Requires PHP: 5.2
+Requires at least: 5.2
+Tested up to: 6.2
+Requires PHP: 7.0
 Stable tag: trunk
 License: GPLv2
 
@@ -43,8 +43,10 @@ We invite you to check out a few other related free plugins that our team has al
 * [Clearfy – WordPress optimization plugin and disable ultimate tweaker](https://wordpress.org/plugins/clearfy/)
 * [Disable Comments for Any Post Types (Remove Comments)](https://wordpress.org/plugins/comments-plus/)
 * [Cyrlitera – transliteration of links and file names](https://wordpress.org/plugins/cyrlitera/)
-* [Disable updates, Disable automatic updates, Updates manager](https://wordpress.org/plugins/webcraftic-updates-manager/)
+* [Cyr-to-lat reloaded – transliteration of links and file names](https://wordpress.org/plugins/cyr-and-lat/ "Cyr-to-lat reloaded")
 * [Disable admin notices individually](https://wordpress.org/plugins/disable-admin-notices/ "Disable admin notices individually")
+* [Hide login page](https://wordpress.org/plugins/hide-login-page/ "Hide login page")
+* [Disable updates, Disable automatic updates, Updates manager](https://wordpress.org/plugins/webcraftic-updates-manager/)
 
 == Installation ==
 
@@ -57,6 +59,84 @@ We invite you to check out a few other related free plugins that our team has al
 2. Assets manager
 
 == Changelog ==
+= 2.1.5 (22.03.2023) =
+* Fixed: Freemius framework conflict
+* Added: Compatibility with Wordpress 6.2
+
+= 2.1.4 (27.05.2022) =
+* Compatibility with Wordpress 6.0
+
+= 2.1.3 (21.03.2022) =
+* Fixed: Compatibility with Disable admin notices plugin
+
+= 2.1.2 (21.03.2022) =
+* Compatibility with Wordpress 5.2 - 5.9.x
+* Fixed: Minor bug
+
+= 2.1.0 (21.12.2020) =
+* Added: Compatibility with Wordpress 5.8
+* Fixed: Minor bugs
+
+= 2.0.7 (21.12.2020) =
+* Disabled search by options for a single plugin.
+* Fixed: duplicate templates and scripts error when rendering html views of Assets manager.
+
+= 2.0.6 (15.12.2020) =
+* Added: Subscribe form
+* Fixed: Minor bug
+
+= 2.0.5 (12.02.2020) =
+* Fixed: Minor bug
+
+= 2.0.4 (10.12.2019) =
+* Fixed: Bug "[Warning message when open the Customize](https://wordpress.org/support/topic/warning-message-when-open-the-customize/)".
+* Fixed: Conditional logic in the premium plugin didn't work in previous version due an error.
+* Added: You can control asset requires. Now if you disabled asset and it required for which other asset, you will get prompt with warning.
+* Added: If you click on the "requires" tag, you will be gone to the asset for which require the current asset.
+
+= 2.0.3 (13.11.2019) =
+* Fixed: Minor bugs. Comment head of mu plugin determined as main.
+
+= 2.0.2 (13.11.2019) =
+* Fixed: Minor bugs. Added an admin notice about great release.
+
+= 2.0.1 (12.10.2019) =
+* Fixed: The bug with save mode.
+* Fixed: Some conditions (entire website) didn't work. It could be due save mode.
+* Fixed: Critical a php error which related "Call to undefined function wp_scripts_get_suffix".
+
+= 2.0.0 (03.10.2019) =
+* The interface has become more compact and friendly.
+* The speed and productivity of the editor is increased, it loads faster and does not freeze, as it was before.
+* Extended conditional logic has been added, now you can create complex conditions for disabling assets.
+* An additional mode has appeared to completely disable the plugin (you can disable not only scripts, but also stop executing plugin scripts).
+* Known bugs in the previous version are fixed.
+
+= 1.1.0 =
+* Added: Compatibility with Wordpress 4.2 - 5.x
+* Added: Multisite support
+* Fixed: Minor bugs
+
+= 1.0.7 =
+* Fixed: Added compatibility with ithemes sync
+* Fixed: Minor style fixes
+
+= 1.0.6 =
+* Fixed: Fixed a bug when the interface did not open on the frontend.
+
+= 1.0.5 =
+Great update:
+* We completely changed the interface design. Now it is more convenient for visual inspection of resource files.
+* Fixed: All errors that users have reported about
+* Added: Multisite support
+* Added: New logic disabled scripts and styles
+* Added: You can exclude assets from optimizing for Autoptimize and Clearfy plugins.
+* Added: You can exclude resource files for which you do not need to remove the query string.
+* Added: You can see which plugin the style file belongs to and the js file.
+= 1.0.4 =
+* Fixed: Update core
+* Fixed: Compatibility with others plugin
+
 = 1.0.3 =
 * Fixed: Compatibility with Clearfy plugin
 * Fixed: The plugin interface did not work and the styles were not loaded due to security settings

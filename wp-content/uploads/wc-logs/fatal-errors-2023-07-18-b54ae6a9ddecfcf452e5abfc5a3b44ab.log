@@ -1,0 +1,315 @@
+2023-07-18T19:03:47+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:03:47+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:03:48+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:03:53+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:04:00+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:04:04+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:04:07+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:04:14+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:04:16+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:04:21+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:04:28+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:04:35+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:04:42+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:04:49+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:04:56+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:05:03+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:05:10+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:05:16+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:05:17+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:05:24+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:05:31+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:05:38+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:05:45+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:05:52+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:05:59+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:06:03+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:06:05+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:06:06+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:06:13+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:06:16+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:06:20+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:06:27+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:06:34+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:06:41+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:06:48+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:06:55+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:07:02+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:07:08+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:07:09+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:07:16+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:07:17+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:07:22+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:07:30+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:07:37+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+
+2023-07-18T19:07:44+00:00 CRITICAL Uncaught Error: Call to undefined function Automattic\WooCommerce\Blocks\Domain\Services\has_block() in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php:49
+Stack trace:
+#0 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(127): Automattic\WooCommerce\Blocks\Domain\Services\Notices->init()
+#1 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Bootstrap.php(75): Automattic\WooCommerce\Blocks\Domain\Bootstrap->init()
+#2 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Package.php(125): Automattic\WooCommerce\Blocks\Domain\Bootstrap->__construct(Object(Automattic\WooCommerce\Blocks\Registry\Container))
+#3 F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Registry\AbstractDependencyType.php(42): Automattic\WooCommerce\Blocks\Package::Automattic\WooCommerce\Blocks\{closure}(Object(Automattic\WooCommerce\Blocks\Regist in F:\xampp\htdocs\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\Notices.php on line 49
+

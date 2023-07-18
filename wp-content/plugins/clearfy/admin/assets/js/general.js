@@ -5,7 +5,6 @@
  * @version 1.0
  */
 
-
 (function($) {
 	'use strict';
 
@@ -13,6 +12,30 @@
 		init: function() {
 			this.qickStartAssistent();
 			this.importOptions();
+
+			/*$.wfactory_469.hooks.add('core/components/pre_activate', function(button) {
+				// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
+				if( !$('#WBCR').length ) {
+					return false;
+				}
+				if( button.closest('.wbcr-clr-new-component').length ) {
+					button.closest('.wbcr-clr-new-component').remove();
+				}
+				if( button.closest('.wbcr-clearfy-fake-image-optimizer-board').length ) {
+					button.remove();
+					window.location.reload();
+				}
+			});*/
+
+			/*$.wfactory_469.hooks.add('core/components/updated', function(button, data, response) {
+				// Выполняем код ниже, только на страницах плагина с интерфейсом Clearfy
+				if( !($('#WBCR').length && $.wbcr_factory_templates_118) ) {
+					return false;
+				}
+				if( response.data.need_rewrite_rules && !$('.wbcr-clr-need-rewrite-rules-message').length ) {
+					$.wbcr_factory_templates_118.app.showNotice(response.data.need_rewrite_rules, 'warning');
+				}
+			});*/
 		},
 		qickStartAssistent: function() {
 			var self = this;
@@ -39,20 +62,16 @@
 			 var $this = $(this),
 			 switcher = $(this).closest('.wbcr-clearfy-switch'),
 			 modeName = switcher.data('mode');
-
 			 if( switcher.hasClass('wbcr-clearfy-loading') ) {
 			 return false;
 			 }
-
 			 switcher.addClass('wbcr-clearfy-loading');
-
 			 self.sendRequest({
 			 action: 'wbcr_clearfy_configurate',
 			 mode: modeName,
 			 cancel_mode: true
 			 }, function(data) {
 			 switcher.removeClass('wbcr-clearfy-loading');
-
 			 if( data && data.export_options ) {
 			 $('#wbcr-clearfy-import-export').html(data.export_options);
 			 }
@@ -66,24 +85,59 @@
 			 });*/
 
 			$('.wbcr-clearfy-popup-button-ok').click(function() {
-				var $this = $(this), modeName = $(this).closest('.wbcr-clearfy-confirm-popup').data('mode'),
-					switcher = $('div[data-mode="' + modeName + '"]', '#wbcr-clearfy-quick-mode-board');
+				var $this = $(this), modeName = $this.closest('.wbcr-clearfy-confirm-popup').data('mode'),
+					switcher = $('div[data-mode="' + modeName + '"]', '#wbcr-clearfy-quick-mode-board'),
+					modeArgs = switcher.data('mode-args'),
+					flushRedirect = modeArgs && modeArgs.flush_redirect;
 
 				self.hideConfirmationPopup();
 				switcher.addClass('wbcr-clearfy-loading');
 
 				self.sendRequest({
 						action: 'wbcr_clearfy_configurate',
-						mode: modeName
+						mode: modeName,
+						flush_redirect: flushRedirect
 					}, function(data) {
-						switcher.removeClass('wbcr-clearfy-loading');
+						if( !flushRedirect ) {
+							switcher.removeClass('wbcr-clearfy-loading');
+						}
 
-						if( data && data.export_options ) {
+						if( !data || data.error ) {
+							/**
+							 * Хук выполняет проивольную функцию, после того как получен ajax ответ о том, что в
+							 * результате конфигурации произошла ошибка Реализация системы фильтров и хуков в файле
+							 * libs/clearfy/admin/assests/js/global.js Пример регистрации хука
+							 * $.wbcr_factory_templates_118.hooks.add('wbcr/factory_templates_118/updated',
+							 * function(noticeId) {});
+							 * @param {string} modeName - имя режима конфигурации
+							 * @param {object} data
+							 */
+
+							$.wbcr_factory_templates_118.hooks.run('clearfy/quick_start/configurated_error', [
+								modeName,
+								data
+							]);
+							return;
+						}
+
+						if( data.export_options ) {
 							$('#wbcr-clearfy-import-export').html(data.export_options);
 						}
 					},
-					function() {
-						if( modeName != 'reset' ) {
+					function(data) {
+
+						/**
+						 * Хук выполняет проивольную функцию, после того как получен ajax ответ об успешном выполнении
+						 * конфигурации Реализация системы фильтров и хуков в файле
+						 * libs/clearfy/admin/assests/js/global.js Пример регистрации хука
+						 * $.wbcr_factory_templates_118.hooks.add('wbcr/factory_templates_118/updated', function(noticeId)
+						 * {});
+						 * @param {string} modeName - имя режима конфигурации
+						 * @param {object} data
+						 */
+						$.wbcr_factory_templates_118.hooks.run('clearfy/quick_start/configurated', [modeName, data]);
+
+						if( modeName !== 'reset' ) {
 							switcher.addClass('wbcr-clearfy-active');
 							return;
 						}
@@ -98,13 +152,19 @@
 		showConfirmationPopup: function(modeName, options) {
 			var self = this;
 
-			$('.wbcr-clearfy-layer').fadeIn();
+			if( !$('.wbcr-clearfy-layer').length ) {
+				var layer = $('<div></div>').addClass('wbcr-clearfy-layer');
+				layer.prependTo('#wpbody');
+				layer.fadeIn();
+			} else {
+				$('.wbcr-clearfy-layer').fadeIn();
+			}
 
 			var popupElem = $('.wbcr-clearfy-confirm-popup');
 			popupElem.data('mode', modeName);
 			popupElem.fadeIn();
 
-			if( modeName != 'reset' ) {
+			if( modeName !== 'reset' ) {
 				var printOptTitles = '';
 
 				if( options ) {
@@ -143,64 +203,99 @@
 					$this = $(this);
 
 				if( !settings ) {
-					return;
+					$.wbcr_factory_templates_118.app.showNotice('Import options is empty!', 'danger');
+					return false;
+				}
+
+				if( void 0 === wbcr_clearfy_ajax || !wbcr_clearfy_ajax.import_options_nonce ) {
+					$.wbcr_factory_templates_118.app.showNotice('Unknown Javascript error, most likely the wbcr_clearfy_ajax variable does not exist!', 'danger');
+					return false;
 				}
 
 				$(this).prop('disabled', true);
 
 				self.sendRequest({
-					action: 'wbcr_clearfy_import_settings',
+					action: 'wbcr-clearfy-import-settings',
+					_wpnonce: wbcr_clearfy_ajax.import_options_nonce,
 					settings: settings
-				}, function(data) {
-					//console.log(data);
+				}, function(response) {
 					$this.prop('disabled', false);
+
+					if( response.data.update_notice ) {
+						if( !$('.wbcr-clr-update-package').length ) {
+							$.wbcr_factory_templates_118.app.showNotice(response.data.update_notice);
+						}
+					} else {
+						if( $('.wbcr-clr-update-package').length ) {
+							$('.wbcr-clr-update-package').closest('.wbcr-factory-warning-notice').remove();
+						}
+					}
 				});
 
 				return false;
 			});
 		},
-		sendRequest: function(data, beforeValidateCallback, successCallback) {
-
-			var errorContanier = $('.wbcr-clearfy-switch-error-message'),
-				defaultErrorMessage = errorContanier.text();
+		sendRequest: function(request_data, beforeValidateCallback, successCallback) {
+			var self = this;
 
 			if( wbcr_clearfy_ajax === undefined ) {
 				console.log('Undefinded wbcr_clearfy_ajax object.');
 				return;
 			}
 
-			var ajaxUrl = wbcr_clearfy_ajax ? wbcr_clearfy_ajax.ajaxurl : ajaxurl;
-
-			if( typeof data === 'object' ) {
-				data.security = wbcr_clearfy_ajax.ajax_nonce;
+			if( typeof request_data === 'object' ) {
+				request_data.security = wbcr_clearfy_ajax.ajax_nonce;
 			}
 
 			$.ajax(ajaxurl, {
 				type: 'post',
 				dataType: 'json',
-				data: data,
+				data: request_data,
 				success: function(data, textStatus, jqXHR) {
+					var noticeId;
 
 					beforeValidateCallback && beforeValidateCallback(data);
 
 					if( !data || data.error ) {
+						console.log(data);
+
 						if( data ) {
-							console.log(data.error);
-							if( !errorContanier.is(':visible') ) {
-								errorContanier.html(defaultErrorMessage + '<br>' + data.error);
+							noticeId = $.wbcr_factory_templates_118.app.showNotice(data.error_message, 'danger');
+						} else {
+							if( void 0 !== wbcr_clearfy_ajax ) {
+								noticeId = $.wbcr_factory_templates_118.app.showNotice(wbcr_clearfy_ajax.i18n.unknown_error, 'danger');
 							}
 						}
 
-						if( !errorContanier.is(':visible') ) {
-							errorContanier.fadeIn(600).delay(10000).fadeOut(600);
+						setTimeout(function() {
+							$.wbcr_factory_templates_118.app.hideNotice(noticeId);
+						}, 5000);
+						return;
+					}
+
+					successCallback && successCallback(data);
+
+					if( !request_data.flush_redirect ) {
+						if( void 0 !== wbcr_clearfy_ajax ) {
+							noticeId = $.wbcr_factory_templates_118.app.showNotice(wbcr_clearfy_ajax.i18n.success_update_settings, 'success');
+
+							setTimeout(function() {
+								$.wbcr_factory_templates_118.app.hideNotice(noticeId);
+							}, 5000);
 						}
 						return;
 					}
 
-					successCallback && successCallback();
+					window.location.href = wbcr_clearfy_ajax.flush_cache_url;
+					// открыть уведомление
 
-					$('.wbcr-clearfy-switch-success-message').fadeIn(600).delay(3000).fadeOut(600);
+				},
+				error: function(xhr, ajaxOptions, thrownError) {
+					console.log(xhr.status);
+					console.log(xhr.responseText);
+					console.log(thrownError);
 
+					var noticeId = $.wbcr_factory_templates_118.app.showNotice('Error: [' + thrownError + '] Status: [' + xhr.status + '] Error massage: [' + xhr.responseText + ']', 'danger');
 				}
 			});
 		}

@@ -29,9 +29,9 @@
 		exit;
 	}
 
-	if( !class_exists('Wbcr_FactoryForms400_TextboxControl') ) {
+	if( !class_exists('Wbcr_FactoryForms466_TextboxControl') ) {
 
-		class Wbcr_FactoryForms400_TextboxControl extends Wbcr_FactoryForms400_Control {
+		class Wbcr_FactoryForms466_TextboxControl extends Wbcr_FactoryForms466_Control {
 
 			public $type = 'textbox';
 
@@ -74,19 +74,10 @@
 				<?php if( $units ) { ?><div class="input-group"><?php } ?>
 				<input <?php $this->attrs() ?>/>
 				<?php if( $units ) { ?>
-				<span class="input-group-addon"><?php echo $units; ?></span>
+				<span class="input-group-addon"><?php echo esc_html($units); ?></span>
 			<?php } ?>
 				<?php if( $units ) { ?></div><?php } ?>
 			<?php
-			}
-
-			public function getSubmitValue($name, $subName)
-			{
-				$name_on_form = $this->getNameOnForm($name);
-
-				return isset($_POST[$name_on_form])
-					? sanitize_text_field($_POST[$name_on_form])
-					: '';
 			}
 		}
 	}
