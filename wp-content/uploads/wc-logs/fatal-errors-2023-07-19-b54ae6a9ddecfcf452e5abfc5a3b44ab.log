@@ -1,0 +1,40 @@
+2023-07-19T20:17:28+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in F:\xampp\htdocs\wp-content\themes\avs-eng\layouts\frontpage-pavola.php:10
+Stack trace:
+#0 F:\xampp\htdocs\wp-includes\template-loader.php(106): include()
+#1 F:\xampp\htdocs\wp-blog-header.php(19): require_once('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\index.php(17): require('F:\\xampp\\htdocs...')
+#3 {main}
+  thrown в F:\xampp\htdocs\wp-content\themes\avs-eng\layouts\frontpage-pavola.php на строке 10
+
+2023-07-19T20:38:51+00:00 CRITICAL require(): Failed opening required 'F:\xampp\htdocs/wp-content/themes/avs-eng/inc/theme-admin.php' (include_path='F:\xampp\php\PEAR') в F:\xampp\htdocs\wp-content\themes\avs-eng\functions.php на строке 175
+
+2023-07-19T20:38:51+00:00 CRITICAL require(): Failed opening required 'F:\xampp\htdocs/wp-content/themes/avs-eng/inc/theme-admin.php' (include_path='F:\xampp\php\PEAR') в F:\xampp\htdocs\wp-content\themes\avs-eng\functions.php на строке 175
+
+2023-07-19T20:38:52+00:00 CRITICAL require(): Failed opening required 'F:\xampp\htdocs/wp-content/themes/avs-eng/inc/theme-admin.php' (include_path='F:\xampp\php\PEAR') в F:\xampp\htdocs\wp-content\themes\avs-eng\functions.php на строке 175
+
+2023-07-19T20:41:16+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in F:\xampp\htdocs\wp-content\themes\avs-eng\layouts\frontpage-pavola.php:10
+Stack trace:
+#0 F:\xampp\htdocs\wp-includes\template-loader.php(106): include()
+#1 F:\xampp\htdocs\wp-blog-header.php(19): require_once('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\index.php(17): require('F:\\xampp\\htdocs...')
+#3 {main}
+  thrown в F:\xampp\htdocs\wp-content\themes\avs-eng\layouts\frontpage-pavola.php на строке 10
+
+2023-07-19T20:43:53+00:00 CRITICAL Uncaught Error: Call to undefined function get_field() in F:\xampp\htdocs\wp-content\themes\avs-eng\layouts\frontpage-pavola.php:10
+Stack trace:
+#0 F:\xampp\htdocs\wp-includes\template-loader.php(106): include()
+#1 F:\xampp\htdocs\wp-blog-header.php(19): require_once('F:\\xampp\\htdocs...')
+#2 F:\xampp\htdocs\index.php(17): require('F:\\xampp\\htdocs...')
+#3 {main}
+  thrown в F:\xampp\htdocs\wp-content\themes\avs-eng\layouts\frontpage-pavola.php на строке 10
+
+2023-07-19T20:44:51+00:00 CRITICAL require(): Failed opening required 'F:\xampp\htdocs/wp-content/themes/avs-eng/inc/template-functions.php' (include_path='F:\xampp\php\PEAR') в F:\xampp\htdocs\wp-content\themes\avs-eng\functions.php на строке 157
+
+2023-07-19T20:44:52+00:00 CRITICAL require(): Failed opening required 'F:\xampp\htdocs/wp-content/themes/avs-eng/inc/template-functions.php' (include_path='F:\xampp\php\PEAR') в F:\xampp\htdocs\wp-content\themes\avs-eng\functions.php на строке 157
+
+2023-07-19T20:45:34+00:00 CRITICAL require(): Failed opening required 'F:\xampp\htdocs/wp-content/themes/avs-eng/inc/theme-admin.php' (include_path='F:\xampp\php\PEAR') в F:\xampp\htdocs\wp-content\themes\avs-eng\functions.php на строке 173
+
+2023-07-19T20:45:35+00:00 CRITICAL require(): Failed opening required 'F:\xampp\htdocs/wp-content/themes/avs-eng/inc/theme-admin.php' (include_path='F:\xampp\php\PEAR') в F:\xampp\htdocs\wp-content\themes\avs-eng\functions.php на строке 173
+
+2023-07-19T20:45:59+00:00 CRITICAL require(): Failed opening required 'F:\xampp\htdocs/wp-content/themes/avs-eng/inc/theme-admin.php' (include_path='F:\xampp\php\PEAR') в F:\xampp\htdocs\wp-content\themes\avs-eng\functions.php на строке 173
+
