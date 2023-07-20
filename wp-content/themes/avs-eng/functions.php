@@ -75,8 +75,8 @@ if ( ! function_exists( 'avs_eng_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 95,
-			'width'       => 95,
+			'height'      => 250,
+			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -172,6 +172,3 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 	require get_template_directory() . '/inc/theme-admin.php';
 
-if (class_exists('WooCommerce')) {
-	require_once(get_template_directory() . '/woo-c.php');
-}

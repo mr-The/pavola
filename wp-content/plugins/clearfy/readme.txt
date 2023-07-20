@@ -1,10 +1,10 @@
-﻿=== Clearfy Cache – WordPress optimization plugin, Minify HTML, CSS & JS, Defer ===
-Contributors: Creativemotion, webcraftic, alexkovalevv
-Donate link: https://clearfy.pro/pricing/?utm_source=wordpress.org&utm_campaign=wbcr_clearfy&utm_content=repo
-Tags: cache, minify, optimize, performance, pagespeed, minify css, minify js, remove querystrings, disable rest api, bicycles by falbar, remove rss feeds, remove meta generator, yoast seo remove comments, yoast seo, yoast seo breadcrumbs, disable embeds,remove embeds, remove rsd link, dns-prefetch, remove dns-prefetch, meta generator, rsd link, wlw manifest link, remove wlw manifest link, canonical link, remove canonical link, shortlink link, remove shortlink link, emoji, attachment pages, remove attachment pages, rss feeds, disable rss feeds, rest api, disable rest api, remove rest api, clearfy, archives date, post pagination, archives author, hide login errors, recent comments, tag, rpc, xml, xml rpc, xmlrpc, admin bar, remove querystrings, reduce HTTP requests, disable heartbeat, disable revision, heartbeat, revision, clean, optimize, remove rest-api, remove rest-api, remove jquery migrate, html minify, robots.txt editor, plugin updates, disable plugin updates, disable core updates, core updates, enable automatic updates, disable widgets, disable default widgets, remove html comments
-Requires at least: 5.2
-Tested up to: 6.2
-Requires PHP: 7.0
+﻿=== Clearfy – WordPress optimization plugin and disable ultimate tweaker ===
+Contributors: webcraftic
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VDX7JNTQPNPFW
+Tags: wp disable, disable comments, disable updates, disable emoji, disable embeds, remove querystrings, disable rest api, bicycles by falbar, remove rss feeds, remove meta generator, yoast seo remove comments, yoast seo, yoast seo breadcrumbs, disable embeds,remove embeds, remove rsd link, dns-prefetch, remove dns-prefetch, meta generator, rsd link, wlw manifest link, remove wlw manifest link, canonical link, remove canonical link, shortlink link, remove shortlink link, emoji, attachment pages, remove attachment pages, rss feeds, disable rss feeds, rest api, disable rest api, remove rest api, clearfy, archives date, post pagination, archives author, hide login errors, recent comments, tag, rpc, xml, xml rpc, xmlrpc, admin bar, remove querystrings, reduce HTTP requests, disable heartbeat, disable revision, heartbeat, revision, clean, optimize, remove rest-api, remove rest-api, remove jquery migrate, html minify, robots.txt editor, plugin updates, disable plugin updates, disable core updates, core updates, enable automatic updates, disable widgets, disable default widgets, remove html comments
+Requires at least: 4.2
+Tested up to: 4.9
+Requires PHP: 5.2
 Stable tag: trunk
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -43,27 +43,9 @@ In addition, we observed important features:
 Do you want the same or better? **Download Clearfy for free** and see for yourself! Configuring the plugin takes only 5-10 minutes. Just think how long it would be take you to find and configure all optimization scripts, plugins, if you had not the all in one solution Clearfy.
 
 ### More than 50 Clearfy plugin features for WordPress optimization ###
-
-#### PAGE CACHING ####
-
-Clearfy Cache is a simple, yet powerful WordPress caching plugin that is easy to use, needs minimal configuration, and best of all helps improve site performance for a faster load time. It creates static HTML files of frontend pages and stores them on the server’s disk. This allows the static HTML files to be delivered instead of generating pages on the fly, avoiding resource intensive backend processes from the WordPress core, plugins, and database.
-
-HOW DOES THE CACHING WORK? Clearfy Cache captures page contents and saves it as a static HTML file on the server’s disk. The static HTML file created can be one of several possible cache versions depending on the plugin settings and HTTP request. Accepted static HTML files are then delivered without any database queries or on the fly compression, allowing for a quicker page load.
-
-* **Enable Cache
-* **Browser Caching (PRO)
-* **Mobile Cache (PRO)
-* **Widget Cache (PRO)
-
-#### PERFORMANCE OPTIMIZATION ####
-* **Minify HTML** — compresses the code, speeds up the website loading.
-* **Minify CSS** — you can decrease the size of css files
-* **Minify JS** — you can decrease the size of css files
-* **Critical CSS** — Add CSS files or CSS code to the critical section so that it connects at the very beginning of the page.
-* **Defer JS & CSS
-
 #### Code cleanup ####
 * **Disable RSS Feeds** — disables RSS if you using WordPress for website only, not for blog.
+* **Disable Rest API** — disables Rest API and removes Rest API links. Use this if you don’t need to manage WordPress with third party solutions.
 * **Disable Emojis** — emojis generates extra code and slow down the site, even if you did not put any smiley.
 * **Remove jQuery Migrate** — if you use several popular plugins that are regularly updates, then you can safely delete jQuery Migrate.
 * **Disable Embeds** — if you do not insert videos into the posts or pages, turn embeds off.
@@ -73,6 +55,8 @@ HOW DOES THE CACHING WORK? Clearfy Cache captures page contents and saves it as 
 * **Remove Shortlink** — if you use permalinks, you do not need the shortlinks.
 * **Remove Previous/Next Post Link in HEAD** — delete previous and next post links if you do not use the blog.
 * **Remove .recentcomments Styles** — remove if you want to change the "Related posts" widget styles.
+* **Minify Html** — compresses the code, speeds up the website loading.
+* **WordPress Sanitization** — removes invalid and malicious characters from the URLs and file names.
 
 #### WordPress SEO optimization ####
 * **Automatically insert the alt attribute** — sets the alt attribute for all images in posts and pages, if alt is absent.
@@ -184,13 +168,10 @@ If you think that you do not need all Clearfy features, you can pick up a mini p
 
 #### Translations ####
 * English (default), always included
-* Russian big thanks to [Alexander Kovalev](http://alexkovalev.me "Full stack Wordpress developer")
+* Russian
 * French — big thanks to @kingteamdunet, @fchaussin users
 * Italian (70%)
 * Chinese — big thanks to @idoog and @robertsky_
-* German — big thanks to @moviemaster8
-* Dutch (Belgium) — big thanks to sensuelas
-* Portuguese (Brazil) - big thanks to @rdsfelipe
 
 We are very need for your help with [translating the Clearfy plugin](https://translate.wordpress.org/projects/wp-plugins/clearfy) into your native language. We want to make it international and understandable for everyone. Please contact us via email inside the plugin, or create a topic on our [support forum](https://wordpress.org/support/plugin/clearfy) if you can help with the translations. In exchange for your help, we will give you better support and our premium plugins absolutely free!
 
@@ -226,7 +207,7 @@ Absolutely not. On the contrary, we recommend you to install one of them with Cl
 
 = Do I need acceleration and caching plugins like WP Super Cache, WP Fastest Cache, W3 Total Cache, Autoptimize, WP Rocket? =
 
-Of course you do. Clearfy helps you with better site caching. If you have [Clearfy premium](https://clearfy.pro/pricing/) installed, you will not need additional installation of caching plugins. The page caching function is included in the premium Clearfy package.
+Of course you do. Clearfy helps you with better site caching, but it's not a caching plugin.
 
 = I turned on the option to create robots.txt, but nothing happens. =
 
@@ -234,7 +215,7 @@ It looks like that there is already has a `robots.txt` file at the root folder o
 
 = Does Clearfy support a multisite (network)? =
 
-Plugin has support for multisite only in the premium version [learn more](https://clearfy.pro/pricing/).
+No, it does not. If you need this feature, suggest it on our [support forum](https://wordpress.org/support/plugin/clearfy).
 
 = Can I ask questions if I have? =
 
@@ -247,289 +228,13 @@ Of course! To do this, email us your wishes with address, which you will find in
 == Screenshots ==
 
 1. Control panel quick start
-2. Image optimizer
-3. Plugin components
-4. Update manager
-5. Assets manager
+2. WordPress Assets manager, dequeue scripts, dequeue styles
+3. Control panel - confirmation of your list of functions
+4. Control panel seo tab
+5. Control panel comments tab
+6. Features
 
 == Changelog ==
-= 2.1.9 (26.05.2023) =
-* Added: Compatibility with php 8.1
-* Fixed: Minor bugs.
-
-= 2.1.5 (22.03.2023) =
-* Fixed: Freemius framework conflict
-* Added: Compatibility with Wordpress 6.2
-
-= 2.1.4 (30.01.2023) =
-* Fixed: Minor bugs.
-
-= 2.1.3 (25.12.2022) =
-* Added new caching features.
-
-= 2.1.2 (16.11.2022) =
-* The caching module is unlocked and now all caching functions are available for free.
-
-= 2.0.6 (29.10.2022) =
-* Fixed: Minor bugs.
-
-= 2.0.5 (02.06.2022) =
-* Fixed: Security issue
-
-= 2.0.4 (27.05.2022) =
-* Added: Compatibility with Wordpress 6.0
-
-= 2.0.2 (24.03.2022) =
-* Removed code causing rest api blocking for unauthenticated users.
-
-= 2.0.1 (24.03.2022) =
-* Added: Compatibility with Wordpress 5.9
-
-= 2.0.0 (24.11.2021) =
-* Added: Page caching. It creates static HTML files of frontend pages and stores them on the server’s disk. This allows the static HTML files to be delivered instead of generating pages on the fly, avoiding resource intensive backend processes from the WordPress core, plugins, and database.
-* Improved: Compatibility with premium plugin
-
-= 1.9.6 (15.09.2021) =
-* Fixed: Minor bugs.
-* Improved: Compatibility with Wordpress 5.8
-
-= 1.9.4 (01.07.2021) =
-* Fixed: Bug https://wordpress.org/support/topic/php-fatal-error-261/
-* Fixed: Bug https://forum.webcraftic.com/threads/php-notice-undefined-index-path-in.792/
-* Added compatibility with premium plugin 1.3.6
-
-= 1.9.3 (31.05.2021) =
-* Fixed: Bug https://wordpress.org/support/topic/pagespeed-api-quote-exceeded/
-* Fixed: Bug https://wordpress.org/support/topic/random-fatal-error/
-* Fixed: Bug https://wordpress.org/support/topic/php-fatal-error-254/
-* Fixed: Minor bugs.
-
-= 1.9.1 (12.05.2021) =
-* Fixed: Bug with connecting old google analytics. Removed unnecessary Facebook pixel and Google analytics connections.
-* [Minify and combine] Now script and style optimization is disabled by default for administrators and authorized users. If you want to enable optimization, you can do so by checking the "Also optimize JS/CSS for logged in editors/administrators?"
-
-= 1.9.0 (08.05.2021) =
-In this update, the plugin interface has been simplified, some options have received more automation. In this update, the plugin interface has been simplified, some options have received more automation. Fixed some bugs in the plugin.
-
-= 1.8.9 (06.04.2021) =
-* Fixed: Clearfy was blocking htaccess file overwriting in some cases, now the problem is fixed.
-
-= 1.8.8 (05.04.2021) =
-* Added: Compatibility with the new version of the premium plugin
-* [Minify and Combine] When you aggregate css files into one, the site design can be destroyed, now this bug has been fixed.
-* Improved: Compatibility the option "Remove html comments" with Gutenberg
-* [Assets Manager] Added new "Query string" conditional logic. Now you can disable scripts if the query string contains certain variables.
-
-= 1.8.7 (17.03.2021) =
-* The plugin now requires php 7 and wordpress 5.2 to work properly.
-
-= 1.8.6 (03.03.2021) =
-* Improved: Compatibility with Wordpress 5.7
-
-= 1.8.5 (08.02.2021) =
-* Fixed: Minor bugs.
-
-= 1.8.4 (08.02.2021) =
-* Fixed: Minor bugs in the plugin interface.
-* Improved: compatibility with php 8.
-* Improved: compatibility with premium plugin.
-* Improved: [Disable admin notices] compatibility with Google SiteKit plugin.
-
-= 1.8.3 (25.01.2021) =
-* Added: wp rocket compatibility
-* Fixed: minor bugs
-
-= 1.8.2 (22.12.2020) =
-* Updated: subscription form will disappear from this moment if you have already subscribed.
-* Fixed: [Assets manager component] duplicate templates and scripts error when rendering html views of Assets manager.
-
-= 1.8.1 (15.12.2020) =
-* Added: Subscribe form
-* Fixed: Minor bugs.
-
-= 1.8.0 (20.10.2020) =
-* Сompatible with premium plugin 1.1.6. Added page caching feature to premium plugin.
-* Fixed: Minor bugs.
-
-= 1.7.4 (16.09.2020) =
-* Fixed: Cannot declare class Minify_HTML (Conflict with WP-Optimize).
-
-= 1.7.3 (7.09.2020) =
-* Fixed: Critical error in the Gutenberg editor
-
-= 1.7.2 (4.09.2020) =
-* Fixed: Error with white screen
-
-= 1.7.1 (4.09.2020) =
-* Added: Setup wizard.
-* Fixed: Minor bugs.
-
-= 1.7.0 =
-* Added: Compatibility with Wordpress 5.5
-
-= 1.6.9 =
-* Added: Critical CSS options
-
-= 1.6.8 (3.06.2020) =
-* Fixed: critical bug
-
-= 1.6.7 (3.06.2020) =
-* Added: options search in the plugin interface. You can enter the option name, the plugin will automatically redirect you to the desired page where the option is located.
-* Updated: main navigation menu.
-* Fixed: Minor bugs
-
-= 1.6.6 (29.04.2020) =
-* Fixed: Minor bugs
-
-= 1.6.5 (28.04.2020) =
-* Fixed: The license was activated during synchronization with the server, but the license has not expired yet and was active.
-* Fixed: The notification “Please, install premium plugin” no longer appears if the plugin was installed manually.
-* Added: Сompatibility with php 7.4
-* Added: Сompatibility with Wordpress 5.4
-* Fixed: [Webcraftic Disable Admin Notices Individually] Conflicts with plugins 404page, Lara’s Google Analytics, YITH WooCommerce Gift Cards
-* Fixed: [Minify and combine] Minor bugs.
-
-= 1.6.4 (12.02.2020) =
-* Fixed: Minor bugs.
-
-= 1.6.3 (21.01.2020) =
-* Fixed: Minor bugs.
-* Fixed: Compatibility with Robin image optimizer 1.4.2
-* Fixed: Broken links in plugin interface.
-* Fixed: Bug with translations of components.
-* Fixed: [Minify and combine] compatibility php 7.4
-
-= 1.6.2 (20.11.2019) =
-* Fixed: Minor bugs.
-
-= 1.6.1 (13.11.2019) =
-* Fixed: Compatibility with Wordpress 5.3
-* Fixed: [Assets manager component] Minor bugs. Added an admin notice about great release.
-* Fixed: [Assets manager component] Conditional logic in the premium plugin didn't work in previous version due an error.
-* Added: [Assets manager component] You can control asset requires. Now if you disabled asset and it required for which other asset, you will get prompt with warning.
-* Added: [Assets manager component] If you click on the "requires" tag, you will be gone to the asset for which require the current asset.
-* Added: Restored plugin Hide my wp for premium build. And added compatibility Clearfy with Hide my wp.
-
-= 1.6.0 (12.10.2019) =
-* Fixed: [Google analytic cache] a bug with creating a local copy of the Google analytics library.
-* Fixed: [Assets manager component] fatal error with "Call to undefined function wp_scripts_get_suffix"
-* Fixed: [Assets manager component] bugs with jquery library and improved compatibility with other optimization plugins."
-* Fixed: [Robin image optimizer] a bug with converting webp in image optimizer. Under the Clearfy license images weren't converted.
-* Fixed: Removed ads for premium users
-
-= 1.5.9 (04.10.2019) =
-* Fixed: [Assets manager component] fatal error with "Call to undefined function wbcr_gnz_deploy_mu_plugin()"
-* Fixed: [Assets manager component] fatal error with "Use of undefined constant WGZ_PLUGIN_DIR"
-* Fixed: Minor bugs with uninstall plugin
-
-= 1.5.7 (04.10.2019) =
-* Fixed: [Cyrlitera component] fatal error with "class 'WCTR_Helper' not found"
-
-= 1.5.6 (04.10.2019) =
-* [Assets manager component]: The interface has become more compact and friendly.
-* [Assets manager component]: The speed and productivity of the editor is increased, it loads faster and does not freeze, as it was before.
-* [Assets manager component]: Extended conditional logic has been added, now you can create complex conditions for disabling assets.
-* [Assets manager component]: An additional mode has appeared to completely disable the plugin (you can disable not only scripts, but also stop executing plugin scripts).
-* [Assets manager component]: Known bugs in the previous version are fixed.
-
-= 1.5.3 =
-* Fixed: Bug with Elementor plugin. If you enable options "remove query strings for static resources", elementor plugin stopped its work
-* Fixed: [Update manager component]: When you disable WordPress core updates, you still see an update notification for version 5.x.x
-* Fixed: [Update manager component]: Clearfy compatibility error. Namely, when the component was activated, the cron tasks for checking for updates were not runned.
-* Fixed: [Update manager component]: PHP Notice "Undefined property: stdClass::$plugin"
-* Fixed: [Assets manager component]: Php error "Cannot use string offset as an array"
-* Fixed: [Assets manager component]: Broken interface and some javascript errors
-* Fixed: [Assets manager component]: PHP Notice "Trying to get property 'taxonomy' of non-object"
-* Fixed: When you enable the remove meta generator option, meta tag viewport can also be removed.
-* Fixed: After enabling the Google Fonts asynchronous option, you could see php notice "Notice: Trying to get property of non-object"
-* Fixed: Disabling revisions in Wordpress 5.0 does not work (Gutenberg).
-* Fixed: Compatible with Robin Image Optimizer 1.3.6
-
-= 1.5.0 =
-* Fixed: Bug when disabling embeds, in Wordpress 5.0 did not work editor gutenberg
-
-= 1.4.9 =
-* Fixed: Bug with Woocommerce Memberships
-* Fixed: Bug with License manager
-* Fixed: [Cyrlitera component]: when using transliteration on frontend, duplicate pages were created.
-* Fixed: [Update manager component]: no longer disables plugin update checking.
-* Fixed: [Update manager component]: inverted switches to disable auto-updates.
-* Fixed: [Update manager component]: removed the "Update Manager" button on the plugin and themes page.
-* Fixed: Bug with wbcr_factory_409_imppage_after_form_save: you will no longer see the PHP notification.
-
-= 1.4.6 =
-* Fixed: Bug when license activated [Call to undefined function mime_content_type].
-* Fixed: Disable comments component: [Uncaught Error: Class 'WCTR_Plugin' not found].
-* Fixed: Removed notifications that cannot be dismissed.
-* Fixed: Update manager component: [Notice: Trying to get property of non-object].
-* Fixed: Update manager component: [Warning: Invalid argument supplied].
-
-= 1.4.5 =
-* Fixed: Update manager: [Undefined index: clearfy]
-
-= 1.4.4 =
-* Fixed: Added compatibility with ithemes sync
-* Fixed: Assets manager: A bug when the interface did not open on the frontend.
-* Fixed: Unlocked multisite support for individual sites. Network management mode, still remained only for premium.
-
-= 1.4.3 =
-* Fixed: Compatibility with W3 total cache
-* Fixed: Compatibility with External Media without Import
-* Fixed: Fatal error when activating plugin
-* Fixed: Removed tab on the page to get premium for free.
-
-= 1.4.2 =
-* Fixed: Errors in the plugin on user requests
-* New: The Updates Manager component has been completely redesigned, many additional functions have been added.
-* New: The Assets Manager component has been completely redesigned, many additional functions have been added.
-* New: Friendly interface
-* New: Step to php 5.3 and above
-* New: Import/export has been moved to the Clearfy Settings page.
-* Added: Multisite support for most components.
-* Added: Compatibility with external components
-* Added: Additional hooks and filters for white label.
-* Added: New components.
-
-= 1.3.184 =
-* Fixed: Critical error with WCL_Helper::minifyHtml()
-* Fixed: Disable rest api
-* Fixed: Disable emojis
-* Fixed: Translations
-* Fixed: Bug when loading components with Clearfy business
-* Fixed: Added compatibility with Learndash
-
-= 1.3.183 =
-* Fixed: Critical error when plugin activate
-* Fixed: Conflict due to the jsMin library
-* Fixed: Crush of the markup for the additional Clearfy menu in the adminbar
-* Added: Option to disable the extra Clearfy menu in the adminbar
-
-= 1.3.182 =
-* Fixed: Critical error when plugin update
-
-= 1.3.181 =
-* Fixed: Fatal error when plugin update
-
-= 1.3.18 =
-* Added: new component for image optimization. We’ve created a 100% free solution for image optimization, which is as good as the paid products. The plugin optimizes your images automatically, reducing their weight with no quality loss.
-* Added: new component for scripts & styles optimization - this component combines all your scripts and styles in one file, compresses & caches it.
-* Added: new component for HTML compression - we’ve completely redesigned HTML compression of the pages and added these features to another component. It’s more stable and reliable solution for HTML code optimization of your pages.
-* Added: new [premium] component for Hide Wordpress - this premium component helps in hiding your WordPress from hackers and bots. Basically, it disables identification of your CMS by changing directories and files names, removing meta data and replacing HTML content which can provide all information about the platform you use. Most websites can be hacked easily, as hackers and bots know all security flaws in plugins, themes and the WordPress core. You can secure the website from the attack by hiding the information the hackers will need.
-* Added: updated the robots.txt layout (like in Yoast studio)
-* Fixed: compatibility problems with PHP 7.0 in helpers.php
-* Fixed: malfunctioned transliteration in frontend and several custom posts.
-* Fixed: php error instead of the warning message, when a user has already had other webcraftic plugins and tried to add Clearfy.
-* Fixed: some users had problems with the “Remove post pagination” feature – now this option is marked with grey.
-* Fixed: recommended mode for the quick plugin setup has been removed. This has been done because users couldn’t figure out what features they were activating and why.
-* Fixed: problems with editing pages in such popular plugins as elementor and visual composer with enabled “Remove versions from request lines” feature. We’ve decided to keep the version in the request line for authorized users.
-* Added: you can exclude sending the If-Modified-Since header for the main page, because main pages update really rare.
-* Fixed: conflict with the Divi theme – some users were missing the settings panel when the “Hide Admin notification” component was used.
-* Fixed: problem with displaying the Font Awesome icons with enabled asynchronous font loading.
-* The “Hide login page” module turned into the separate component. It is no longer enabled by default. Attention! If you’ve ever used features associated with hiding login page, then, please, re-activate this component.
-* Improvements in activation and deactivation of components.
-* Added: premium version support, licensing page and ability to install paid components.
-* Donate widget has been removed. Now if you want to support our project, you can switch to the premium version and get the best support & extra features.
-
 = 1.2.1 =
 * Fixed: Bug with Buddypress (forum issue BUG. Blank Edit buddypress page)
 * Fixed: In version 1.2.0, changes were lost 1.9.1 and 1.9.2

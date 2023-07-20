@@ -27,9 +27,9 @@
 		exit;
 	}
 
-	if( !class_exists('Wbcr_FactoryForms466_RadioColorsControl') ) {
+	if( !class_exists('Wbcr_FactoryForms400_RadioColorsControl') ) {
 
-		class Wbcr_FactoryForms466_RadioColorsControl extends Wbcr_FactoryForms466_Control {
+		class Wbcr_FactoryForms400_RadioColorsControl extends Wbcr_FactoryForms400_Control {
 
 			public $type = 'radio-color';
 
@@ -64,7 +64,7 @@
 				$name_on_form = $this->getNameOnForm();
 				$this->addHtmlAttr('name', $name_on_form);
 
-				echo '<div class="factory-colors-inner-wrap" data-radio-name="' . esc_attr($name_on_form) . '">';
+				echo '<div class="factory-colors-inner-wrap" data-radio-name="' . $name_on_form . '">';
 			}
 
 			/**
@@ -102,7 +102,7 @@
 				<span class="factory-form-radio-item">
                 <lable class="factory-from-radio-label">
 	                <input type="radio" <?php $this->attrs() ?> value="<?php echo esc_attr($item[0]) ?>" <?php echo $checked ?>/>
-	                <span style="background-color:<?php echo esc_attr($item[1]) ?>"></span>
+	                <span style="background-color:<?= esc_attr($item[1]) ?>"></span>
                 </lable>
             </span>
 			<?php }

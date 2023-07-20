@@ -1,251 +1,140 @@
 <?php
-/**
- * The boot file is needed to connect backend files, as well as register hooks.
- * Some hooks are so small that it does not make sense to put them into a file
- * or put them into a specific group of code.
- *
- * I usually register administrator notifications, create handlers before saving
- * plugin settings or after, register options in the Clearfy plugin.
- *
- * @author    Webcraftic <wordpress.webraftic@gmail.com>, Alex Kovalev <alex.kovalevv@gmail.com>
- * @copyright Webcraftic
- * @version   1.1
- */
+	/**
+	 * Admin boot
+	 * @author Webcraftic <alex.kovalevv@gmail.com>
+	 * @copyright Webcraftic 25.05.2017
+	 * @version 1.0
+	 */
 
-// Exit if accessed directly
-if( !defined('ABSPATH') ) {
-	exit;
-}
-
-/**
- * Уведомление будет показано на всех страницах Clearfy и его компонентах.
- *
- * @param WCL_Plugin $plugin
- * @param Wbcr_FactoryPages467_ImpressiveThemplate $obj
- */
-
-add_action('wbcr/factory/pages/impressive/print_all_notices', function ($plugin, $obj) {
-	# Выводит уведомление, что в отключены некоторые опции, чтобы не было конфликтов с wp rocket.
-	if( is_plugin_active('wp-rocket/wp-rocket.php') ) {
-		$obj->printWarningNotice(sprintf(__('You are using Clearfy and wp rocket together, to avoid conflicts, we have disabled similar features in Clearfy. For example, you cannot use caching in Clearfy and wp rocket at the same time. You can read more about this in <a href="%s" target="_blank" rel="noopener">this article</a>.', 'clearfy'), 'https://clearfy.pro/docs/wp-rocket-clearfy/'));
+	// Exit if accessed directly
+	if( !defined('ABSPATH') ) {
+		exit;
 	}
-	# Выводит уведомление, что нужно сбросить постоянные ссылки.
-	if( WCL_Plugin::app()->getPopulateOption('need_rewrite_rules') ) {
-		$obj->printWarningNotice(sprintf('<span class="wbcr-clr-need-rewrite-rules-message">' . __('When you deactivate some components, permanent links may work incorrectly. If this happens, please, <a href="%s">update the permalinks</a>, so you could complete the deactivation.', 'clearfy'), admin_url('options-permalink.php')) . '</span>');
-	}
-}, 10, 2);
 
-/**
- * Этот хук реализует условную логику перенаправления на страницу мастера настроек,
- * сразу после активации плагина.
- */
-add_action('admin_init', function () {
-	$plugin = WCL_Plugin::app();
+	/**
+	 * Ошибки совместимости с похожими плагинами
+	 */
+	function wbcr_clearfy_admin_conflict_notices_error()
+	{
+		$notices = array();
 
-	// If the user has updated the plugin or activated it for the first time,
-	// you need to show the page "What's new?"
-	if( !WCL_Plugin::app()->isNetworkAdmin() ) {
-		$setup_page_viewed = WCL_Plugin::app()->request->get('wclearfy_setup_page_viewed', null);
-		if( is_null($setup_page_viewed) ) {
-			if( WCL_Helper::is_need_show_setup_page() ) {
-				try {
-					$redirect_url = '';
-					if( class_exists('Wbcr_FactoryPages467') ) {
-						$redirect_url = WCL_Plugin::app()->getPluginPageUrl('setup', ['wclearfy_setup_page_viewed' => 1]);
-					}
-					if( $redirect_url ) {
-						wp_safe_redirect($redirect_url);
-						die();
-					}
-				} catch( Exception $e ) {
-				}
-			}
-		} else {
-			if( WCL_Helper::is_need_show_setup_page() ) {
-				delete_option($plugin->getOptionName('setup_wizard'));
-			}
+		$default_notice = WCL_Plugin::app()
+				->getPluginTitle() . ': ' . __('We found that you have the plugin %s installed. The functions of this plugin already exist in %s. Please deactivate plugin %s to avoid conflicts between plugins functions.', 'clearfy');
+		$default_notice .= ' ' . __('If you do not want to deactivate the plugin %s for some reason, we strongly recommend do not use the same plugins functions at the same time!', 'clearfy');
+
+		if( is_plugin_active('wp-disable/wpperformance.php') ) {
+			$notices[] = sprintf($default_notice, 'WP Disable', WCL_Plugin::app()
+				->getPluginTitle(), 'WP Disable', 'WP Disable');
 		}
-	}
-});
 
-/**
- * Выводит кнопку настроек Clearfy в шапке интерфейса плагина
- */
-add_action('wbcr/factory/pages/impressive/header', function ($plugin_name) {
-	if( $plugin_name != WCL_Plugin::app()->getPluginName() ) {
-		return;
-	}
-	?>
-	<a href="<?php echo WCL_Plugin::app()->getPluginPageUrl('clearfy_settings') ?>" class="wbcr-factory-button wbcr-factory-type-settings">
-		<?php echo apply_filters('wbcr/clearfy/settings_button_title', __('Clearfy settings', 'clearfy')); ?>
-	</a>
+		if( empty($notices) ) {
+			return;
+		}
+
+		?>
+		<div id="wbcr-clearfy-conflict-error" class="notice notice-error is-dismissible">
+			<?php foreach((array)$notices as $notice): ?>
+				<p>
+					<?= $notice ?>
+				</p>
+			<?php endforeach; ?>
+		</div>
 	<?php
-});
-
-/**
- * @param                                          $form
- * @param Wbcr_Factory469_Plugin $plugin
- * @param Wbcr_FactoryPages467_ImpressiveThemplate $obj
- */
-function wbcr_clearfy_multisite_before_save($form, $plugin, $obj)
-{
-	if( $plugin->getPluginName() !== WCL_Plugin::app()->getPluginName() ) {
-		return;
 	}
 
-	if( $plugin->isNetworkAdmin() ) {
-		if( !$plugin->premium->is_activate() && $plugin->isNetworkActive() ) {
-			$obj->redirectToAction('multisite-pro');
-		}
-	}
-}
+	add_action('admin_notices', 'wbcr_clearfy_admin_conflict_notices_error');
 
-add_action('wbcr/factory/pages/impressive/before_form_save', 'wbcr_clearfy_multisite_before_save', 10, 3);
+	/**
+	 * Welcome guid
+	 * @param string $hook_suffix
+	 */
+	function wbcr_enqueue_pointer_script_style($hook_suffix)
+	{
+		$enqueue_pointer_script_style = false;
+		$dismissed_pointers = explode(',', get_user_meta(get_current_user_id(), 'dismissed_wp_pointers', true));
 
-/**
- * Устанавливает логотип Webcraftic и сборку плагина для Clearfy и всех его компонентов
- *
- * @param string $title
- *
- * @since 1.4.0
- *
- */
-function wbcr_clearfy_branding($title)
-{
-	$is_premium = WCL_Plugin::app()->premium->is_activate();
-
-	return 'Webcraftic Clearfy ' . ($is_premium ? '<span class="wbcr-clr-logo-label wbcr-clr-premium-label-logo">' . __('Business', 'clearfy') . '</span>' : '<span class="wbcr-clr-logo-label wbcr-clr-free-label-logo">Free</span>') . ' ver';
-}
-
-add_action('wbcr/factory/pages/impressive/plugin_title', 'wbcr_clearfy_branding');
-
-/**
- * Подключаем скрипты для установки компонентов Clearfy
- * на все страницы админпанели
- */
-/*add_action('admin_enqueue_scripts', function () {
-	wp_enqueue_style('wbcr-clearfy-install-components', WCL_PLUGIN_URL . '/admin/assets/css/install-addons.css', [], WCL_Plugin::app()->getPluginVersion());
-	wp_enqueue_script('wbcr-clearfy-install-components', WCL_PLUGIN_URL . '/admin/assets/js/install-addons.js', [
-		'jquery',
-		'wbcr-factory-templates-118-global'
-	], WCL_Plugin::app()->getPluginVersion());
-});*/
-
-/**
- * Удаляем уведомление Clearfy о том, что нужно перезаписать постоянные ссылоки.
- */
-function wbcr_clearfy_flush_rewrite_rules($hard)
-{
-	WCL_Plugin::app()->deletePopulateOption('need_rewrite_rules', 1);
-
-	return $hard;
-}
-
-add_filter('flush_rewrite_rules_hard', 'wbcr_clearfy_flush_rewrite_rules');
-
-/**
- * Обновить постоынные ссылки, после выполнения быстрых настроек
- *
- * @param WHM_Plugin $plugin
- * @param Wbcr_FactoryPages467_ImpressiveThemplate $obj
- */
-function wbcr_clearfy_after_form_save($plugin, $obj)
-{
-	if( !WCL_Plugin::app()->currentUserCan() ) {
-		return;
-	}
-	$is_clearfy = WCL_Plugin::app()->getPluginName() == $plugin->getPluginName();
-
-	if( $is_clearfy && $obj->id == 'quick_start' && isset($_GET['action']) && $_GET['action'] == 'flush-cache-and-rules' ) {
-		require_once ABSPATH . 'wp-admin/includes/file.php';
-		require_once ABSPATH . 'wp-admin/includes/misc.php';
-		flush_rewrite_rules(true);
-	}
-}
-
-add_action('wbcr/factory/pages/impressive/after_form_save', 'wbcr_clearfy_after_form_save', 10, 2);
-
-/**
- * Widget with the offer to buy Clearfy Business
- *
- * @param array $widgets
- * @param string $position
- * @param Wbcr_Factory469_Plugin $plugin
- */
-
-add_filter('wbcr/factory/pages/impressive/widgets', function ($widgets, $position, $plugin) {
-	$is_current_plugin = $plugin->getPluginName() == WCL_Plugin::app()->getPluginName();
-
-	if( class_exists('WRIO_Plugin') ) {
-		$is_current_plugin = $plugin->getPluginName() === WRIO_Plugin::app()->getPluginName() || $plugin->getPluginName() === WCL_Plugin::app()->getPluginName();
-	}
-
-	if( $is_current_plugin ) {
-
-		require_once WCL_PLUGIN_DIR . '/admin/includes/sidebar-widgets.php';
-
-		if( WCL_Plugin::app()->premium->is_activate() ) {
-			unset($widgets['donate_widget']);
-
-			if( $position == 'right' ) {
-				unset($widgets['adverts_widget']);
-				unset($widgets['business_suggetion']);
-				unset($widgets['rating_widget']);
-				unset($widgets['info_widget']);
-			}
-
-			return $widgets;
-		} else {
-			if( $position == 'right' ) {
-				unset($widgets['business_suggetion']);
-				unset($widgets['info_widget']);
-				unset($widgets['rating_widget']);
-			}
+		if( !in_array('wbcr_clearfy_defence_pointer_1_2_0', $dismissed_pointers) || !in_array('wbcr_clearfy_settings_pointer_1_2_0', $dismissed_pointers) || !in_array('wbcr_clearfy_components_pointer_1_2_0', $dismissed_pointers) ) {
+			$enqueue_pointer_script_style = true;
+			add_action('admin_print_footer_scripts', 'wbcr_pointer_print_scripts');
 		}
 
-		if( $position == 'bottom' ) {
-			unset($widgets['support_widget']);
-			$widgets['donate_widget'] = wbcr_clearfy_get_sidebar_premium_widget();
+		if( $enqueue_pointer_script_style ) {
+			wp_enqueue_style('wp-pointer');
+			wp_enqueue_script('wp-pointer');
 		}
 	}
 
-	return $widgets;
-}, 9999, 3);
+	// todo: remove in 1.2.0
+	function wbcr_pointer_print_scripts()
+	{
+		$dismissed_pointers = explode(',', get_user_meta(get_current_user_id(), 'dismissed_wp_pointers', true));
 
-/**
- * Remove adverts notices for premium users
- */
-add_action('wbcr/factory/admin_notices', function ($notices, $plugin_name) {
-	if( $plugin_name != WCL_Plugin::app()->getPluginName() ) {
-		return $notices;
+		$pointer_setting_content = "<h3>" . sprintf(__('Welcome to Clearfy (%s)', 'clearfy'), '1.2.0') . "</h3>";
+		$pointer_setting_content .= "<p>" . __('There are new optimization and protection features in the plugin. We recommend you to look at them maybe they will be useful!', 'clearfy') . "</p>";
+
+		$pointer_performance_content = "<h3>" . __('The section "Code cleaning" was renamed', 'clearfy') . "</h3>";
+		$pointer_performance_content .= "<p>" . __('Asynchronous Google fonts loading, Google Analytics optimization, disabling Google Fonts and Maps, disabling of gravatars, Font Awesome icons was added.', 'clearfy') . "</p>";
+
+		$pointer_defence_content = "<h3>" . __('Login page protection added', 'clearfy') . "</h3>";
+		$pointer_defence_content .= "<p>" . __('With the new Clearfy version, you can use the hide login page function. Nobody will know the address of your login page, which means there will be no password bruteforce and the attempts of your website hack will decrease.', 'clearfy') . "</p>";
+
+		?>
+
+		<script type="text/javascript">
+			//<![CDATA[
+			jQuery(document).ready(function($) {
+				<?php if(!in_array('wbcr_clearfy_settings_pointer_1_2_0', $dismissed_pointers)): ?>
+				$('#menu-settings').pointer({
+					content: '<?php echo $pointer_setting_content; ?>',
+					position: {
+						edge: 'left', // arrow direction
+						align: 'center' // vertical alignment
+					},
+					pointerWidth: 350,
+					close: function() {
+						$.post(ajaxurl, {
+							pointer: 'wbcr_clearfy_settings_pointer_1_2_0', // pointer ID
+							action: 'dismiss-wp-pointer'
+						});
+					}
+				}).pointer('open');
+				<?php endif; ?>
+				<?php if(!in_array('wbcr_clearfy_performance_pointer_1_2_0', $dismissed_pointers) && in_array('wbcr_clearfy_settings_pointer_1_2_0', $dismissed_pointers)): ?>
+				$('#performance-clearfy-tab').pointer({
+					content: '<?php echo $pointer_performance_content; ?>',
+					position: {
+						edge: 'left', // arrow direction
+						align: 'center' // vertical alignment
+					},
+					pointerWidth: 350,
+					close: function() {
+						$.post(ajaxurl, {
+							pointer: 'wbcr_clearfy_performance_pointer_1_2_0', // pointer ID
+							action: 'dismiss-wp-pointer'
+						});
+					}
+				}).pointer('open');
+				<?php endif; ?>
+				<?php if(!in_array('wbcr_clearfy_defence_pointer_1_2_0', $dismissed_pointers) && in_array('wbcr_clearfy_performance_pointer_1_2_0', $dismissed_pointers)): ?>
+				$('#defence-clearfy-tab').pointer({
+					content: '<?php echo $pointer_defence_content; ?>',
+					position: {
+						edge: 'left', // arrow direction
+						align: 'center' // vertical alignment
+					},
+					pointerWidth: 350,
+					close: function() {
+						$.post(ajaxurl, {
+							pointer: 'wbcr_clearfy_defence_pointer_1_2_0', // pointer ID
+							action: 'dismiss-wp-pointer'
+						});
+					}
+				}).pointer('open');
+				<?php endif; ?>
+			});
+			//]]>
+		</script>
+	<?php
 	}
 
-	if( WCL_Plugin::app()->premium->is_activate() ) {
-		unset($notices['adverts_notice']);
-	}
-
-	return $notices;
-}, 9999, 2);
-
-/**
- * Remove adverts widgets for premium users
- */
-add_action('wp_dashboard_setup', function () {
-	global $wp_meta_boxes;
-
-	if( WCL_Plugin::app()->premium->is_activate() ) {
-		if( isset($wp_meta_boxes['dashboard']) ) {
-			if( isset($wp_meta_boxes['dashboard']['normal']) && isset($wp_meta_boxes['dashboard']['normal']['core']) && isset($wp_meta_boxes['dashboard']['normal']['core']['wbcr-factory-adverts-widget']) ) {
-				unset($wp_meta_boxes['dashboard']['normal']['core']['wbcr-factory-adverts-widget']);
-			}
-			if( isset($wp_meta_boxes['dashboard']['side']) && isset($wp_meta_boxes['dashboard']['side']['core']) && isset($wp_meta_boxes['dashboard']['normal']['core']['wbcr-factory-adverts-widget']) ) {
-				unset($wp_meta_boxes['dashboard']['normal']['core']['wbcr-factory-adverts-widget']);
-			}
-		}
-	}
-}, 9999);
-
-// add widget scripts on all clearfy pages
-add_action('wbcr/clearfy/page_assets', function ($id, $scripts, $styles) {
-	$scripts->add(WCL_PLUGIN_URL . '/admin/assets/js/widgets.js', array('jquery'));
-}, 10, 3);
+	add_action('admin_enqueue_scripts', 'wbcr_enqueue_pointer_script_style');

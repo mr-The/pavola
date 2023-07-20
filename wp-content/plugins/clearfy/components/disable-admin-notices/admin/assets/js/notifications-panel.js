@@ -10,10 +10,8 @@
 
 	$(document).ready(function() {
 		$(document).on('click', '.wbcr-han-panel-restore-notify-link', function() {
-
 			var self = $(this),
 				noticeID = $(this).data('notice-id'),
-				nonce = $(this).data('nonce'),
 				counterEl = $('.wbcr-han-adminbar-counter');
 
 			if( !noticeID ) {
@@ -26,34 +24,21 @@
 				type: 'post',
 				dataType: 'json',
 				data: {
-					action: 'wbcr-dan-restore-notice',
-					security: nonce,
+					action: 'wbcr_dan_restore_notice',
+					security: wbcr_dan_ajax_restore_nonce,
 					notice_id: noticeID
 				},
-				success: function(response) {
-					if( !response || !response.success ) {
-
-						if( response.data.error_message ) {
-							console.log(response.data.error_message);
-							self.closest('li').show();
-						} else {
-							console.log(response);
-						}
-
+				success: function(data, textStatus, jqXHR) {
+					if( data == 'error' && data.error ) {
+						alert(data.error);
+						self.closest('li').show();
 						return;
 					}
 
 					counterEl.text(counterEl.text() - 1);
 					self.closest('li').remove();
-				},
-				error: function(xhr, ajaxOptions, thrownError) {
-					console.log(xhr.status);
-					console.log(xhr.responseText);
-					console.log(thrownError);
 				}
 			});
-
-			return false;
 		});
 	});
 })(jQuery);

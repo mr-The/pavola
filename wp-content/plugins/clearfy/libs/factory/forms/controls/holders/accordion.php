@@ -13,13 +13,13 @@
 	if( !defined('ABSPATH') ) {
 		exit;
 	}
-	if( !class_exists('Wbcr_FactoryForms466_AccordionHolder') ) {
+	if( !class_exists('Wbcr_FactoryForms400_AccordionHolder') ) {
 		/**
 		 * Tab Control Holder
 		 *
 		 * @since 1.0.0
 		 */
-		class Wbcr_FactoryForms466_AccordionHolder extends Wbcr_FactoryForms466_Holder {
+		class Wbcr_FactoryForms400_AccordionHolder extends Wbcr_FactoryForms400_Holder {
 
 			/**
 			 * A holder type.

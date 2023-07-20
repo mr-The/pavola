@@ -1,10 +1,10 @@
 === Cyrlitera – transliteration of links and file names  ===
 Tags: translitera, cyrillic, latin, l10n, russian, rustolat, slugs, translations, transliteration, media, georgian, european, diacritics, ukrainian
-Contributors: webcraftic, creativemotion, alexkovalevv
+Contributors: webcraftic
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VDX7JNTQPNPFW
-Requires at least: 5.2
-Tested up to: 6.2
-Requires PHP: 7.0
+Requires at least: 4.2
+Tested up to: 4.9
+Requires PHP: 5.2
 Stable tag: trunk
 License: GPLv2
 
@@ -62,12 +62,10 @@ We used some plugins functions:
 We invite you to check out a few other related free plugins that our team has also produced that you may find especially useful:
 
 * [Clearfy – WordPress optimization plugin and disable ultimate tweaker](https://wordpress.org/plugins/clearfy/)
+* [WordPress Assets manager, dequeue scripts, dequeue styles](https://wordpress.org/plugins/gonzales/)
 * [Disable Comments for Any Post Types (Remove Comments)](https://wordpress.org/plugins/comments-plus/)
 * [Disable updates, Disable automatic updates, Updates manager](https://wordpress.org/plugins/webcraftic-updates-manager/)
-* [Cyr-to-lat reloaded – transliteration of links and file names](https://wordpress.org/plugins/cyr-and-lat/ "Cyr-to-lat reloaded")
 * [Disable admin notices individually](https://wordpress.org/plugins/disable-admin-notices/ "Disable admin notices individually")
-* [WordPress Assets manager, dequeue scripts, dequeue styles](https://wordpress.org/plugins/gonzales/  "WordPress Assets manager, dequeue scripts, dequeue styles")
-* [Hide login page](https://wordpress.org/plugins/hide-login-page/ "Hide login page")
 
 == Installation ==
 
@@ -77,60 +75,26 @@ We invite you to check out a few other related free plugins that our team has al
 
 == Frequently Asked Questions ==
 
+= Does plugin work with multisite? =
+No plugin does not support multisites. This is temporary and we will try to add support for networks in the future.
+
 = Converts characters incorrectly? =
 Try to change the problematic symbols in the plugin's settings with the symbol base enlargement field. These characters will replace the default characters.
 
 = How to restore converted URLs? =
 There is a "Rollback changes" button in the plugin settings. This option works only for links, which has been transliterated. This will not work for filenames.
-
 == Screenshots ==
 1. Setting page
 2. Simple for posts
 2. Simple for filenames
 
 == Changelog ==
-= 1.1.7 (22.03.2023) =
-* Fixed: Freemius framework conflict
-* Added: Compatibility with Wordpress 6.2
-
-= 1.1.6 (30.05.2022) =
-* Added: Compatibility with Wordpress 6.0
-
-= 1.1.5 (24.03.2022) =
-* Added: Compatibility with Disable admin notices plugin
-
-= 1.1.4 (23.03.2022) =
-* Added: Compatibility with Wordpress 5.9
-* Fixed: Minor bugs
-
-= 1.1.3 (20.10.2021) =
-* Added: Compatibility with Wordpress 5.8
-* Fixed: Minor bugs
-
-= 1.1.2 (15.12.2020) =
-* Added: Subscribe form
-* Fixed: Minor bugs
-
-= 1.1.1 =
-* Added: Compatibility with Wordpress 4.2 - 5.x
-* Added: Gutenberg support
-* Added: Multisite support
-* Fixed: Minor bugs
-
-= 1.0.5 =
-Fixed: Update core
-Fixed: Bug with bodypress
-Fixed: Transliteration on the frontend
-Fixed: Added option to disable transliteration on frontend
-
 = 1.0.4 =
 Fixed: Bug with transliteration of file names
 Added: Compatibility with PHP 7.2
 Added: Forced transliteration for file names
-
 = 1.0.3 =
 * Fixed: Small bugs
-
 = 1.0.2 =
 * Added: Function of converting files to lowercase
 * Added: Forced transliteration function
@@ -138,9 +102,7 @@ Added: Forced transliteration for file names
 * Added: Ability to change the base of symbols of transliteration
 * Added: Button for converting old posts, categories, tags
 * Added: Button to restore old links
-
 = 1.0.1 =
 * Fixed small bugs
-
 = 1.0.0 =
 * Plugin release

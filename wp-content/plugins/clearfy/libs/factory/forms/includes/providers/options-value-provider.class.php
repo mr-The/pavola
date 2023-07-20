@@ -13,7 +13,7 @@
 		exit;
 	}
 
-	if( !class_exists('Wbcr_FactoryForms466_OptionsValueProvider') ) {
+	if( !class_exists('Wbcr_FactoryForms400_OptionsValueProvider') ) {
 
 		/**
 		 * Factory Options Value Provider
@@ -22,15 +22,7 @@
 		 *
 		 * @since 1.0.0
 		 */
-		class Wbcr_FactoryForms466_OptionsValueProvider implements Wbcr_IFactoryForms466_ValueProvider {
-
-			/**
-			 * A prefix that will be added to all option names.
-			 *
-			 * @since 1.0.0
-			 * @var string
-			 */
-			public $scope;
+		class Wbcr_FactoryForms400_OptionsValueProvider implements Wbcr_IFactoryForms400_ValueProvider {
 
 			/**
 			 * Values to save $optionName => $optionValue
@@ -41,9 +33,17 @@
 			private $values = array();
 
 			/**
+			 * A prefix that will be added to all option names.
+			 *
+			 * @since 1.0.0
+			 * @var string
+			 */
+			public $scope;
+
+			/**
 			 * Creates a new instance of an options value provider.
 			 */
-			public function __construct(Wbcr_Factory469_Plugin $plugin)
+			public function __construct(Wbcr_Factory400_Plugin $plugin)
 			{
 				$this->plugin = $plugin;
 			}
@@ -61,14 +61,12 @@
 			 */
 			public function saveChanges()
 			{
-				foreach((array)$this->values as $option_name => $option_value) {
-					$this->plugin->updatePopulateOption($option_name, $option_value);
-				}
+				$this->plugin->updateOptions($this->values);
 			}
 
 			public function getValue($name, $default = null, $multiple = false)
 			{
-				$value = $this->plugin->getPopulateOption($name, $default);
+				$value = $this->plugin->getOption($name, $default);
 
 				if( $value === 'true' || $value === true ) {
 					$value = 1;

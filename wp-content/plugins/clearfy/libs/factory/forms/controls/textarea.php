@@ -20,9 +20,9 @@
 		exit;
 	}
 
-	if( !class_exists('Wbcr_FactoryForms466_TextareaControl') ) {
+	if( !class_exists('Wbcr_FactoryForms400_TextareaControl') ) {
 
-		class Wbcr_FactoryForms466_TextareaControl extends Wbcr_FactoryForms466_Control {
+		class Wbcr_FactoryForms400_TextareaControl extends Wbcr_FactoryForms400_Control {
 
 			public $type = 'textarea';
 
@@ -36,20 +36,15 @@
 			{
 				$name_on_form = $this->getNameOnForm($name);
 
-				$raw_value = isset($_POST[$name_on_form])
+				$value = isset($_POST[$name_on_form])
 					? $_POST[$name_on_form]
 					: null;
 
-				$value = $raw_value;
-
 				if( is_array($value) ) {
-					$value = array_map('sanitize_textarea_field', $value);
 					$value = implode(',', $value);
-				} else {
-					$value = sanitize_textarea_field($value);
 				}
 
-				return $this->filterValue($value, $raw_value);
+				return sanitize_textarea_field($value);
 			}
 
 			/**

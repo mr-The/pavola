@@ -1,73 +1,75 @@
 <?php
-/**
- * The file contains the class of More Link Holder.
- *
- * @author Alex Kovalev <alex.kovalevv@gmail.com>
- * @copyright (c) 2018, Webcraftic Ltd
- *
- * @package factory-forms
- * @since 1.0.0
- */
-
-// Exit if accessed directly
-if( !defined('ABSPATH') ) {
-	exit;
-}
-
-if( !class_exists('Wbcr_FactoryForms466_MoreLinkHolder') ) {
-
 	/**
-	 * Collapsed Group Holder
+	 * The file contains the class of More Link Holder.
 	 *
+	 * @author Alex Kovalev <alex.kovalevv@gmail.com>
+	 * @copyright (c) 2018, Webcraftic Ltd
+	 *
+	 * @package factory-forms
 	 * @since 1.0.0
 	 */
-	class Wbcr_FactoryForms466_MoreLinkHolder extends Wbcr_FactoryForms466_Holder {
+
+	// Exit if accessed directly
+	if( !defined('ABSPATH') ) {
+		exit;
+	}
+
+	if( !class_exists('Wbcr_FactoryForms400_MoreLinkHolder') ) {
 
 		/**
-		 * A holder type.
+		 * Collapsed Group Holder
 		 *
 		 * @since 1.0.0
-		 * @var string
 		 */
-		public $type = 'more-link';
+		class Wbcr_FactoryForms400_MoreLinkHolder extends Wbcr_FactoryForms400_Holder {
 
-		/**
-		 * Here we should render a beginning html of the tab.
-		 *
-		 * @return void
-		 * @since 1.0.0
-		 */
-		public function beforeRendering()
-		{
-			$count = isset($this->options['count']) ? $this->options['count'] : 0;
+			/**
+			 * A holder type.
+			 *
+			 * @since 1.0.0
+			 * @var string
+			 */
+			public $type = 'more-link';
 
-			$id = 'factory-more-link-' . $this->getName();
+			/**
+			 * Here we should render a beginning html of the tab.
+			 *
+			 * @since 1.0.0
+			 * @return void
+			 */
+			public function beforeRendering()
+			{
+				$count = isset($this->options['count'])
+					? $this->options['count']
+					: 0;
 
-			?>
-			<div <?php $this->attrs() ?>>
-			<div class="form-group">
-				<div class="control-label col-sm-4"></div>
-				<div class="control-group col-sm-8">
-					<a href="#<?php echo $id ?>" class="factory-more-link-show btn btn-default"><?php $this->title() ?>
-						(<?php echo $count ?>)</a>
+				$id = 'factory-more-link-' . $this->getName();
+
+				?>
+				<div <?php $this->attrs() ?>>
+				<div class="form-group">
+					<div class="control-label col-sm-2"></div>
+					<div class="control-group col-sm-10">
+						<a href="#<?php echo $id ?>" class="factory-more-link-show"><?php $this->title() ?>
+							(<?php echo $count ?>)</a>
+					</div>
 				</div>
-			</div>
-			<div class='factory-more-link-content' id="<?php echo $id ?>" style="display: none;">
-			<a href="#<?php echo $id ?>" class='factory-more-link-hide'><?php _e('hide extra options', 'factory'); ?></a>
+				<div class='factory-more-link-content' id="<?php echo $id ?>" style="display: none;">
+				<a href="#<?php echo $id ?>" class='factory-more-link-hide'><?php _e('hide extra options', 'factory'); ?></a>
 			<?php
-		}
+			}
 
-		/**
-		 * Here we should render an end html of the tab.
-		 *
-		 * @return void
-		 * @since 1.0.0
-		 */
-		public function afterRendering()
-		{
-			?>
-			</div></div>
+			/**
+			 * Here we should render an end html of the tab.
+			 *
+			 * @since 1.0.0
+			 * @return void
+			 */
+			public function afterRendering()
+			{
+				?>
+				</div></div>
 			<?php
+			}
 		}
 	}
-}
