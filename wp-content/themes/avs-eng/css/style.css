@@ -661,13 +661,24 @@ template {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 1199px) {
+  .btn_group {
+    padding: 0 90px 0 0;
+  }
+
+}
 
 @media screen and (max-width: 680px) {
+  .btn_group {
+    padding: 0 50px 0 0;
+  }
   .btn_group .btn.btn-callback {
     padding: 10px 5px;
   }
 
 }
+
+
 
 .btn_group .btn.btn-callback:hover {
   border: 2px solid #004123;
@@ -1375,7 +1386,7 @@ header {
   width: 100%;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1199px) {
   .top_nav {
     display: none;
     position: absolute;
@@ -1667,12 +1678,19 @@ header {
   display: none;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1199px) {
   .hidden-lg {
+    display: block;
+    padding: 30px;
+   
+  }
+}
+@media screen and (max-width: 680px) {
+  .hidden-lg {
+    padding: 30px 0 0 0 ;
     display: block;
   }
 }
-
 * {
   margin: 0;
   padding: 0;
