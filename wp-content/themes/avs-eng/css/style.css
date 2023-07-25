@@ -1476,7 +1476,11 @@ header {
 .myFrame {
   z-index: 9999;
 }
-
+@media screen and (max-width: 1199px) {
+  .brony {
+     padding: 0 25px;
+    }
+}
 .top_nav nav ul li a {
   -webkit-transition: .3s linear;
   -o-transition: .3s linear;
