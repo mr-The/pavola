@@ -660,9 +660,7 @@ template {
   color: #fff;
   text-transform: uppercase;
 }
-.bronirovanie{
-  background: #005e32;
-}
+
 
 .frame .no-header.inside-iframe .subheader{
   display: none!important;
@@ -1468,19 +1466,12 @@ header {
     margin: 0;
   }
 }
-.brony {
-  /* padding: 0 0 100px 0; */
-  height: 520px;
 
-}
+
 .myFrame {
   z-index: 9999;
 }
-@media screen and (max-width: 1199px) {
-  .brony {
-     padding: 0 25px;
-    }
-}
+
 .top_nav nav ul li a {
   -webkit-transition: .3s linear;
   -o-transition: .3s linear;
@@ -3212,9 +3203,6 @@ h2 {
   /* margin: 30px 0; */
 }
 
-.brony_text{
-  text-align: center;
-}
 
 @media screen and (max-width: 992px) {
   .options-block .grid {
@@ -3373,5 +3361,31 @@ h2 {
   .tree_photo-image-block {
     width: 100%;
   }
+
+}
+.bronirovanie_script {
+  max-height: 150px;
+}
+.bronirovanie{
+  max-height: 150px;
+  background: #005e32;
+}
+.brony_text{
+  text-align: center;
+}
+
+.brony {
+ 
+  height: 520px;
+  
+}
+
+@media screen and (max-width: 1199px) {
+  .brony {
+     padding: 0 25px;
+    }
+    .bronirovanie{
+      padding: 25px 0;
+    }
 
 }

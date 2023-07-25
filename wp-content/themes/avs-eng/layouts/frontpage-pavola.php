@@ -28,7 +28,7 @@ get_header();
 <!-- Блок "Бронирования" -->
 <section class="">
 <div class="bronirovanie ">
-  <div class="bronirovanie_script container">
+  <div class="container bronirovanie_script">
   <div class="left" id="_bn_widget_">
    <a href="https://bnovo.ru/" id="_bnovo_link_" target="_blank">Bnovo</a>
 </div>
@@ -46,7 +46,7 @@ get_header();
         background: "#ffffff",
         background_mobile: "#ffffff",
         bg_alpha: "0",
-        bg_alpha_mobile: "100",
+        bg_alpha_mobile: "0",
         border_color_mobile: "#C6CAD3",
         padding: "24",
         padding_mobile: "24",
