@@ -3363,20 +3363,20 @@ h2 {
   }
 
 }
-.bronirovanie_script {
-  max-height: 150px;
-}
+
 .bronirovanie{
   max-height: 150px;
   background: #005e32;
 }
+.bronirov{
+  max-height: 150px;
+} 
 .brony_text{
   text-align: center;
 }
 
 .brony {
- 
-  height: 520px;
+ height: 520px;
   
 }
 
@@ -3386,6 +3386,10 @@ h2 {
     }
     .bronirovanie{
       padding: 25px 0;
+      max-height: 330px;
+    }
+    .bronirov{
+      max-height: 330px;
     }
 
 }

@@ -20,9 +20,9 @@ name="myIFrame" scrolling="no" z-index='9999' width="100%" height="100%" style="
 
 <!-- Блок "Бронирования" -->
 <section class="">
-<div class="bronirovani  ">
+<div class="bronirov">
   
- <div class="bronirovanie_script container">
+ <div class="container bronirovanie_script">
   <div class="brony_text">
   <h2>Онлайн бронирование</h2>
   </div>
