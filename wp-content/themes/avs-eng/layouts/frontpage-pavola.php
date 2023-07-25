@@ -25,6 +25,67 @@ get_header();
   </section>
 <?php endif; ?>
 
+<!-- Блок "Бронирования" -->
+<section class="">
+<div class="bronirovanie ">
+  <div class="bronirovanie_script container">
+  <div class="left" id="_bn_widget_">
+   <a href="https://bnovo.ru/" id="_bnovo_link_" target="_blank">Bnovo</a>
+</div>
+<script src="//widget.reservationsteps.ru/js/bnovo.js"></script>
+<script type="text/javascript">
+  (function(){
+     Bnovo_Widget.init(function(){
+       Bnovo_Widget.open('_bn_widget_', {
+        type: "horizontal",
+        uid: "259a7cf1-59c9-4096-9ce4-3bd48c027545",
+        lang: "ru",
+        currency: "RUB",
+        width: "100%",
+        width_mobile: "300",
+        background: "#ffffff",
+        background_mobile: "#ffffff",
+        bg_alpha: "0",
+        bg_alpha_mobile: "100",
+        border_color_mobile: "#C6CAD3",
+        padding: "24",
+        padding_mobile: "24",
+        border_radius: "8",
+        font_type: "inter",
+        title_color: "#ffffff",
+        title_color_mobile: "#ffffff",
+        title_size: "22",
+        title_size_mobile: "22",
+        inp_color: "#000000",
+        inp_bordhover: "#BBBBBB",
+        inp_bordcolor: "#DDDDDD",
+        inp_alpha: "100",
+        btn_background: "#004123",
+        btn_background_over: "#004123",
+        btn_textcolor: "#FFFFFF",
+        btn_textover: "#FFFFFF",
+        btn_bordcolor: "#004123",
+        btn_bordhover: "#004123",
+        adults_default: "1",
+        dates_preset: "on",
+        dfrom_today: "on",
+        dfrom_value: "2",
+        dto_nextday: "on",
+        dto_value: "2",
+        cancel_color: "#1875F0",
+        
+        switch_mobiles: "on",
+        switch_mobiles_width: "800",
+    });
+   });
+  })();
+</script>
+
+  </div>
+</div>
+
+
+
 <?php
 // Блок "Текст"
 ?>

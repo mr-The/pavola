@@ -660,6 +660,13 @@ template {
   color: #fff;
   text-transform: uppercase;
 }
+.bronirovanie{
+  background: #005e32;
+}
+
+.frame .no-header.inside-iframe .subheader{
+  display: none!important;
+}
 
 @media screen and (max-width: 1199px) {
   .btn_group {
